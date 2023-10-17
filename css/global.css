@@ -1,0 +1,240 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #AFCDDC;
+    width: 100%;
+    height: 100vh;
+    flex: 50%;
+}
+
+.navbar {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 120px;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #4C85A0;
+    overflow: hidden;
+}
+
+li.navitem {
+    float: right;
+}
+
+li.navitem a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 20px;
+    transition: background-color 0.4s;
+    margin-top: 40px;
+}
+
+li.navitem a:hover {
+    background-color: #282C34;
+}
+
+#Clinica {
+    padding: 30px;
+    font-size: 25pt;
+    color: #282C34;
+    font-style: italic;
+}
+
+h1  {
+    color: #282C34;
+}
+
+h2 {
+    color: #282C34; 
+}
+
+header {
+    background-color: #4C85A0;
+    color: white;
+    padding: 2px;
+    
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+
+header img {
+    float: left;
+    margin-top: -5.7cm;
+    margin-left: 20px;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+}
+
+main {
+    margin: 0 auto;
+    background-color: #C3D6DF;
+    padding: 30px;
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.card-text {
+    margin: 0;
+    color: darkslategray;
+    background-color: #E4F4FD;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex; 
+}
+
+.card-text p {
+    margin: 0; 
+}
+
+.card-text-2 {
+    margin: 0;
+    color: darkslategray;
+    background-color: #E4F4FD;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.card-text-2 p {
+    margin: 0; 
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    max-width: calc(45% - 20px);
+    width: 100%;
+    margin: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 500ms ease;
+    flex: 1;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card .contenido p {
+    line-height: 1.5;
+    color: #6a6a6a;
+    font-size: 12px;
+    margin: 10px auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 300ms ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.main-content {
+    width: 65%;
+    margin: 0;
+    padding: 0;
+    margin-left: 180px;   
+    text-align: justify;   
+    
+}
+/* Estilos para el footer */
+footer {
+    background-color: #4C85A0; /* Color azul pastel */
+    color: #fff; /* Color de texto en el footer */
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos para el contenido del footer */
+.footer-content {
+    max-width: 1200px; /* Ancho máximo del contenido del footer */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    display: flex; /* Usa un diseño de caja flexible para organizar el contenido en una fila */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben en una sola fila */
+    justify-content: space-between; /* Espacia los elementos uniformemente en la fila */
+    align-items: center; /* Centra verticalmente los elementos en la fila */
+}
+
+/* Estilos para el logo en el footer */
+.footer-logo img {
+    max-width: 200px; /* Establece el ancho máximo del logo */
+    float: left;
+    margin-right: 30px;
+    width: 170px;
+    height: 150px;
+    
+}
+
+/* Estilos para la información en el footer */
+.footer-info {
+    flex: 1; /* Ocupa todo el espacio disponible en la fila */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-size: 11pt;
+}
+
+/* Estilos para los enlaces en el footer */
+.footer-links ul {
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el relleno del ul */
+}
+
+.footer-links ul li {
+    margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+}
+
+/* Estilos para el copyright en el footer */
+.footer-copyright {
+    margin-top: 20px; /* Espaciado superior */
+}
