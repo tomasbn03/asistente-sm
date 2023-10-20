@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css"> 
+    <link rel="stylesheet" href="css/login.css">
     <title>Iniciar sesión | Registrarse</title>
 </head>
 <body>
+    <nav>
+        <ul class="navbar">
+            <li class="navitem"><a href="home.html">Inicio</a></li>
+            <li class="navitem"><a href="about.html">Acerca de</a></li>
+            <li class="navitem"><a href="services.html">Servicios</a></li>
+        </ul>
+    </nav>
+    
     <div class="container" id="container">
         <!-- Formulario de logeo -->
         <div class="form-container sign-in-container">
@@ -85,7 +93,6 @@
             </div>
         </div>
     </div>
-    <a href="home.html">Regresar</a>
     <script src="js/script.js"></script>
 </body>
 </html>
