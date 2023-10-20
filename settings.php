@@ -16,13 +16,16 @@ $usuario = $_SESSION['nombre'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
-    <link rel="stylesheet" href="css/form-settings.css">
-    <link rel="stylesheet" href="css/form-cambnm.css">
+    <link rel="stylesheet" href="css/forms-settings.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/error-message.css">
+   
+    
 </head>
 <title>Sistema de Salud Mental</title>
 <body>
+<!-- Barra de menú principal -->
 <nav class="sidebar close">
         <header>
             <div class="image-text">
@@ -72,9 +75,7 @@ $usuario = $_SESSION['nombre'];
                             <i class='bx bxs-cog icon'></i>
                             <span class="text nav-text">Perfil</span>
                         </a>
-                    </li>
-
-                    
+                    </li> 
                 </ul>
             </div>
 
@@ -102,7 +103,7 @@ $usuario = $_SESSION['nombre'];
         </div>
     </nav>
 
-
+    <!-- Seccion principal de la pagina home -->
     <section class="home">
         <div class="text">
             <h1>Bienvenido <?php echo $_SESSION['nombre']; ?></h1> <br>
@@ -118,97 +119,204 @@ $usuario = $_SESSION['nombre'];
 
             <br><br>
             
-            <!-- Formulario de configuración -->
+            <!-- Formularios de configuración -->
+
+            <!-- Filtros para cambiar nombre que aparece en el sistema -->
             <form action="cambiar-nombre.php" method="POST">
-                <!-- Filtros para cambiar nombre que aparece en el sistema -->
-                <h3>Cambiar nombre: </h3>
+                
+                <div class="contenedor-1">
+                    <div class="sub-contenedor-1">
+                    <h3>Cambiar nombre: </h3>
+                    <div class="input-name">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="currentUsername">Nombre de usuario actual:</label>
+                                </td>
+                                <td>
+                                    <label for="newUsername">Nuevo nombre de usuario:</label>
+                                </td>  
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" id="currentUsername" name="currentUsername" required>
+                                </td>
+                                <td>
+                                    <input type="text" id="newUsername" name="newUsername" required>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <input type="submit" name="submitName" value="Guardar"><br><br> 
+                    <!-- Menesaje de error para cambiar correo -->
+                    <?php
+                        if(isset($_GET["error_message"])){
+                            ?>
+                            <p class="name-message">                           
+                                    <?php
+                                        echo $_GET['error_message'];
+                                    ?>
+
+                            </p>
+                        <?php
+                        }
+                    ?>
+                    </div>
+                </div>
+                
+            </form>
+            <!-- Fin de filtros para cambiar nombre -->
+
+<br><br>
+            
+            <!-- Filtro para cambiar la contraseña -->
+            <form action="cambiar-contrasenia.php" method="POST">
+                    <div class="contenedor-2">
+                        <div class="sub-contenedor-2">
+                        <h3>Cambiar contraseña:</h3><br> <br>
+                    <div class="form-group-f">
+                         <label for="currentPassword">Contraseña actual:</label> <br> <br>
+                         <input type="password" id="currentPassword" name="currentPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="newPassword">Nueva contraseña:</label>  
+                                        </td>
+                                        <td>
+                                            <label for="confirmPassword">Confirmar nueva contraseña:</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="password" id="newPassword" name="newPassword" required>
+                                        </td>
+                                        <td>
+                                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <input type="submit" name="submitPass" value="Guardar"><br> <br> <br>
+                            <?php
+                                if(isset($_GET["pass_error_message"])){
+                                    ?>
+                                    <p class="pass-message">                           
+                                            <?php
+                                                echo $_GET['pass_error_message'];
+                                            ?>
+
+                                    </p>
+                                <?php
+                                }
+                            ?>
+                        </div>
+                    </div>
+            </form> 
+            <!-- Fin de filtro para cambiar la contraseña -->
+
+<br><br><br>
+
+
+            <!-- Filtro para cambiar el correo electronico -->
+            <form action="cambiar-correo.php" method="POST">
+                    <div class="contenedor-3">
+                        <div class="sub-contenedor-3">
+                        <h3>Cambiar Correo electronico</h3>
                 <div class="input-name">
                     <table>
                         <tr>
                             <td>
-                                <label for="currentUsername">Nombre de usuario actual:</label>
+                                <label for="currentEmail">Correo electronico actual:</label>
                             </td>
                             <td>
-                                <label for="newUsername">Nuevo nombre de usuario:</label>
+                                <label for="newEmail">Nuevo correo electronico:</label>
                             </td>  
                         </tr>
                         <tr>
                             <td>
-                                <input type="text" id="currentUsername" name="currentUsername" required>
+                                <input type="email" id="currentEmail" name="currentEmail" required>
                             </td>
                             <td>
-                                <input type="text" id="newUsername" name="newUsername" required>
+                                <input type="email" id="newEmail" name="newEmail" required>
                             </td>
                         </tr>
                     </table>
                 </div>
-                <input type="submit" name="submitName" value="Guardar"><br><br>
-            <?php
-            if(isset($_GET['error_message'])){
-                ?>
-                <div class="error-message">
-                <p>
-                    <?php
-                        echo $_GET['error_message'];
-                    ?>
-                </p>
-                </div>
+                <input type="submit" name="submitEmail" value="Guardar"><br><br>
+                <!-- Menesaje de error para cambiar correo -->
                 <?php
-            }
-            ?> <br> 
+                    if(isset($_GET["email_message"])){
+                        ?>
+                        <p class="email-message">                           
+                                <?php
+                                    echo $_GET['email_message'];
+                                ?>
+
+                        </p>
+                    <?php
+                    }
+                ?>
+                        </div>
+                    </div>
             </form>
 
-            <br><br>
-            
-            <!-- Formulario para cambiar la contraseña -->
-            <form action="cambiar-contrasenia.php" method="POST">
-            <h3>Cambiar contraseña:</h3><br> <br>
-            <div class="form-group-f">
-                    <label for="currentPassword">Contraseña actual:</label> <br> <br>
-                    <input type="password" id="currentPassword" name="currentPassword" required>
-                </div>
-                <div class="form-group">
-                    <table>
-                        <tr>
-                            <td>
-                                <label for="newPassword">Nueva contraseña:</label>  
-                            </td>
-                            <td>
-                                <label for="confirmPassword">Confirmar nueva contraseña:</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="password" id="newPassword" name="newPassword" required>
-                            </td>
-                            <td>
-                                <input type="password" id="confirmPassword" name="confirmPassword" required>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <input type="submit" name="submitPass" value="Guardar"><br> <br> <br>
-                <?php
-                    if (isset($_GET['pass_error_message'])) {
-                        ?>
-                        <p class="error-message-pass">
-                            <?php
-                                echo $_GET['pass_error_message'];
-                            ?>
-                        </p>
-                        <?php
-                    }
-                    ?> 
-            </form> 
-        </div>
-        <br><br><br><br>
-                
-    </section>
+<br><br>
 
+            <!-- Fin de filtro para cambiar el numero de telefono -->
+            <form action="cambiar-telefono.php" method="POST">
+                <div class="contenedor-4">
+                    <div class="sub-contenedor-4">
+                    <h3>Cambiar número telefonico</h3>
+                    <div class="input-name">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="currentPhone">Número de teléfono actual:</label>
+                                </td>
+                                <td>
+                                    <label for="newPhone">Nuevo número de teléfono:</label>
+                                </td>  
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" id="currentPhone" name="currentPhone" required>
+                                </td>
+                                <td>
+                                    <input type="text" id="newPhone" name="newPhone" required>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <input type="submit" name="submitPhone" value="Guardar"><br><br>
+                    <?php
+                    if(isset($_GET["phone_error_message"])){
+                        ?>
+                        <p class="phone-message">                           
+                                <?php
+                                    echo $_GET['phone_error_message'];
+                                ?>
+
+                        </p>
+                    <?php
+                    }
+                ?>
+                    </div>
+                </div>
+            </form>
+        </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+    </section>
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>
-    <script src="./js/menu.js"></script>
-    <script src="./js/script.js"></script>
+    
+    <script src="js/menu.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

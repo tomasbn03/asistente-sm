@@ -72,6 +72,7 @@
                 <input type="text" name="usuario" placeholder="Usuario" />
                 <input type="email" name="correo" placeholder="Correo electronico" required/>
                 <input type="password" name="contrasenia" placeholder="Contraseña" required/>
+                <input type="text" id="telefono" name="telefono" placeholder="Telefono" required>
                 <br>
                 <button type="submit">Registrarse</button>
             </form>

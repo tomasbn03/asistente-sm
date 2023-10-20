@@ -5,6 +5,7 @@
     $usuario = $_POST['usuario'];
     $correo = $_POST['correo'];
     $pass = $_POST['contrasenia'];
+    $telefono = $_POST['telefono'];
 
     //Encriptar contraseña
     // $pass = hash('sha512', $pass);
@@ -45,9 +46,16 @@
         include 'login-register.php';
         exit();
     }
+    if(!preg_match("/^[0-9]{7,10}$/", $telefono)) {
+        $error_message = "Número de teléfono no válido.";
+        mysqli_close($conexion);
+        include 'login-register.php';
+        exit();
+    }
 
-    $query = "INSERT INTO usuarios(nombre, usuario, correo, contrasenia)
-    VALUES('$nombre','$usuario','$correo','$pass')";
+    $query = "INSERT INTO usuarios(nombre, usuario, correo, contrasenia, telefono)
+    VALUES('$nombre','$usuario','$correo','$pass', '$telefono')";
+
 
     $exe = mysqli_query($conexion, $query);
 

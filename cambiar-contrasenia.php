@@ -32,17 +32,17 @@ if (isset($_POST['submitPass'])) {
                 if ($conexion->query($query) === TRUE) {
                     $pass_error_message = "La contraseña ha sido cambiada exitosamente.";
                 } else {
-                    $pass_error_message = "Error al cambiar la contraseña: " . $conexion->error;
+                    $pass_error_message  = "Error al cambiar la contraseña: " . $conexion->error;
                 }
             } else {
-                $pass_error_message = "La contraseña actual es incorrecta. Inténtalo de nuevo.";
+                $pass_error_message  = "La contraseña actual es incorrecta. Inténtalo de nuevo.";
             }
         } else {
-            $pass_error_message = "No se encontró un usuario con este nombre.";
+            $pass_error_message  = "No se encontró un usuario con este nombre.";
         }
     } else {
         // El usuario actual no coincide con el usuario en sesión, muestra un mensaje de error
-        $pass_error_message = "No tienes permiso para cambiar la contraseña de otro usuario.";
+        $pass_error_message  = "No tienes permiso para cambiar la contraseña de otro usuario.";
     }
 
     // Cerrar la conexión a la base de datos

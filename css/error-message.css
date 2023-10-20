@@ -1,0 +1,44 @@
+.name-message {
+    width: 400px;
+    height: 30px;
+    background-color: rgb(182, 68, 68);
+    color: white;
+    border-radius: 5px;
+    font-size: 12pt;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+.pass-message {
+    width: 400px;
+    height: 30px;
+    background-color: rgb(182, 68, 68);
+    color: white;
+    border-radius: 5px;
+    font-size: 12pt;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.email-message {
+    width: 400px;
+    height: 30px;
+    background-color: rgb(182, 68, 68);
+    color: white;
+    border-radius: 5px;
+    font-size: 12pt;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.phone-message {
+    width: 400px;
+    height: 30px;
+    background-color: rgb(182, 68, 68);
+    color: white;
+    border-radius: 5px;
+    font-size: 12pt;
+    text-align: center;
+    padding-top: 5px;
+}
