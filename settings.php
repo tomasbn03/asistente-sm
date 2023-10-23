@@ -42,12 +42,7 @@ $usuario = $_SESSION['nombre'];
         </header>
         <div class="menu-bar">
             <div class="menu">
-
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Buscar...">
-                </li>
-
+        
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="index.php">
@@ -57,9 +52,9 @@ $usuario = $_SESSION['nombre'];
                     </li>
 
                     <li class="nav-link">
-                        <a href="evaluacion-clinica.php">
+                        <a href="psicologo.php">
                             <i class='bx bx-group icon' ></i>
-                            <span class="text nav-text">Evaluación Clinica</span>
+                            <span class="text nav-text">Psicologo</span>
                         </a>
                     </li>
 
@@ -110,6 +105,8 @@ $usuario = $_SESSION['nombre'];
             <p><b>Tu bienestar mental es prioridad.</b> En esta sección, puedes personalizar tu experiencia en nuestro sitio, aquí puedes gestionar 
                 tu perfil.</p> <br><br>
 
+
+
                 <div class="container"> 
                     <div class="centered-div">
                         <img class="img-prfl" src="img/perfil.png">
@@ -118,7 +115,8 @@ $usuario = $_SESSION['nombre'];
                 </div>
 
             <br><br>
-            
+            <input type="file" name="foto_perfil" accept="image/*">
+            <br><br>
             <!-- Formularios de configuración -->
 
             <!-- Filtros para cambiar nombre que aparece en el sistema -->
@@ -313,9 +311,10 @@ $usuario = $_SESSION['nombre'];
 <br>
     </section>
     <footer>
-        <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
+        <p>&copy;<span id="year"></span>  MentalMatters Virtual. Todos los derechos reservados.</p>
     </footer>
     
+    <script src="./js/showYear.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/script.js"></script>
 </body>

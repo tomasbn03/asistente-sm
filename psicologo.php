@@ -16,6 +16,7 @@ $correo = $_SESSION['correo'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/botones-ca.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -38,10 +39,6 @@ $correo = $_SESSION['correo'];
         <div class="menu-bar">
             <div class="menu">
 
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Buscar...">
-                </li>
 
                 <ul class="menu-links">
                     <li class="nav-link">
@@ -105,7 +102,18 @@ $correo = $_SESSION['correo'];
         <h1>Holaaa</h1>
             <p>Bienvenido a la página de contacto psicologico, este es un texto de prueba temporal.</p>
         </div>
-        
+        <div class="botones-ca">
+            <div class="contacto-u">
+                <a href="">
+                    <span>Contacto Urgente</span>
+                </a>
+            </div>
+            <div class="programar-s">
+                <a href="">
+                    <span>Programar Sesión</span>
+                </a>
+            </div>
+        </div>
     </section>
 
     

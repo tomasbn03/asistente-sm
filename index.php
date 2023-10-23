@@ -38,10 +38,7 @@ $correo = $_SESSION['correo'];
         <div class="menu-bar">
             <div class="menu">
 
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Buscar...">
-                </li>
+              
 
                 <ul class="menu-links">
                     <li class="nav-link">
@@ -107,7 +104,6 @@ $correo = $_SESSION['correo'];
             <h1>Holaaa</h1>
             <p>Bienvenido a la página de inicio, este es un texto de prueba temporal.</p>            
         </div>
-        
     </section>
 
 
@@ -115,7 +111,7 @@ $correo = $_SESSION['correo'];
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>
-    <script src="./js/menu.js"></script>
+    <script src="./js/showYear.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

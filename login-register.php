@@ -56,24 +56,17 @@
         <div class="form-container sign-up-container">
             <form method="POST" action="registro.php">
                 <h1>Crear cuenta</h1><br>
-                <?php
-                    if(isset($error_message)){
-                        ?>
-                        <p class="error">
-                            <?php
-                                echo $error_message;
-                            ?>
-                        </p>
-                    <?php
-                    }
-                ?>
+                <!--  -->
+                    
+                
                 <span></span>
                 <input type="text" name="nombre" placeholder="Nombre / Apellido" required/>
                 <input type="text" name="usuario" placeholder="Usuario" />
                 <input type="email" name="correo" placeholder="Correo electronico" required/>
                 <input type="password" name="contrasenia" placeholder="Contraseña" required/>
                 <input type="text" id="telefono" name="telefono" placeholder="Telefono" required>
-                <br>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="Fecha de nacimiento" required>
+                
                 <button type="submit">Registrarse</button>
             </form>
         </div>

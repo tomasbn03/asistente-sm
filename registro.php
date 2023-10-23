@@ -6,10 +6,7 @@
     $correo = $_POST['correo'];
     $pass = $_POST['contrasenia'];
     $telefono = $_POST['telefono'];
-
-    //Encriptar contraseña
-    // $pass = hash('sha512', $pass);
-    // $pass = password_hash($_POST['contrasenia'], PASSWORD_BCRYPT); // Hashear la contraseña antes de guardarla en la base de datos
+    $fechaNacimiento = $_POST['fechaNacimiento'];
 
     // Validate name
     $verify_name = mysqli_query($conexion, "SELECT * FROM usuarios WHERE LOWER(nombre) = LOWER('$nombre')");
@@ -38,13 +35,14 @@
         exit();
     }
 
+
     // Validate password
     $verify_pass = mysqli_query($conexion, "SELECT * FROM usuarios WHERE contrasenia = '$pass'");
     if(mysqli_num_rows($verify_pass) > 0){
         $error_message = "La contraseña con la que intentas registrarte ya está en uso, intenta con otra";
         mysqli_close($conexion);
         include 'login-register.php';
-        exit();
+        exit();  
     }
     if(!preg_match("/^[0-9]{7,10}$/", $telefono)) {
         $error_message = "Número de teléfono no válido.";
@@ -53,8 +51,15 @@
         exit();
     }
 
-    $query = "INSERT INTO usuarios(nombre, usuario, correo, contrasenia, telefono)
-    VALUES('$nombre','$usuario','$correo','$pass', '$telefono')";
+    if(!preg_match("/^[6-7][0-9]{7}$/", $telefono)) {
+    $error_message = "Número de teléfono no válido.";
+    mysqli_close($conexion);
+    include 'login-register.php';
+    exit();
+    }
+
+    $query = "INSERT INTO usuarios(nombre, usuario, correo, contrasenia, telefono, fecha_nacimiento)
+    VALUES('$nombre','$usuario','$correo','$pass', '$telefono', '$fechaNacimiento')";
 
 
     $exe = mysqli_query($conexion, $query);
