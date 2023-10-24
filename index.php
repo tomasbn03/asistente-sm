@@ -80,37 +80,73 @@ $correo = $_SESSION['correo'];
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Cerrar Sesión</span>
                     </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Modo oscuro</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-                
+                </li>          
             </div>
         </div>
     </nav>
+    <!-- Seccion principal para la página de acceder a recursos de bienestar -->
+    <section class="home"><br>
+            <img src="img/portada.png" alt="">
+            <div class="text">
+                    <h1>Bienvenido/a a MentalMatters Virtual <?php echo $usuario ?></h1><br>
+                    <p>En este mundo, encontrarás un espacio seguro y acogedor donde tu salud mental es nuestra prioridad. 
+                    Explora nuestra biblioteca de recursos, participa en cursos de desarrollo personal, y descubre ejercicios 
+                    de relajación que te ayudarán a encontrar la paz interior.</p>
+            </div>
+            
+            <div class="cont-recurso">
+            <div class="text">
+            <h3>Biblioteca de Bienestar</h3>
+                    <p>Explora nuestra colección cuidadosamente seleccionada de recursos diseñados para promover tu bienestar 
+                        físico, mental y emocional. Desde guías prácticas hasta meditaciones guiadas, cada recurso es una 
+                        herramienta para ayudarte a encontrar equilibrio y serenidad en tu vida diaria.</p>
+            </div><br><br>
+                    <!-- Contenedores para cada apartado -->
+                    <div class="recurso1">
+                            <h3>Cómo Gestionar el Estrés en el Trabajo</h3> 
+                            <span>El estrés laboral es una realidad en la vida moderna.
+                                Aprende a identificar y reducir su impacto con consejos 
+                                prácticos y técnicas de relajación.</span> <br><br>
+                                <a href="biblio-bienestar1.php" class="boton-animado">Acceder</a>
+                    </div>
 
 
-    <section class="home">
-        <div class="text">
-            <h1>Holaaa</h1>
-            <p>Bienvenido a la página de inicio, este es un texto de prueba temporal.</p>            
-        </div>
+
+                    <div class="recurso2">
+                        
+                            <h3>Meditación Guiada para la Relajación Profunda</h3>
+                            <span>Sumérgete en un viaje de tranquilidad y paz interior con
+                                nuestra meditación guiada. Descubre cómo la respiración 
+                                adecuada y la postura correcta pueden llevarte a un estado 
+                                de relajación profunda.</span><br><br>
+                                <a href="biblio-bienestar2.php" class="boton-animado">Acceder</a>
+                    </div>
+
+
+
+                    <div class="recurso3">
+                            <h3>Guía Completa para el Manejo del Estrés Diario</h3>
+                            <span>Enfrenta los desafíos diarios con serenidad y confianza. 
+                                Esta guía te ofrece herramientas prácticas para identificar las fuentes 
+                                de estrés y técnicas efectivas para mitigar sus efectos. Descubre un camino
+                                hacia un estilo de vida equilibrado y empoderado. </span><br><br>
+                                <a href="biblio-bienestar3.php" class="boton-animado">Acceder</a>
+                    </div> 
+            </div>
+            <div class="text">
+            <img src="" >
+                <h1></h1>
+                    <p></p>
+            </div>
     </section>
+
 
 
 
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>
+    <script src="./js/menu.js"></script>
     <script src="./js/showYear.js"></script>
     <script src="./js/script.js"></script>
 </body>

@@ -221,15 +221,15 @@ $usuario = $_SESSION['nombre'];
             <form action="cambiar-correo.php" method="POST">
                     <div class="contenedor-3">
                         <div class="sub-contenedor-3">
-                        <h3>Cambiar Correo electronico</h3>
+                        <h3>Cambiar Correo electrónico</h3>
                 <div class="input-name">
                     <table>
                         <tr>
                             <td>
-                                <label for="currentEmail">Correo electronico actual:</label>
+                                <label for="currentEmail">Correo electrónico actual:</label>
                             </td>
                             <td>
-                                <label for="newEmail">Nuevo correo electronico:</label>
+                                <label for="newEmail">Nuevo correo electrónico:</label>
                             </td>  
                         </tr>
                         <tr>
@@ -266,7 +266,7 @@ $usuario = $_SESSION['nombre'];
             <form action="cambiar-telefono.php" method="POST">
                 <div class="contenedor-4">
                     <div class="sub-contenedor-4">
-                    <h3>Cambiar número telefonico</h3>
+                    <h3>Cambiar número telefónico</h3>
                     <div class="input-name">
                         <table>
                             <tr>

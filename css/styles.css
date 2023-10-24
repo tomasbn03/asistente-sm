@@ -7,3 +7,135 @@ footer {
     padding: 10px; /* Espaciado interior del footer */
     text-align: center; /* Alineación del contenido en el centro del footer */
 }
+
+/* Estilo para los contenedores */
+div[class^="recurso1"] {
+    background-image: url('../img/estres-trabajo.png');
+    opacity: 0.7;
+    background-size: 100px 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: black;
+    display: inline-block; 
+    width: 450px;  
+    height: 210px; 
+    margin-right: 100px; 
+    vertical-align: top; 
+    text-align: center; 
+    padding: 5px; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(31, 51, 81, 0.5);
+    background-color: #d8edf6;
+    font-size: 12pt;
+    transition: transform 0.3s ease; 
+}
+
+.recurso1:hover {
+    transform: translate(10px, -10px); /* Mueve el div 10px a la derecha y 10px hacia arriba */
+}
+
+div[class^="recurso2"] {
+    background-image: url('../img/meditacion.png');
+    opacity: 0.7;
+    background-size: 100px 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: black;
+    display: inline-block; 
+    width: 450px;  
+    height: 210px; 
+    margin-right: 100px; 
+    vertical-align: top; 
+    text-align: center; 
+    padding: 5px; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(31, 51, 81, 0.5);
+    background-color: #d8edf6;
+    font-size: 12pt;
+    transition: transform 0.3s ease; 
+}
+
+.recurso2:hover {
+    transform: translate(10px, -10px); /* Mueve el div 10px a la derecha y 10px hacia arriba */
+}
+
+div[class^="recurso3"] {
+    background-image: url('../img/manejo-estres.png');
+    opacity: 0.7;
+    background-size: 100px 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: black;
+    display: inline-block; 
+    width: 450px;  
+    height: 210px; 
+    margin-right: 100px; 
+    vertical-align: top; 
+    text-align: center; 
+    padding: 5px; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(31, 51, 81, 0.5);
+    background-color: #d8edf6;
+    font-size: 12pt;
+    transition: transform 0.3s ease; 
+}
+
+.recurso3:hover {
+    transform: translate(10px, -10px); /* Mueve el div 10px a la derecha y 10px hacia arriba */
+}
+
+div[class^="recurso"]:last-child {
+    margin-right: 0; /* Eliminar el margen derecho del último contenedor para que no haya espacio adicional a la derecha */
+}
+
+h3 {
+    margin-top: 5%;  /* Centrar el título verticalmente */
+    transform: translateY(-50%); /* Ajustar el centrado vertical */
+}
+
+.cont-recurso {
+    display: flex;            /* Hace que .text sea un contenedor flex */
+    justify-content: center;
+    flex-wrap: wrap; 
+    padding: 12px 60px;  
+    align-items: center;      
+    height: 90vh;    
+    background-color: #f1f1f1;  
+}
+
+.recurso span {
+     text-align: justify;
+}
+
+.recurso h3 {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.boton-animado {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
+}
+
+/* Animación al pasar el mouse */
+.boton-animado:hover {
+    transform: scale(1.05); /* Aumenta el tamaño un 5% */
+    background-color: #0056b3; /* Cambia el color de fondo */
+}
+
+/* Animación al hacer clic */
+.boton-animado:active {
+    transform: scale(0.95); /* Reduce el tamaño un 5% */
+}
