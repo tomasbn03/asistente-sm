@@ -60,7 +60,7 @@ input[type="submit"]{
 .contenedor-1 {
     background-color: #B9CFE9;
     width: 700px;
-    height: 320px;
+    height: 800px;
     display: block;
     margin: 0;
     border-radius: 10px;
@@ -70,41 +70,27 @@ input[type="submit"]{
     padding: 20px;
 }
 
-.contenedor-2 {
-    background-color: #B9CFE9;
-    width: 700px;
-    height: 470px;
-    display: block;
-    margin: 0;
-    border-radius: 10px;
+
+
+
+
+/* Estilos para el botón */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 300ms ease;
 }
 
-.sub-contenedor-2 {
-    padding: 20px;
+.button:hover {
+    background-color: #0056b3;
 }
 
-.contenedor-3 {
-    background-color: #B9CFE9;
-    width: 700px;
-    height: 320px;
-    display: block;
-    margin: 0;
-    border-radius: 10px;
-}
-
-.sub-contenedor-3 {
-    padding: 20px;
-}
-
-.contenedor-4 {
-    background-color: #B9CFE9;
-    width: 700px;
-    height: 320px;
-    display: block;
-    margin: 0;
-    border-radius: 10px;
-}
-
-.sub-contenedor-4 {
-    padding: 20px;
+/* Estilos para el contenedor "cambiar-passwd" */
+.cambiar-passwd {
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin: 20px auto; /* Centra el contenedor verticalmente y ajusta el espacio exterior */
 }

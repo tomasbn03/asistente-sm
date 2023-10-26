@@ -34,6 +34,7 @@
                         $_SESSION['usuario'] = $row['usuario'];
                         $_SESSION['correo'] = $row['correo'];
                         $_SESSION['contrasenia'] = $row['contrasenia'];
+                        $_SESSION['telefono'] = $row['telefono'];
                         header("location: index.php");
                         exit();        
                 }else{

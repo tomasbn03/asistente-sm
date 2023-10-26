@@ -1,4 +1,4 @@
-<?php
+ <?php
 session_start(); // Asegúrate de haber iniciado la sesión
 
 $usuario = $_SESSION['nombre'];
@@ -49,11 +49,11 @@ if (isset($_POST['submitPass'])) {
     $conexion->close();
 
     // Redireccionar al usuario de regreso a la página de configuración
-    header("Location: settings.php?pass_error_message=" . urlencode($pass_error_message));
+    header("Location: settings-passwd.php?pass_error_message=" . urlencode($pass_error_message));
     exit();
 } else {
     // Manejo de caso en el que se accede a la página sin haber enviado el formulario
-    header("Location: settings.php");
+    header("Location: settings-passwd.php");
     exit();
 }
 ?>
