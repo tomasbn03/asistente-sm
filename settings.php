@@ -46,8 +46,8 @@ header("Pragma: no-cache");
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="index.php">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Inicio</span>
+                            <i class='bx bx-leaf icon'></i>
+                            <span class="text nav-text">Recursos Bienestar</span>
                         </a>
                     </li>
 
@@ -68,7 +68,7 @@ header("Pragma: no-cache");
                     <li class="nav-link">
                         <a href="settings.php">
                             <i class='bx bxs-cog icon'></i>
-                            <span class="text nav-text">Perfil</span>
+                            <span class="text nav-text">Configuraciones</span>
                         </a>
                     </li> 
                 </ul>
@@ -123,7 +123,7 @@ header("Pragma: no-cache");
                                 </tr>
                                 <tr>
                                     <td><input type="text" id="currentUsername" value="<?php echo $_SESSION['nombre']; ?>" name="currentUsername" required></td>
-                                    <td><input type="text" id="newUsername" name="newUsername" required></td>
+                                    <td><input type="text" id="newUsername" name="newUsername" ></td>
                                 </tr>
                             </table>
                         </div>
@@ -138,7 +138,7 @@ header("Pragma: no-cache");
                                 </tr>
                                 <tr>
                                     <td><input type="email" id="currentEmail" value="<?php echo $_SESSION['correo'] ?>" name="currentEmail" required></td>
-                                    <td><input type="email" id="newEmail" name="newEmail" required></td>
+                                    <td><input type="email" id="newEmail" name="newEmail" ></td>
                                 </tr>
                             </table>
                         </div>
@@ -153,7 +153,7 @@ header("Pragma: no-cache");
                                 </tr>
                                 <tr>
                                     <td><input type="text" id="currentPhone" value="<?php echo $_SESSION['telefono']; ?>" name="currentPhone" required></td>
-                                    <td><input type="text" id="newPhone" name="newPhone" required></td>
+                                    <td><input type="text" id="newPhone" name="newPhone" ></td>
                                 </tr>
                             </table>
                         </div>
@@ -171,7 +171,7 @@ header("Pragma: no-cache");
                     </form>
                 </div>
             </div><br>
-            <p>Tambien puedes cambiar tu contraseña</p><br>
+            <p style="font-size: 14pt;">Tambien puedes cambiar tu contraseña</p><br>
             <div class="cmbcnt">
                 <a href="settings-passwd.php" class="button">Cambiar la contraseña</a>
             </div>

@@ -42,8 +42,8 @@ $correo = $_SESSION['correo'];
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="index.php">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Inicio</span>
+                            <i class='bx bx-leaf icon'></i>
+                            <span class="text nav-text">Recursos Bienestar</span>
                         </a>
                     </li>
 
@@ -64,7 +64,7 @@ $correo = $_SESSION['correo'];
                     <li class="nav-link">
                         <a href="settings.php">
                             <i class='bx bxs-cog icon'></i>
-                            <span class="text nav-text">Perfil</span>
+                            <span class="text nav-text">Configuraciones</span>
                         </a>
                     </li>
 
@@ -78,18 +78,6 @@ $correo = $_SESSION['correo'];
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Cerrar Sesión</span>
                     </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Modo oscuro</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
                 </li>
                 
             </div>

@@ -1,11 +1,51 @@
+
+
 .cont-text{
     font-size: 20px;
     font-weight: 500;
     color: var(--text-color);
     padding: 10px 180px;
-    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
 }
 
+.sub-cont-text {
+    width: 1000px;
+    height: 170px;
+    background-color: #D2E7FF;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
+.contextu {
+    width: 900px;
+    margin-left: 30px;
+    text-align: justify;
+}
+
+.cont1 span{
+    font-size: 12pt;
+    text-align: justify;
+}
+.cont2 span{
+    font-size: 12pt;
+    text-align: justify;
+}
+.cont3 span{
+    font-size: 12pt;
+    text-align: justify;
+}
+
+h1 {
+    color: #272665;
+}
+
+h2 {
+    color: #272665;
+}
+
+h3 {
+    color: #272665;
+}
 
 footer {
     position: fixed;
@@ -23,21 +63,55 @@ footer {
     width: 800px;
 }
 
+.fondo {
+    width: 650px;
+    height: 200px;
+    background-color: #D2E7FF;
+    padding-top: 20px;
+    border-radius: 7px; 
+    transition: all 500ms ease; /* Esto asegura que los cambios se animen suavemente */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s,
+}
+
+
+
+.fondo:hover {
+    transform: scale(1.05); 
+    background-color: #B9CFE9;
+}
+
 .cont1 {
-    width: 600px;
+    width: 580px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 7px;
+    text-align: justify;
 }
 
 .cont2 {
-    width: 600px;
+    width: 580px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 7px;
+    text-align: justify;
 }
 
 .cont3 {
-    width: 600px;
+    width: 580px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 7px;
+    text-align: justify;
 }
 
 .boton-animado {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
@@ -47,6 +121,10 @@ footer {
     background-color: #007BFF;
     color: white;
     transition: transform 0.3s, background-color 0.3s; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    
 }
 
 
@@ -61,7 +139,75 @@ footer {
 }
 
 #portada {
-    padding: 12px 180px;
-    width: 1600px;
-    height: 450px;
+    padding: 5px 130px;
+    width: 1300px;
+    height: 420px;
+    margin-left: 50px;
 }
+
+/* Estilo para carrusel */
+.carousel-container {
+    position: relative;
+    width: 1000px;
+    height: 60px;
+    overflow: hidden;
+    background-color: #766FB0;
+    color: #D2E7FF;
+    border-radius: 5px;
+}
+
+.carousel-quote {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    font-style:unset;
+    margin-top: -18px;
+    
+}
+
+#quote1 {
+    animation-name: fadeInOut1;
+}
+
+#quote2 {
+    animation-name: fadeInOut2;
+}
+
+#quote3 {
+    animation-name: fadeInOut3;
+}
+
+@keyframes fadeInOut1 {
+    0% { opacity: 0; }
+    10% { opacity: 1; }   /* Comienza a mostrarse al 10% */
+    30% { opacity: 1; }   /* Se mantiene visible hasta el 30% */
+    40% { opacity: 0; }   /* Empieza a desaparecer al 40% */
+    100% { opacity: 0; }
+}
+
+@keyframes fadeInOut2 {
+    0% { opacity: 0; }
+    40% { opacity: 0; }   /* Se mantiene oculta hasta el 40% */
+    50% { opacity: 1; }   /* Comienza a mostrarse al 50% */
+    70% { opacity: 1; }   /* Se mantiene visible hasta el 70% */
+    80% { opacity: 0; }   /* Empieza a desaparecer al 80% */
+    100% { opacity: 0; }
+}
+
+@keyframes fadeInOut3 {
+    0% { opacity: 0; }
+    80% { opacity: 0; }          
+    90% { opacity: 1; } 
+    95% { opacity: 1 ;}  
+    100% { opacity: 0; }
+}
+
