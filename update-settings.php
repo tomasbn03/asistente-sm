@@ -4,6 +4,8 @@ session_start();
 include 'db.php';
 
 $usuario = $_SESSION['nombre'];
+$correo = $_SESSION['correo'];
+$telefono = $_SESSION['telefono'];
 $message = ""; // Mensaje para mostrar al usuario
 
 // Si se envió el formulario
@@ -18,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param('s', $newUsername);
         $stmt->execute();
         $result = $stmt->get_result();
-
+    
         if ($result->num_rows > 0) {
             $message .= "El nuevo nombre de usuario ya está en uso. Por favor, elige otro.<br>";
         } else {
@@ -27,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($stmt->execute()) {
                 $message .= "El nombre de usuario ha sido cambiado exitosamente.<br>";
                 $_SESSION['nombre'] = $newUsername;
+                $usuario = $newUsername;  // Actualizamos la variable local con el nuevo valor.
             } else {
                 $message .= "Error al cambiar el nombre de usuario: " . $conexion->error . "<br>";
             }

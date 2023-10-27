@@ -97,11 +97,11 @@ $correo = $_SESSION['correo'];
         </div>
     </nav>
 
-    <section class="home">
-        <div class="text">
+    
+    <div class="cont-text">
         <h1>Holaaa</h1>
             <p>Bienvenido a la página de contacto psicologico, este es un texto de prueba temporal.</p>
-        </div>
+        
         <div class="botones-ca">
             <div class="contacto-u">
                 <a href="">
@@ -114,7 +114,7 @@ $correo = $_SESSION['correo'];
                 </a>
             </div>
         </div>
-    </section>
+    </div>
 
     
     <footer>

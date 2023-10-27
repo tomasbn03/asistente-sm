@@ -82,8 +82,8 @@ $correo = $_SESSION['correo'];
             </div>
         </div>
     </nav>
-    <section class="home"><br>
-        <div class="text">
+    
+        <div class="cont-text">
             <h1>Meditación Guiada para la Relajación Profunda</h1>
             <h3>Video de meditación guiada de 10 minutos</h3>
             <p>Disfruta de una inmersión tranquila en la relajación profunda a través de esta meditación guiada de 10 minutos. 
@@ -125,7 +125,7 @@ $correo = $_SESSION['correo'];
                 Con la práctica regular, descubrirás un espacio de serenidad que siempre ha estado dentro de ti. Dedica estos momentos para ti y 
                 observa los cambios positivos en tu bienestar general.</p>
         </div><br><br>
-    </section>
+    
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>

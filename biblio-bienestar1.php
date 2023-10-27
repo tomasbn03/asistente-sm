@@ -85,8 +85,8 @@ $correo = $_SESSION['correo'];
     </nav>
 
 
-    <section class="home">
-        <div class="text">
+    
+        <div class="cont-text">
             <h1>¿Cómo Gestionar el Estrés en el Trabajo?</h1>
             <h3>Introducción al estrés en el trabajo.</h3>
             <p>El estrés laboral es una de las principales causas de problemas de salud 
@@ -159,7 +159,7 @@ $correo = $_SESSION['correo'];
             </ul>
 
         </div><br><br>
-    </section>
+    
 
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>

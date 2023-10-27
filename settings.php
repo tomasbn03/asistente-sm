@@ -6,11 +6,9 @@ if (!isset($_SESSION['correo'])) {
     exit();
 }
 
-$usuario = $_SESSION['nombre'];
-$correo = $_SESSION['correo'];
-$telefono = $_SESSION['telefono'];
-
-
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -89,8 +87,8 @@ $telefono = $_SESSION['telefono'];
     </nav>
 
     <!-- Seccion principal de la pagina home -->
-    <section class="home">
-        <div class="text">
+    
+        <div class="cont-text">
             <h1>Bienvenido <?php echo $_SESSION['nombre']; ?></h1> <br>
             <p><b>Tu bienestar mental es prioridad.</b> En esta sección, puedes personalizar tu experiencia en nuestro sitio, aquí puedes gestionar 
                 tu perfil.</p> <br><br>
@@ -102,11 +100,7 @@ $telefono = $_SESSION['telefono'];
                         <img class="img-prfl" src="img/perfil.png">
                         <p>Cuenta</p>
                     </div>
-                </div>
-                <div class="cambiar-passwd">
-                    <a href="settings-passwd.php" class="button">Cambiar la contraseña</a>
-                </div>
-
+                </div><br>
 
             <br><br>
             <input type="file" name="foto_perfil" accept="image/*">
@@ -143,7 +137,7 @@ $telefono = $_SESSION['telefono'];
                                     <td><label for="newEmail">Nuevo correo electrónico:</label></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="email" id="currentEmail" value="<?php echo $_SESSION['correo']; ?>" name="currentEmail" required></td>
+                                    <td><input type="email" id="currentEmail" value="<?php echo $_SESSION['correo'] ?>" name="currentEmail" required></td>
                                     <td><input type="email" id="newEmail" name="newEmail" required></td>
                                 </tr>
                             </table>
@@ -173,24 +167,22 @@ $telefono = $_SESSION['telefono'];
                                     echo '<p>'.$_GET['message'].'</p>';
                                 }
                             ?>
-                        </div>
-
+                        </div>                 
                     </form>
                 </div>
+            </div><br>
+            <p>Tambien puedes cambiar tu contraseña</p><br>
+            <div class="cmbcnt">
+                <a href="settings-passwd.php" class="button">Cambiar la contraseña</a>
             </div>
-                
-            
+        </div>  
 
-<br><br>
-
-            
-        
 <br>
 <br>
 <br>
 <br>
 <br>
-    </section>
+    
     <footer>
         <p>&copy;<span id="year"></span>  MentalMatters Virtual. Todos los derechos reservados.</p>
     </footer>

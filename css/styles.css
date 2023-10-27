@@ -1,3 +1,12 @@
+.cont-text{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 10px 180px;
+    justify-content: space-around;
+}
+
+
 footer {
     position: fixed;
     bottom: 0;
@@ -8,16 +17,22 @@ footer {
     text-align: center; 
 }
 
+.container-recursos {
+    display: flex;
+    margin: 0;
+    width: 800px;
+}
+
 .cont1 {
-    
+    width: 600px;
 }
 
 .cont2 {
-
+    width: 600px;
 }
 
 .cont3 {
-
+    width: 600px;
 }
 
 .boton-animado {
@@ -45,3 +60,8 @@ footer {
     transform: scale(0.95); 
 }
 
+#portada {
+    padding: 12px 180px;
+    width: 1600px;
+    height: 450px;
+}

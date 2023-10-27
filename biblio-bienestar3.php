@@ -82,8 +82,8 @@ $correo = $_SESSION['correo'];
             </div>
         </div>
     </nav>
-    <section class="home"><br>
-        <div class="text">
+    
+        <div class="cont-text">
             <h1>Guía Completa para el Manejo del Estrés Diario</h1>
             <h3>Introducción al estrés y su impacto en la salud mental</h3>
             <p>El estrés es una reacción natural del cuerpo ante situaciones que percibe como amenazantes o desafiantes. 
@@ -140,7 +140,7 @@ $correo = $_SESSION['correo'];
             </ul><br>
             <p>El estrés diario puede ser abrumador, pero con las herramientas y técnicas adecuadas, es posible gestionarlo y mantener una vida equilibrada y saludable. La clave está en el autoconocimiento y la adaptabilidad, permitiendo que cada persona desarrolle un plan personalizado que se ajuste a sus necesidades y realidades.</p>
         </div><br><br><br>
-    </section>
+    
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>

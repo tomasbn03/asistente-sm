@@ -7,7 +7,7 @@ if (!isset($_SESSION['correo'])) {
 }
 
 $pass = $_SESSION['contrasenia'];
-
+$usuario = $_SESSION['nombre'];
 
 ?>
 
@@ -84,9 +84,8 @@ $pass = $_SESSION['contrasenia'];
             </div>
         </div>
     </nav>
-    <section class="home">
-        <div class="text">
-            <h1>En este apartado puedes actualizar tu contraseña</h1>
+        <div class="cont-text">
+            <h2>En este apartado puedes actualizar tu contraseña <?php echo $_SESSION['nombre']; ?></h2><br>
             
             <!-- Filtro para cambiar la contraseña -->
             <form action="cambiar-contrasenia.php" method="POST">
@@ -94,8 +93,10 @@ $pass = $_SESSION['contrasenia'];
                         <div class="sub-contenedor-2">
                         <h3>Cambiar contraseña:</h3><br> <br>
                         <div class="form-group-f">
-                         <label for="currentPassword">Contraseña actual:</label> <br> <br>
-                         <input type="password" id="currentPassword" value="<?php echo $pass ?>" name="currentPassword" required>
+                                <div class="currentPass">
+                                    <label for="currentPassword">Contraseña actual:</label> <br> <br>
+                                    <input type="password" id="currentPassword" value="<?php echo $pass ?>" name="currentPassword" required>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <table>
@@ -121,7 +122,7 @@ $pass = $_SESSION['contrasenia'];
                             <?php
                                 if(isset($_GET["pass_error_message"])){
                                     ?>
-                                    <p class="pass-message">                           
+                                    <p class="pass_error_message">                           
                                             <?php
                                                 echo $_GET['pass_error_message'];
                                             ?>
@@ -135,7 +136,11 @@ $pass = $_SESSION['contrasenia'];
             </form> 
             <!-- Fin de filtro para cambiar la contraseña -->
         </div>
-    </section>
-
+        <footer>
+            <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
+        </footer>
+        <script src="./js/menu.js"></script>
+        <script src="./js/showYear.js"></script>
+        <script src="./js/script.js"></script>
 </body>
 </html>

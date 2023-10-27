@@ -38,6 +38,10 @@ input[type="submit"]{
     margin-left: 50px;
 }
 
+.currentPass {
+    margin-left: 40px   ;
+}
+
 .container {
     width: 80px;
     height: 90px; 
@@ -53,8 +57,8 @@ input[type="submit"]{
     margin-top: 3px;
 }
 
-.form-group-f {
-    margin-left: 40px;
+h3 {
+    margin-left: 30px;
 }
 
 .contenedor-1 {
@@ -84,27 +88,25 @@ input[type="submit"]{
     padding: 20px;
 }
 
+.cmbcnt {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-top: -55px;
+    margin-right: 490px;
+}
 
-
-
-
-/* Estilos para el botón */
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background-color: #007BFF;
-    color: #fff;
+    color: white;
+    border: none;
+    border-radius: 5px;
     text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 300ms ease;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para el contenedor "cambiar-passwd" */
-.cambiar-passwd {
-    text-align: center; /* Centra el contenido horizontalmente */
-    margin: 20px auto; /* Centra el contenedor verticalmente y ajusta el espacio exterior */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
