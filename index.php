@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['correo'])) { // Cambia 'correo' al nombre de la variable de sesión que utilizas para el inicio de sesión
+if (!isset($_SESSION['correo'])) { 
     header("Location: login-register.php");
     exit();
 }
@@ -69,11 +69,8 @@ $correo = $_SESSION['correo'];
                             <span class="text nav-text">Perfil</span>
                         </a>
                     </li>
-
-                    
                 </ul>
             </div>
-
             <div class="bottom-content">
                 <li class="">
                     <a href="logout.php">
@@ -95,50 +92,45 @@ $correo = $_SESSION['correo'];
             </div>
             
             <div class="cont-recurso">
-            <div class="text">
-            <h3>Biblioteca de Bienestar</h3>
-                    <p>Explora nuestra colección cuidadosamente seleccionada de recursos diseñados para promover tu bienestar 
-                        físico, mental y emocional. Desde guías prácticas hasta meditaciones guiadas, cada recurso es una 
-                        herramienta para ayudarte a encontrar equilibrio y serenidad en tu vida diaria.</p>
-            </div><br><br>
-                    <!-- Contenedores para cada apartado -->
-                    <div class="recurso1">
+                        <div class="text">
+                            <h3>Biblioteca de Bienestar</h3>
+                                <p>Explora nuestra colección cuidadosamente seleccionada de recursos diseñados para promover tu bienestar 
+                                físico, mental y emocional. Desde guías prácticas hasta meditaciones guiadas, cada recurso es una 
+                                herramienta para ayudarte a encontrar equilibrio y serenidad en tu vida diaria.</p>
+                        </div><br><br>
+                    
+                        <div class="cont1">
                             <h3>Cómo Gestionar el Estrés en el Trabajo</h3> 
-                            <span>El estrés laboral es una realidad en la vida moderna.
-                                Aprende a identificar y reducir su impacto con consejos 
-                                prácticos y técnicas de relajación.</span> <br><br>
+                                <span>El estrés laboral es una realidad en la vida moderna.
+                                    Aprende a identificar y reducir su impacto con consejos 
+                                    prácticos y técnicas de relajación.</span> <br><br>
                                 <a href="biblio-bienestar1.php" class="boton-animado">Acceder</a>
-                    </div>
+                        </div>
 
 
 
-                    <div class="recurso2">
-                        
+                        <div class="cont2">
                             <h3>Meditación Guiada para la Relajación Profunda</h3>
-                            <span>Sumérgete en un viaje de tranquilidad y paz interior con
-                                nuestra meditación guiada. Descubre cómo la respiración 
-                                adecuada y la postura correcta pueden llevarte a un estado 
-                                de relajación profunda.</span><br><br>
+                                <span>Sumérgete en un viaje de tranquilidad y paz interior con
+                                    nuestra meditación guiada. Descubre cómo la respiración 
+                                    adecuada y la postura correcta pueden llevarte a un estado 
+                                    de relajación profunda.</span><br><br>
                                 <a href="biblio-bienestar2.php" class="boton-animado">Acceder</a>
-                    </div>
+                        </div>
 
 
 
-                    <div class="recurso3">
+                        <div class="cont3">
                             <h3>Guía Completa para el Manejo del Estrés Diario</h3>
-                            <span>Enfrenta los desafíos diarios con serenidad y confianza. 
-                                Esta guía te ofrece herramientas prácticas para identificar las fuentes 
-                                de estrés y técnicas efectivas para mitigar sus efectos. Descubre un camino
-                                hacia un estilo de vida equilibrado y empoderado. </span><br><br>
-                                <a href="biblio-bienestar3.php" class="boton-animado">Acceder</a>
-                    </div> 
-            </div>
-            <div class="text">
-            <img src="" >
-                <h1></h1>
-                    <p></p>
+                                <span>Enfrenta los desafíos diarios con serenidad y confianza. 
+                                    Esta guía te ofrece herramientas prácticas para identificar las fuentes 
+                                    de estrés y técnicas efectivas para mitigar sus efectos. Descubre un camino
+                                    hacia un estilo de vida equilibrado y empoderado. </span><br><br>
+                                <a href="biblio-bienestar3.php" class="boton-animado">Acceder</a><br><br><br><br>
+                        </div> 
             </div>
     </section>
+            
 
 
 

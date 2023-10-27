@@ -71,6 +71,20 @@ input[type="submit"]{
 }
 
 
+.contenedor-2 {
+    background-color: #B9CFE9;
+    width: 700px;
+    height: 500px;
+    display: block;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.sub-contenedor-2 {
+    padding: 20px;
+}
+
+
 
 
 
