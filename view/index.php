@@ -16,8 +16,8 @@ $correo = $_SESSION['correo'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../assets/css/menu.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <title>Sistema de Salud Mental</title>
 <body>
@@ -25,7 +25,7 @@ $correo = $_SESSION['correo'];
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="img/perfil.png" alt="">
+                    <img src="../assets/img/perfil.png" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -73,7 +73,7 @@ $correo = $_SESSION['correo'];
             </div>
             <div class="bottom-content">
                 <li class="">
-                    <a href="logout.php">
+                    <a href="../controller/logout.php">
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Cerrar Sesión</span>
                     </a>
@@ -81,7 +81,7 @@ $correo = $_SESSION['correo'];
             </div>
         </div>
     </nav>
-    <img src="img/portada.png" id="portada">
+    <img src="../assets/img/portada.png" id="portada">
     <!-- Seccion principal para la página de acceder a recursos de bienestar -->
     
     
@@ -162,8 +162,8 @@ $correo = $_SESSION['correo'];
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>
-    <script src="./js/menu.js"></script>
-    <script src="./js/showYear.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/showYear.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

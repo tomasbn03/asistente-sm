@@ -1,7 +1,7 @@
 <?php
     
     session_start();
-    include 'db.php';
+    include '../model/db.php';
 
     if(isset($_POST['correo']) && isset($_POST['contrasenia'])) {
         function validate($data){
@@ -15,10 +15,10 @@
         $contrasenia = validate($_POST['contrasenia']);
         
         if(empty($correo)){
-            header("location: login-register.php?error=El correo es requerido");
+            header("location: ../view/login-register.php?error=El correo es requerido");
             exit();
         }elseif(empty($contrasenia)){
-            header("location: login-register.php?error=La contraseña es requerida");
+            header("location: ../view/login-register.php?error=La contraseña es requerida");
             exit();
         }else{
             // $contrasenia = md5($contrasenia);
@@ -35,19 +35,19 @@
                         $_SESSION['correo'] = $row['correo'];
                         $_SESSION['contrasenia'] = $row['contrasenia'];
                         $_SESSION['telefono'] = $row['telefono'];
-                        header("location: index.php");
+                        header("location: ../view/index.php");
                         exit();        
                 }else{
-                    header("location: login-register.php?error=El usuario o la contraseña son incorrectas");
+                    header("location: ../view/login-register.php?error=El usuario o la contraseña son incorrectas");
                     exit();
                 }
             }else{
-                header("location: login-register.php?error=El usuario o la contraseña son incorrectas");
+                header("location: ../view/login-register.php?error=El usuario o la contraseña son incorrectas");
                 exit();
             }
         }
     }else{
-        header("location: login-register.php?error=El usuario o la contraseña son incorrectas");
+        header("location: ../view/login-register.php?error=El usuario o la contraseña son incorrectas");
         exit();
     }
 

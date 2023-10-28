@@ -3,7 +3,7 @@
     session_unset();
     session_destroy();
 
-    header("location: login-register.php");
+    header("location: ../view/login-register.php");
     exit();
 ?>
 

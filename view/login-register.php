@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
     <title>Iniciar sesión | Registrarse</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
     <div class="container" id="container">
         <!-- Formulario de logeo -->
         <div class="form-container sign-in-container">
-            <form method="POST" action="login.php">
+            <form method="POST" action="../controller/login.php">
                 <h1>Iniciar sesión</h1><br>
                 <!-- Error para Login -->
                 <?php
@@ -54,7 +54,7 @@
 
         <!-- Formulario de registro -->
         <div class="form-container sign-up-container">
-            <form method="POST" action="registro.php">
+            <form method="POST" action="../controller/registro.php">
                 <h1>Crear cuenta</h1><br>
                 <!--  -->
                     
@@ -74,7 +74,7 @@
         <div class="overlay-container">
             <div class="overlay">
                 <div class="salud-mental-img">
-                    <img src="img/salud-mental.png" alt="">
+                    <img src="../assets/img/salud-mental.png" alt="">
                 </div>
                 <div class="overlay-panel overlay-left">
                     <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
@@ -87,6 +87,6 @@
             </div>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

@@ -17,10 +17,10 @@ $usuario = $_SESSION['nombre'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
-    <link rel="stylesheet" href="css/forms-settings.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/error-message.css">
+    <link rel="stylesheet" href="../assets/css/forms-settings.css">
+    <link rel="stylesheet" href="../assets/css/menu.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/error-message.css">
     <title>Cambiar contraseña</title>
 </head>
 <body>
@@ -29,7 +29,7 @@ $usuario = $_SESSION['nombre'];
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="img/perfil.png" alt="">
+                    <img src="../assets/img/perfil.png" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -75,7 +75,7 @@ $usuario = $_SESSION['nombre'];
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="logout.php">
+                    <a href="../controller/logout.php">
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Cerrar Sesión</span>
                     </a>
@@ -88,7 +88,7 @@ $usuario = $_SESSION['nombre'];
             <h2>En este apartado puedes actualizar tu contraseña <?php echo $_SESSION['nombre']; ?></h2><br>
             
             <!-- Filtro para cambiar la contraseña -->
-            <form action="cambiar-contrasenia.php" method="POST">
+            <form action="../model/cambiar-contrasenia.php" method="POST">
                     <div class="contenedor-2">
                         <div class="sub-contenedor-2">
                         <h3>Cambiar contraseña:</h3><br> <br>
@@ -139,8 +139,8 @@ $usuario = $_SESSION['nombre'];
         <footer>
             <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
         </footer>
-        <script src="./js/menu.js"></script>
-        <script src="./js/showYear.js"></script>
-        <script src="./js/script.js"></script>
+        <script src="../assets/js/menu.js"></script>
+        <script src="../assets/js/showYear.js"></script>
+        <script src="../assets/js/script.js"></script>
 </body>
 </html>

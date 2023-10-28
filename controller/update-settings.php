@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include 'db.php';
+include '../model/db.php';
 
 $usuario = $_SESSION['nombre'];
 $correo = $_SESSION['correo'];
@@ -108,11 +108,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conexion->close();
 
     // Redirigir al usuario con el mensaje
-    header("Location: settings.php?message=" . urlencode($message));
+    header("Location: ../view/settings.php?message=" . urlencode($message));
     exit();
 
 } else {
-    header("Location: settings.php");
+    header("Location: ../view/settings.php");
     exit();
 }
 ?>

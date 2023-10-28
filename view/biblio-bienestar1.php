@@ -15,16 +15,16 @@ if (!isset($_SESSION['correo'])) { // Cambia 'correo' al nombre de la variable d
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion del estres en el trabajo | Biblioteca de recursos</title>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/biblio1.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../assets/css/menu.css">
+    <link rel="stylesheet" href="../assets/css/biblio1.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="img/perfil.png" alt="">
+                    <img src="../assets/img/perfil.png" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -75,7 +75,7 @@ if (!isset($_SESSION['correo'])) { // Cambia 'correo' al nombre de la variable d
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="logout.php">
+                    <a href="../controller/logout.php">
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Cerrar Sesión</span>
                     </a>
@@ -83,7 +83,7 @@ if (!isset($_SESSION['correo'])) { // Cambia 'correo' al nombre de la variable d
             </div>
         </div>
     </nav>
-    <img src="img/portada.png" id="portada">
+    <img src="../assets/img/portada.png" id="portada">
 
     
         <div class="cont-text">
@@ -174,8 +174,8 @@ if (!isset($_SESSION['correo'])) { // Cambia 'correo' al nombre de la variable d
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>
-    <script src="./js/menu.js"></script>
-    <script src="./js/showYear.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/showYear.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

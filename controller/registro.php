@@ -1,5 +1,5 @@
 <?php
-    include 'db.php';
+    include '../model/db.php';
 
     $nombre = $_POST['nombre'];
     $usuario = $_POST['usuario'];
@@ -13,7 +13,7 @@
     if(mysqli_num_rows($verify_name) > 0 ){
         $error_message = "El nombre con el que intentas registrarte ya está en uso, intenta con otro";
         mysqli_close($conexion);
-        include 'login-register.php';
+        include '../view/login-register.php';
         exit();
     }
 
@@ -22,7 +22,7 @@
     if(mysqli_num_rows($verify_user) > 0 ){
         $error_message = "El nombre de usuario con el que intentas registrarte ya está en uso, intenta con otro";
         mysqli_close($conexion);
-        include 'login-register.php';
+        include '../view/login-register.php';
         exit();
     }
 
@@ -31,7 +31,7 @@
     if(mysqli_num_rows($verify_email) > 0 ){
         $error_message = "El correo con el que intentas registrarte ya está en uso, intenta con otro";
         mysqli_close($conexion);
-        include 'login-register.php';
+        include '../view/login-register.php';
         exit();
     }
 
@@ -41,20 +41,20 @@
     if(mysqli_num_rows($verify_pass) > 0){
         $error_message = "La contraseña con la que intentas registrarte ya está en uso, intenta con otra";
         mysqli_close($conexion);
-        include 'login-register.php';
+        include '../view/login-register.php';
         exit();  
     }
     if(!preg_match("/^[0-9]{7,10}$/", $telefono)) {
         $error_message = "Número de teléfono no válido.";
         mysqli_close($conexion);
-        include 'login-register.php';
+        include '../view/login-register.php';
         exit();
     }
 
     if(!preg_match("/^[6-7][0-9]{7}$/", $telefono)) {
     $error_message = "Número de teléfono no válido.";
     mysqli_close($conexion);
-    include 'login-register.php';
+    include '../view/login-register.php';
     exit();
     }
 
@@ -66,10 +66,10 @@
 
     if($exe) {
         mysqli_close($conexion);
-        echo '<script>window.location = "login-register.php";</script>';
+        echo '<script>window.location = "../view/login-register.php";</script>';
     } else {
         $error_message = "Error, usuario no registrado";
         mysqli_close($conexion);
-        include 'login-register.php';
+        include '../view/login-register.php';
     }
 ?>

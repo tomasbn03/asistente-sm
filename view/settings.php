@@ -16,10 +16,10 @@ header("Pragma: no-cache");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
-    <link rel="stylesheet" href="css/forms-settings.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/error-message.css">
+    <link rel="stylesheet" href="../assets/css/forms-settings.css">
+    <link rel="stylesheet" href="../assets/css/menu.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/error-message.css">
    
     
 </head>
@@ -30,7 +30,7 @@ header("Pragma: no-cache");
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="img/perfil.png" alt="">
+                    <img src="../assets/img/perfil.png" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -76,7 +76,7 @@ header("Pragma: no-cache");
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="logout.php">
+                    <a href="../controller/logout.php">
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Cerrar Sesión</span>
                     </a>
@@ -97,7 +97,7 @@ header("Pragma: no-cache");
 
                 <div class="container"> 
                     <div class="centered-div">
-                        <img class="img-prfl" src="img/perfil.png">
+                        <img class="img-prfl" src="../assets/img/perfil.png">
                         <p>Cuenta</p>
                     </div>
                 </div><br>
@@ -112,7 +112,7 @@ header("Pragma: no-cache");
             <div class="contenedor-1">
                 <div class="sub-contenedor-1">
                     <!-- Cambiar nombre -->
-                    <form action="update-settings.php" method="POST">
+                    <form action="../controller/update-settings.php" method="POST">
                         <!-- Cambiar nombre -->
                         <h3>Cambiar nombre: </h3>
                         <div class="input-name">
@@ -187,8 +187,8 @@ header("Pragma: no-cache");
         <p>&copy;<span id="year"></span>  MentalMatters Virtual. Todos los derechos reservados.</p>
     </footer>
     
-    <script src="./js/showYear.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../assets/js/showYear.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

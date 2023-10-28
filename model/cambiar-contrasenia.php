@@ -49,11 +49,11 @@ if (isset($_POST['submitPass'])) {
     $conexion->close();
 
     // Redireccionar al usuario de regreso a la página de configuración
-    header("Location: settings-passwd.php?pass_error_message=" . urlencode($pass_error_message));
+    header("Location: ../view/settings-passwd.php?pass_error_message=" . urlencode($pass_error_message));
     exit();
 } else {
     // Manejo de caso en el que se accede a la página sin haber enviado el formulario
-    header("Location: settings-passwd.php");
+    header("Location: ../view/settings-passwd.php");
     exit();
 }
 ?>
