@@ -1,22 +1,6 @@
-.message {
-    background-color: rgb(182, 68, 68);
-    color: white;
-    border-radius: 5px;
+.pass_error_message {
+    color: #272665;
     font-size: 12pt;
     text-align: center;
-    padding-top: 5px;
-    width: 500px;
-    height: 70px;
-    
 }
 
-.pass_error_message {
-    width: 400px;
-    height: 30px;
-    background-color: rgb(182, 68, 68);
-    color: white;
-    border-radius: 5px;
-    font-size: 12pt;
-    text-align: center;
-    padding-top: 5px;
-}

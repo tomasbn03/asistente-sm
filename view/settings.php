@@ -5,10 +5,11 @@ if (!isset($_SESSION['correo'])) {
     header("Location: login-register.php");
     exit();
 }
+ 
+$usuario = $_SESSION['nombre'];
+$email = $_SESSION['correo'];
+$phone = $_SESSION['telefono'];
 
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,6 +18,7 @@ header("Pragma: no-cache");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
     <link rel="stylesheet" href="../assets/css/forms-settings.css">
+    <link rel="stylesheet" href="../assets/css/forms-display.css">
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/error-message.css">
@@ -104,73 +106,99 @@ header("Pragma: no-cache");
 
             <br><br>
             <input type="file" name="foto_perfil" accept="image/*">
-            <br><br>
+            <br><br><br>
 
             <!-- Filtros para cambiar nombre que aparece en el sistema -->
             
-                
-            <div class="contenedor-1">
-                <div class="sub-contenedor-1">
-                    <!-- Cambiar nombre -->
-                    <form action="../controller/update-settings.php" method="POST">
-                        <!-- Cambiar nombre -->
-                        <h3>Cambiar nombre: </h3>
-                        <div class="input-name">
+            <!-- Formulario para cambiar nombre -->
+            <div class="container-display">
+                <div class="sub-name">
+                        <h3>Cambiar nombre para mostrar:</h3>
+                        <form method="POST" action="../controller/update-name.php">
                             <table>
-                                <tr>
-                                    <td><label for="currentUsername">Nombre de usuario actual:</label></td>
-                                    <td><label for="newUsername">Nuevo nombre de usuario:</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" id="currentUsername" value="<?php echo $_SESSION['nombre']; ?>" name="currentUsername" required></td>
-                                    <td><input type="text" id="newUsername" name="newUsername" ></td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>Nombre actual:</th>
+                                        <th>Nuevo nombre: </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" id="currentName" name="currentName" value="<?php echo $_SESSION['nombre']; ?>" ></td>
+                                        <td><input type="text" id="newName" name="newName"></td>
+                                    </tr>
+                                </tbody>
                             </table>
-                        </div>
-
-                        <!-- Cambiar correo -->
-                        <h3>Cambiar Correo electrónico</h3>
-                        <div class="input-name">
-                            <table>
-                                <tr>
-                                    <td><label for="currentEmail">Correo electrónico actual:</label></td>
-                                    <td><label for="newEmail">Nuevo correo electrónico:</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="email" id="currentEmail" value="<?php echo $_SESSION['correo'] ?>" name="currentEmail" required></td>
-                                    <td><input type="email" id="newEmail" name="newEmail" ></td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <!-- Cambiar número de teléfono -->
-                        <h3>Cambiar número telefónico</h3>
-                        <div class="input-name">
-                            <table>
-                                <tr>
-                                    <td><label for="currentPhone">Número de teléfono actual:</label></td>
-                                    <td><label for="newPhone">Nuevo número de teléfono:</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" id="currentPhone" value="<?php echo $_SESSION['telefono']; ?>" name="currentPhone" required></td>
-                                    <td><input type="text" id="newPhone" name="newPhone" ></td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <input type="submit" name="submitDatos" value="Guardar"><br><br>
-
-                        <!-- Mensajes de error -->
-                        <div class="message">
-                            <?php
-                                if(isset($_GET["message"])){
-                                    echo '<p>'.$_GET['message'].'</p>';
-                                }
-                            ?>
-                        </div>                 
-                    </form>
+                            <button type="submit" name="submitName">Guardar cambios</button>
+                        </form>
                 </div>
-            </div><br>
+                <div class="mensaje">
+                    <!-- Mensaje -->
+                    <?php if(isset($_GET["mensaje_name"])){ ?> <p class="mensaje_name"> <?php echo $_GET['mensaje_name']; ?> </p> <?php } ?>
+                </div>
+            </div>
+<br><br><br>
+            <!-- Formulario para cambiar correo -->
+            <div class="container-display">
+                <div class="sub-email">
+                    <table>
+                        <h3>Cambiar correo:</h3>
+                        <form method="POST" action="../controller/update-email.php">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Correo actual:</th>
+                                        <th>Nuevo correo: </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="email" name="correo" value="<?php echo $_SESSION['correo']; ?>"></td>
+                                        <td><input type="email" name="nuevoCorreo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button type="submit" name="submitEmail">Guardar cambios</button>
+                        </form>
+                    </table>
+                </div>
+                <div class="mensaje">
+                    <!-- Mensaje -->
+                    <?php if(isset($_GET["mensaje_email"])){ ?> <p class="mensaje_email"> <?php echo $_GET['mensaje_email']; ?> </p> <?php } ?>
+                </div>
+            </div>
+<br><br><br>
+            <!-- Formulario para cambiar telefono -->
+            <div class="container-display">
+                <div class="sub-phone">
+                    <table>
+                        <h3>Cambiar número telefónico:</h3>
+                        <form method="POST" action="../controller/update-phone.php">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Número actual:</th>
+                                        <th>Nuevo número: </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" name="currentPhone" value="<?php echo $_SESSION['telefono']; ?>"></td>
+                                        <td><input type="text" name="newPhone"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button type="submit" name="submitPhone">Guardar cambios</button>
+                        </form>
+                    </table>
+                </div>
+                <div class="mensaje">
+                    <!-- Mensaje -->
+                    <?php if(isset($_GET["mensaje_phone"])){ ?> <p class="mensaje_phone"> <?php echo $_GET['mensaje_phone']; ?> </p> <?php } ?>
+                </div>
+            </div>
+
+<br><br><br>
             <p style="font-size: 14pt;">Tambien puedes cambiar tu contraseña</p><br>
             <div class="cmbcnt">
                 <a href="settings-passwd.php" class="button">Cambiar la contraseña</a>

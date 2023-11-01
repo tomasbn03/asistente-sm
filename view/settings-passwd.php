@@ -45,8 +45,8 @@ $usuario = $_SESSION['nombre'];
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="index.php">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Inicio</span>
+                            <i class='bx bx-leaf icon'></i>
+                            <span class="text nav-text">Recursos Bienestar</span>
                         </a>
                     </li>
 
@@ -67,7 +67,7 @@ $usuario = $_SESSION['nombre'];
                     <li class="nav-link">
                         <a href="settings.php">
                             <i class='bx bxs-cog icon'></i>
-                            <span class="text nav-text">Perfil</span>
+                            <span class="text nav-text">Configuraciones</span>
                         </a>
                     </li> 
                 </ul>
@@ -95,7 +95,7 @@ $usuario = $_SESSION['nombre'];
                         <div class="form-group-f">
                                 <div class="currentPass">
                                     <label for="currentPassword">Contraseña actual:</label> <br> <br>
-                                    <input type="password" id="currentPassword" value="<?php echo $pass ?>" name="currentPassword" required>
+                                    <input type="password" id="currentPassword" value="<?php echo $_SESSION['contrasenia']; ?>" name="currentPassword" required>
                                 </div>
                             </div>
                             <div class="form-group">

@@ -56,10 +56,8 @@
         <div class="form-container sign-up-container">
             <form method="POST" action="../controller/registro.php">
                 <h1>Crear cuenta</h1><br>
-                <!--  -->
-                    
-                
-                <span></span>
+               
+                           
                 <input type="text" name="nombre" placeholder="Nombre / Apellido" required/>
                 <input type="text" name="usuario" placeholder="Usuario" />
                 <input type="email" name="correo" placeholder="Correo electronico" required/>

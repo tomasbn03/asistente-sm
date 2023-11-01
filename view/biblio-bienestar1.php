@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['correo'])) { // Cambia 'correo' al nombre de la variable de sesión que utilizas para el inicio de sesión
+if (!isset($_SESSION['correo'])) { 
     header("Location: login-register.php");
     exit();
 }

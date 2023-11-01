@@ -4,34 +4,36 @@ table {
 }
 
 input[type="text"] {
-    width: 250px;
-    height: 30px;
+    width: 260px;
+    height: 35px;
     border-radius: 3px; 
-    outline: none;
-    border: solid 1px;
+    outline-color: #272665;
+    border: none;
+    font-weight: bolder;
 }
 
 input[type="password"] {
-    width: 250px;
-    height: 30px;
+    width: 260px;
+    height: 35px;
     border-radius: 3px;
-    outline: none;
-    border: solid 1px;
+    outline-color: #272665;
+    border: none;
 }
 
 input[type="email"] {
-    width: 250px;
-    height: 30px;
+    width: 260px;
+    height: 35px;
     border-radius: 3px;
-    outline: none;
-    border: solid 1px;
+    outline-color: #272665;
+    border: none;
+    font-weight: bolder;
 }
 
 input[type="submit"]{
     width: 90px;
     height: 30px;
     border-radius: 3px;
-    background-color: #282C34;
+    background-color: #272665;
     color: white;
     border-style: none;
     font-weight: bolder;
@@ -61,22 +63,13 @@ h3 {
     margin-left: 30px;
 }
 
-.contenedor-1 {
-    background-color: #B9CFE9;
-    width: 700px;
-    height: 800px;
-    display: block;
-    margin: 0;
-    border-radius: 10px;
-}
-
 .sub-contenedor-1 {
     padding: 20px;
 }
 
 
 .contenedor-2 {
-    background-color: #B9CFE9;
+    background-color: #D2E7FF;
     width: 700px;
     height: 500px;
     display: block;
@@ -91,12 +84,8 @@ h3 {
 .cmbcnt {
     width: 300px;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: right;
-    margin-top: -55px;
-    margin-right: 490px;
+   
+    
 }
 
 .button {
@@ -109,4 +98,8 @@ h3 {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+label {
+    color: #272665;
 }

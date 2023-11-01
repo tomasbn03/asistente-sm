@@ -1,0 +1,47 @@
+button {
+    background-color: #272665;
+    color: white;
+    width: 150px;
+    height: 35px;
+    border-style: none;
+    margin-left: 40px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.container-display {
+    background-color: #D2E7FF;
+    height: 300px;
+    border-radius: 10px;
+    width: 1100px;
+}
+
+.mensaje {
+    width: 250px;
+    height: 30px;
+    padding: 3px 10px;
+    float: right;
+    margin-top: -150px;
+    margin-right: 40px;
+    color: #272665;
+    font-size: 12pt;
+    border-radius: 5px;
+    
+}
+
+.container-display .sub-name{
+    padding: 20px 40px;
+}
+
+.container-display .sub-email{
+    padding: 20px 40px;
+}
+
+.container-display .sub-phone{
+    padding: 20px 40px;
+}
+
+thead {
+    color: #272665;
+}
+
