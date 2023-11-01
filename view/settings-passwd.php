@@ -88,7 +88,7 @@ $usuario = $_SESSION['nombre'];
             <h2>En este apartado puedes actualizar tu contraseña <?php echo $_SESSION['nombre']; ?></h2><br>
             
             <!-- Filtro para cambiar la contraseña -->
-            <form action="../model/cambiar-contrasenia.php" method="POST">
+            <form action="../controller/cambiar-contrasenia.php" method="POST">
                     <div class="contenedor-2">
                         <div class="sub-contenedor-2">
                         <h3>Cambiar contraseña:</h3><br> <br>

@@ -3,7 +3,7 @@ session_start(); // Asegúrate de haber iniciado la sesión
 
 $usuario = $_SESSION['nombre'];
 
-include 'db.php';
+include '../model/db.php';
 
 if (isset($_POST['submitPass'])) {
     $currentPassword = $_POST['currentPassword'];
