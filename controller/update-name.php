@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $currentName = trim($_POST['currentName']);
     $newName = trim($_POST['newName']);
 
+    // Verificar si el nombre actual coincide con el nombre en sesión
     if ($_SESSION['nombre'] === $usuario) {
         $query = "SELECT nombre FROM usuarios WHERE nombre = ?";
         $stmt = $conexion->prepare($query);
@@ -47,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->close();
     $conexion->close();
 
+     // Redireccionar al usuario de regreso a la página de configuración
     header("Location: ../view/settings.php?mensaje_name=" . urlencode($mensaje_name));
     exit();
 } else {

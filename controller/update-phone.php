@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-$usuarioTelefono = $_SESSION['telefono']; // Asegúrate de tener el número de teléfono guardado en la sesión
+$usuarioTelefono = $_SESSION['telefono']; 
 
-include '../model/db.php'; // Asegúrate de tener este archivo y que la conexión esté bien configurada
+include '../model/db.php'; 
 
 $mensaje_phone = "";
 
@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submitPhone'])) {
     $stmt->close();
     $conexion->close();
 
+    // Redireccionar al usuario de regreso a la página de configuración
     header("Location: ../view/settings.php?mensaje_phone=" . urlencode($mensaje_phone));
     exit();
 } else {

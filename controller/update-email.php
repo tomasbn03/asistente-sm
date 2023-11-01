@@ -5,7 +5,7 @@ $usuarioCorreo = $_SESSION['correo'];
 
 $mensaje_email = "";
 
-include '../model/db.php'; // Asegúrate de tener este archivo y que la conexión esté bien configurada
+include '../model/db.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submitEmail'])) {
     $currentEmail = trim($_POST['correo']);

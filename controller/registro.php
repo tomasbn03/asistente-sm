@@ -17,7 +17,7 @@
         exit();
     }
 
-    // Validate username
+    // Valida el nombre del usuario
     $verify_user = mysqli_query($conexion, "SELECT * FROM usuarios WHERE LOWER(usuario) = LOWER('$usuario')");
     if(mysqli_num_rows($verify_user) > 0 ){
         $error_message = "El nombre de usuario con el que intentas registrarte ya está en uso, intenta con otro";
@@ -26,7 +26,7 @@
         exit();
     }
 
-    // Validate email
+    // Valida el correo del usuario
     $verify_email = mysqli_query($conexion, "SELECT * FROM usuarios WHERE LOWER(correo) = LOWER('$correo')");
     if(mysqli_num_rows($verify_email) > 0 ){
         $error_message = "El correo con el que intentas registrarte ya está en uso, intenta con otro";
@@ -36,7 +36,7 @@
     }
 
 
-    // Validate password
+    // Valida la contraseña del usuario
     $verify_pass = mysqli_query($conexion, "SELECT * FROM usuarios WHERE contrasenia = '$pass'");
     if(mysqli_num_rows($verify_pass) > 0){
         $error_message = "La contraseña con la que intentas registrarte ya está en uso, intenta con otra";
