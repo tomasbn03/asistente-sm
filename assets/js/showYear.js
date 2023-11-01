@@ -11,8 +11,10 @@ function actualizarAnio() {
     anioElemento.textContent = anio;
 }
 
+
 // Actualizar el año una vez al cargar la página
 actualizarAnio();
+
 
 // Actualizar el año cada segundo (1000 milisegundos)
 setInterval(actualizarAnio, 1000);

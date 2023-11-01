@@ -22,8 +22,6 @@ $phone = $_SESSION['telefono'];
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/error-message.css">
-   
-    
 </head>
 <title>Sistema de Salud Mental</title>
 <body>

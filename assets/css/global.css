@@ -190,27 +190,25 @@ main p {
     text-align: justify;   
     
 }
-/* Estilos para el footer */
+
 footer {
-    background-color: #4C85A0; /* Color azul pastel */
-    color: #fff; /* Color de texto en el footer */
+    background-color: #4C85A0; 
+    color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
-/* Estilos para el contenido del footer */
 .footer-content {
-    max-width: 1200px; /* Ancho máximo del contenido del footer */
-    margin: 0 auto; /* Centrar el contenido horizontalmente */
-    display: flex; /* Usa un diseño de caja flexible para organizar el contenido en una fila */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben en una sola fila */
-    justify-content: space-between; /* Espacia los elementos uniformemente en la fila */
-    align-items: center; /* Centra verticalmente los elementos en la fila */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
-/* Estilos para el logo en el footer */
 .footer-logo img {
-    max-width: 200px; /* Establece el ancho máximo del logo */
+    max-width: 200px; 
     float: left;
     margin-right: 30px;
     width: 170px;
@@ -218,26 +216,25 @@ footer {
     
 }
 
-/* Estilos para la información en el footer */
 .footer-info {
-    flex: 1; /* Ocupa todo el espacio disponible en la fila */
-    text-align: left; /* Alinea el texto a la izquierda */
+    flex: 1; 
+    text-align: left; 
     font-size: 11pt;
 }
 
-/* Estilos para los enlaces en el footer */
+
 .footer-links ul {
-    list-style: none; /* Elimina los puntos de lista */
-    padding: 0; /* Elimina el relleno del ul */
+    list-style: none; 
+    padding: 0; 
 }
 
 .footer-links ul li {
-    margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+    margin-bottom: 5px; 
 }
 
-/* Estilos para el copyright en el footer */
+
 .footer-copyright {
-    margin-top: 20px; /* Espaciado superior */
+    margin-top: 20px; 
 }
 
 .intro-text {
@@ -259,4 +256,3 @@ footer {
 .sub-intro-text p{
     text-align: justify;
 }
-

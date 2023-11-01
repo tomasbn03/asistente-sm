@@ -74,8 +74,6 @@ footer {
     transition: transform 0.3s,
 }
 
-
-
 .fondo:hover {
     transform: scale(1.05); 
     background-color: #B9CFE9;
@@ -210,4 +208,3 @@ footer {
     95% { opacity: 1 ;}  
     100% { opacity: 0; }
 }
-

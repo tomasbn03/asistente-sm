@@ -8,7 +8,6 @@ if (!isset($_SESSION['correo'])) {
 
 $pass = $_SESSION['contrasenia'];
 $usuario = $_SESSION['nombre'];
-
 ?>
 
 <!DOCTYPE html>

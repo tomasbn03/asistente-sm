@@ -8,7 +8,6 @@ if (!isset($_SESSION['correo'])) {
 
 $usuario = $_SESSION['nombre'];
 $correo = $_SESSION['correo'];
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -13,8 +13,7 @@
             <li class="navitem"><a href="about.html">Acerca de</a></li>
             <li class="navitem"><a href="services.html">Servicios</a></li>
         </ul>
-    </nav>
-    
+    </nav> 
     <div class="container" id="container">
         <!-- Formulario de logeo -->
         <div class="form-container sign-in-container">

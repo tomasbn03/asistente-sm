@@ -161,7 +161,6 @@ $correo = $_SESSION['correo'];
             
             
         </div><br><br><br>
-    
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>

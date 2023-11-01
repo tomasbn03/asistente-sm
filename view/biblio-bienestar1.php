@@ -5,7 +5,6 @@ if (!isset($_SESSION['correo'])) {
     header("Location: login-register.php");
     exit();
 }
-
 ?>
 
 <!DOCTYPE html>
