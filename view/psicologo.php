@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\map;
+
 session_start();
 
 if (!isset($_SESSION['correo'])) { 
@@ -8,6 +11,8 @@ if (!isset($_SESSION['correo'])) {
 
 $usuario = $_SESSION['nombre'];
 $correo = $_SESSION['correo'];
+include '../model/db.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -18,6 +23,7 @@ $correo = $_SESSION['correo'];
     <link rel="stylesheet" href="../assets/css/botones-ca.css">
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/psicologo.css">
 </head>
 <title>Sistema de Salud Mental</title>
 <body>
@@ -103,11 +109,84 @@ $correo = $_SESSION['correo'];
         </div>
     </div>
 
+    <?php
+        $sql = 'SELECT id_psicol, nombre, apellido, correo, telefono FROM psicologos';
+        $stmt = mysqli_query($conexion, $sql);
+
+        echo '<div class="cards-wrapper">';
+
+        while ($row = $stmt->fetch_assoc()) {
+            $id = htmlspecialchars($row['id_psicol']);
+            $nombreCompleto = htmlspecialchars($row['nombre'] . " " . $row['apellido']);
+            $correo = htmlspecialchars($row['correo']);
+            $telefono = htmlspecialchars($row['telefono']);
+
+            $fotoRandom = '../assets/imgs-psicol/' . rand(1, 10) . '.jpg';
+            $fondoRandom = '../assets/imgs-psicol/' . rand(11, 13) . '.jpg';
+
+            $info = <<<EOT
+            <div class="card" data-id="$id" onclick="openModal(this)">
+                <div class="card-header">
+                    <img src="$fondoRandom" alt="Paisaje" class="background-image">
+                    <div class="profile-pic-container">
+                        <img src="$fotoRandom" alt="Foto random para $nombreCompleto" class="profile-image">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h4><b>$nombreCompleto</b></h4>
+                    <p><a href="mailto:$correo">$correo</a></p>
+                    <p>$telefono</p>
+                </div>
+            </div>
+            EOT;
+
+            $modal = <<<EOT
+            <div id="myModal" class="modal">
+                <!-- Contenido del modal -->
+                <div class="modal-content">
+                    <span class="close" id="close">&times;</span>
+                    <div class="modal-body">
+                    $info
+                    </div>
+                </div>
+            </div>
+            EOT;
+
+            echo $modal;
+            echo $info;
+        }
+
+        echo '</div>';
+    ?>
     
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script>
+        function openModal(card) {
+            const modal = document.getElementById("myModal");
+            const span = document.getElementById("close");
+
+            modal.style.display = "block";
+
+            span.addEventListener("click", closeModal);
+            span.onclick = function() {
+                closeModal();
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
