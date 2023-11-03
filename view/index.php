@@ -81,7 +81,9 @@ $correo = $_SESSION['correo'];
             </div>
         </div>
     </nav>
-    <img src="../assets/img/portada.png" id="portada">
+    <div class="backgraund-portada">
+        <img src="../assets/img/portada.png" id="portada">
+    </div>
     <!-- Seccion principal para la página de acceder a recursos de bienestar -->
     
     
@@ -91,9 +93,14 @@ $correo = $_SESSION['correo'];
                 <div class="sub-cont-text">
                         <div class="contextu">
                             <h3>Bienvenido/a a MentalMatters Virtual <?php echo $usuario ?></h3>
-                            <p>En este mundo, encontrarás un espacio seguro y acogedor donde tu salud mental es nuestra prioridad. 
-                            Explora nuestra biblioteca de recursos, participa en cursos de desarrollo personal, y descubre ejercicios 
-                            de relajación que te ayudarán a encontrar la paz interior.</p>
+                            <p>Bienvenido/a a MentalMatters Virtual, Tomas Bonilla. Has llegado a un refugio digital 
+                                especialmente diseñado para quienes buscan equilibrio y bienestar en su vida diaria. 
+                                En este mundo, encontrarás un espacio seguro y acogedor donde tu salud mental es nuestra 
+                                prioridad. No solo es un sitio para aprender y crecer, sino también un rincón donde te 
+                                sentirás entendido y apoyado. Explora nuestra amplia biblioteca de recursos, participa 
+                                en cursos de desarrollo personal diseñados por expertos, y descubre ejercicios de 
+                                relajación que te ayudarán a encontrar la paz interior. Tu bienestar es nuestro
+                                principal objetivo.</p>
                         </div>
                 </div>
             </div><br>
@@ -101,9 +108,11 @@ $correo = $_SESSION['correo'];
                         <div class="sub-cont-text">
                             <div class="contextu">
                                 <h3>Biblioteca de Bienestar</h3>
-                                <p>Explora nuestra colección cuidadosamente seleccionada de recursos diseñados para promover tu bienestar 
-                                físico, mental y emocional. Desde guías prácticas hasta meditaciones guiadas, cada recurso es una 
-                                herramienta para ayudarte a encontrar equilibrio y serenidad en tu vida diaria.</p>
+                                <p>Descubre nuestra selección especializada de recursos, elegidos pensando en ti y en tu 
+                                    bienestar integral. Con una combinación de conocimientos científicos y técnicas prácticas, 
+                                    nuestra colección abarca desde guías detalladas hasta meditaciones envolventes. Cada 
+                                    lemento ha sido diseñado como una herramienta personalizada para cultivar equilibrio, 
+                                    armonía y paz en tu rutina cotidiana.</p>
                             </div>
                         </div>
             </div><br>
@@ -129,7 +138,6 @@ $correo = $_SESSION['correo'];
                 </div><br>
 
 
-
                 <div class="fondo">
                     <div class="cont2">
                         <h3>Meditación Guiada para la Relajación Profunda</h3>
@@ -148,7 +156,7 @@ $correo = $_SESSION['correo'];
                                 Esta guía te ofrece herramientas prácticas para identificar las fuentes 
                                 de estrés y técnicas efectivas para mitigar sus efectos. Descubre un camino
                                 hacia un estilo de vida equilibrado y empoderado. </span><br>
-                                <a href="biblio-bienestar3.php" class="boton-animado">Acceder</a>
+                                <a href="biblio-bienestar3.php" class="boton-animado-a">Acceder</a>
                     </div>
                 </div><br>
                  <br>
@@ -157,7 +165,49 @@ $correo = $_SESSION['correo'];
                     <p class="carousel-quote" id="quote2">El abrazo del alma es aquel que nos reconforta en los momentos de oscuridad y nos recuerda que no estamos solos</p>
                     <p class="carousel-quote" id="quote3">La salud de nuestra mente es el reflejo de cómo nutrimos nuestra esencia y nuestro espíritu</p>
                 </div>
-            </div><br><br><br><br>
+            </div><br><br><br>  
+            
+            <div class="forum-container">
+                <h2>Foros Alterno Recomendados</h2>
+                <p>Descubre y participa en foros externos que recomendamos para enriquecer tu camino hacia el bienestar.</p> <br> <br>
+
+                <!-- Foro 1 -->
+                <div class="forum-item">
+                    <img src="../assets/img/valores.png" alt="Logo del foro" class="forum-logo">
+                    <div class="forum-description">
+                        <h3>Nombre del Foro</h3>
+                        <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
+                        <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
+                    </div>
+                    <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
+                </div><br>
+
+                <!-- Foro 2 -->
+                <div class="forum-item">
+                    <img src="../assets/img/investigacion.png" alt="Logo del foro" class="forum-logo">
+                    <div class="forum-description">
+                        <h3>Nombre del Foro</h3>
+                        <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
+                        <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
+                    </div>
+                    <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
+                </div><br>
+
+                <!-- Foro 3 -->
+                <div class="forum-item">
+                    <img src="../assets/img/investigacion.png" alt="Logo del foro" class="forum-logo">
+                    <div class="forum-description">
+                        <h3>Nombre del Foro</h3>
+                        <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
+                        <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
+                    </div>
+                    <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
+                </div><br>
+                
+                <p><strong>Nota:</strong> Aunque estos foros son recomendados, no tenemos control sobre su contenido. Ejerce juicio propio y consulta a un profesional en caso de necesitar asistencia.</p>
+            </div> 
+
+<br><br><br>
 
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
