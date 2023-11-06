@@ -29,7 +29,7 @@ $correo = $_SESSION['correo'];
 
                 <div class="text logo-text">
                     <span class="name"></span>
-                    <span class="profession"><?php echo $usuario; ?></span>
+                    <span class="profession"><?php echo $_SESSION['nombre']; ?></span>
                 </div>
             </div>
             <i class='bx bx-chevron-right toggle'></i>
@@ -83,8 +83,11 @@ $correo = $_SESSION['correo'];
             </div>
         </div>
     </nav>
-    <img src="../assets/img/portada.png" id="portada">
-        <div class="cont-text">
+    <div class="backgraund-portada">
+        <img src="../assets/img/portada.png" id="portada">
+    </div>
+    
+    <div class="cont-text">
         <h1>Guía Completa para el Manejo del Estrés Diario</h1><br>
             <div class="biblio-text">
                 <h3>Introducción al estrés y su impacto en la salud mental</h3>

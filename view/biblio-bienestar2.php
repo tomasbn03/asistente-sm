@@ -83,8 +83,9 @@ $correo = $_SESSION['correo'];
             </div>
         </div>
     </nav>
-    <img src="../assets/img/portada.png" id="portada">
-
+    <div class="backgraund-portada">
+        <img src="../assets/img/portada.png" id="portada">
+    </div>
         <div class="cont-text">
         <h1>Meditación Guiada para la Relajación Profunda</h1><br>
             <div class="biblio-text">

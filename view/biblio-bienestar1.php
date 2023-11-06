@@ -4,6 +4,9 @@ session_start();
 if (!isset($_SESSION['correo'])) { 
     header("Location: login-register.php");
     exit();
+$usuario = $_SESSION['nombre'];
+$correo = $_SESSION['correo'];
+
 }
 ?>
 
@@ -28,7 +31,7 @@ if (!isset($_SESSION['correo'])) {
 
                 <div class="text logo-text">
                     <span class="name"></span>
-                    <span class="profession"><?php echo $usuario; ?></span>
+                    <span class="profession"><?php echo $_SESSION['nombre']; ?></span>
                 </div>
             </div>
             <i class='bx bx-chevron-right toggle'></i>
@@ -82,91 +85,79 @@ if (!isset($_SESSION['correo'])) {
             </div>
         </div>
     </nav>
-    <img src="../assets/img/portada.png" id="portada">
+    <div class="backgraund-portada">
+        <img src="../assets/img/portada.png" id="portada">
+    </div>
 
     
         <div class="cont-text">
-        <h1>¿Cómo Gestionar el Estrés en el Trabajo?</h1><br>
-            <div class="biblio-text">
-                    <h3>Introducción al estrés en el trabajo.</h3>
-                    <p>El estrés laboral es una de las principales causas de problemas de salud 
-                        entre los profesionales de hoy debido a la creciente complejidad y ritmo 
-                        acelerado de las tareas en el entorno laboral moderno. El mundo laboral 
-                        actual está plagado de expectativas cambiantes, tecnología en constante 
-                        evolución y demandas de multitarea. Aunque impulsa la innovación y el 
-                        crecimiento, ha elevado los niveles de estrés. Sin embargo, con una 
-                        comprensión adecuada y estrategias efectivas, es posible mantener un 
-                        estado mental saludable.</p> <br>
-            </div><br>
+            <div class="infografia">
+                <h1>Manejo del Estrés Diario</h1><br><br>
+                
+                <section class="info-section">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dswLKHhocxk?si=zf1jqx6U_yWYOg39" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br>
+                    <div class="img-e">
+                        <img src="../assets/img-biblio/pensando-demasiado.png" alt="Imagen relacionada">    
+                    </div><br><br>
+                    <div class="info-content">
+                    <h2>Introducción al estrés</h2> <br>
+                    <h4>Entendiendo Nuestro Mecanismo de Alerta</h4>
+                    <p>El estrés, a menudo malentendido, es una 
+                    compleja respuesta biológica diseñada para 
+                    ayudarnos a enfrentar situaciones exigentes 
+                    o peligrosas. Es nuestro mecanismo de alerta,
+                    una señal que prepara al cuerpo para "luchar
+                    o huir".</p> <br>
+                    <ul>
+                        <li>
+                            <b>Estrés Agudo:</b><p>Es una respuesta inmediata 
+                            a un desafío o amenaza, como un frenazo brusco
+                            en el tráfico o una presentación importante. 
+                            Esta reacción puede aumentar nuestra capacidad 
+                            de concentración y reacción, siendo en ocasiones
+                            beneficioso.</p>
+                        </li> <br>
+                        <li>
+                            <b>Estrés Crónico:</b><p>Surge cuando estas respuestas agudas 
+                            se activan repetidamente o persisten en el tiempo, 
+                            como enfrentar problemas constantes en el trabajo o 
+                            una relación difícil. A largo plazo, este tipo de 
+                            estrés puede afectar nuestra salud mental y física, 
+                            llevando a problemas como ansiedad, depresión, y 
+                            otras enfermedades.</p>
+                        </li>
+                    </ul><br>
+                    <p>Es esencial diferenciar entre estas dos respuestas 
+                    para identificar cuándo el estrés se convierte en un 
+                    problema y cuándo actúa como un aliado. En nuestra vida 
+                    moderna, donde las amenazas ya no son depredadores sino 
+                    preocupaciones diarias, es vital aprender a gestionar el 
+                    estrés de manera efectiva.</p>
+                    </div>
+                </section>
+                <hr>
+                <br><br>
+                <section class="info-section">
+                    <img src="" alt="Imagen relacionada">
+                    <div class="info-content">
+                    <h2>Fuentes de estrés</h2>                    
+                    <p>Identificar las fuentes de estrés es crucial... </p>
+                    </div>
+                </section>
+                <br><br>
+                <section class="info-section">
+                    <img src="path_to_image3.jpg" alt="Imagen relacionada">
+                    <div class="info-content">
+                    <h2>Técnicas de relajación</h2>
+                    <p>La respiración profunda y la meditación son...</p>
+                    </div>
+                </section>
 
-            <div class="biblio-text">
-                    <h3>Consejos para identificar y reducir el estrés:</h3>
-                        <ul>
-                            <li>
-                                <p><b>Reflexiona sobre tus emociones:</b><br> Evalúa cómo te sientes respecto a tu trabajo.
-                                Estas reflexiones pueden ayudarte a identificar fuentes ocultas de estrés.</p>
-                            </li><br>
-                            <li>
-                                <b>Optimiza tu ambiente de trabajo:</b><br> Un espacio adecuadamente iluminado y ergonómico reduce el estrés.
-                            </li><br>
-                            <li>
-                                <b>stablece expectativas claras:</b><br> Asegúrate de que comprendes lo que se espera de ti y viceversa.
-                            </li><br>
-                            <li>
-                                <b>Busca capacitaciones y cursos:</b><br> La formación continua puede aliviar la sensación de incompetencia.
-                            </li><br>
-                            <li>
-                                <b>Utiliza la tecnología a tu favor:</b><br> Aplicaciones como *Moodpath* o *Daylio* pueden ayudarte a 
-                                rastrear tu bienestar.
-                            </li><br>
-                            <li>
-                                <b>Mantén tu espacio organizado:</b><br> Un entorno ordenado reduce la sensación de caos.
-                            </li><br>
-                            <li>
-                                <b>Evita el multitasking:</b><br>    Enfócate en una tarea a la vez para mantener la calidad del trabajo.
-                            </li><br>
-                        </ul>
-            </div><br><br>
-            
+                <!-- Puedes continuar con más secciones según sea necesario -->
+            </div>
 
-            <div class="biblio-text">
-                    <h3>Ejercicios de respiración y relajación.</h3>
-                        <ul>
-                            <li>
-                                <b>Agrupa tareas similares:</b><br> Realiza tareas similares juntas para aprovechar el flujo de trabajo.
-                            </li><br>
-                            <li>
-                                <b> Establece recompensas:</b><br> Date un pequeño descanso después de completar tareas intensas.
-                            </li><br>
-                            <li>
-                                <b>Delega cuando sea necesario:</b><br> Concentra tu atención en las tareas críticas.
-                            </li><br>
-                            <li>
-                                <b>Usa la regla del 2 minutos:</b><br> Si una tarea te llevará menos de dos minutos, hazla inmediatamente.
-                            </li><br>
-                        </ul>
-            </div><br>
-        
-            <div class="biblio-text">
-                    <h3>Recursos adicionales.</h3>
-                        <ul>
-                            <li>
-                                <p>[The Muse](<a href="https://www.themuse.com/advice">https://www.themuse.com/advice</a>) : <br>Artículos y recursos sobre bienestar en el trabajo.</p>
-                            </li><br>
-                            <li>
-                                <p>[Insight Timer](<a href="https://insighttimer.com/">https://insighttimer.com/</a>): <br>Meditaciones guiadas gratuitas.</p>
-                            </li><br>
-                            <li>
-                                [RescueTime](<a href="https://www.rescuetime.com/">https://www.rescuetime.com/</a>): <br>Herramienta para mejorar la productividad.
-                            </li><br>
-                            <li>
-                                [Workplace Strategies for Mental Health](<a href="https://www.workplacestrategiesformentalhealth.com/">https://www.workplacestrategiesformentalhealth.com/</a>): Herramientas y recursos para el bienestar mental.
-                            </li><br>
-                            <li>
-                                [TED Talks on Work-Life Balance](<a href="https://www.ted.com/topics/work-life+balance">https://www.ted.com/topics/work-life+balance</a>): <br>Charlas inspiradoras sobre equilibrio entre trabajo y vida personal.
-                            </li><br>
-                        </ul>
-            </div><br>
         </div><br><br>
     
 

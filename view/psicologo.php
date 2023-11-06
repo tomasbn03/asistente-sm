@@ -97,20 +97,9 @@ include '../model/db.php';
 
     <div class="cont-text">
         <h1>Holaaa</h1>
-        <p>Bienvenido a la página de contacto psicologico, este es un texto de prueba temporal.</p>
-
-        <div class="botones-ca">
-            <div class="contacto-u">
-                <a href="">
-                    <span>Contacto Urgente</span>
-                </a>
-            </div>
-            <div class="programar-s">
-                <a href="">
-                    <span>Programar Sesión</span>
-                </a>
-            </div>
-        </div>
+            <p>Bienvenido a la página de contacto psicologico, este es un texto de prueba temporal.</p>
+        
+        
     </div>
 
     <?php

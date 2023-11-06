@@ -1,6 +1,6 @@
 .biblio-text {
     width: 900px;
-    text-align: justify ;
+    
 }
 ul li {
     list-style-type: none;
@@ -8,3 +8,46 @@ ul li {
     margin: 0;
     padding: 0;
 }
+
+iframe{
+    width:  450px;
+    height: 250px;
+}
+
+.infografia {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    max-width: 900px;
+    margin: 20px auto;
+  }
+  
+  .info-section {
+    display: flex;
+    flex-direction: column; /* Esto asegura que el contenido esté en dirección vertical */
+    text-align: justify ;
+    margin-bottom: 20px;
+  }
+  
+  .info-section img {
+    max-width: 200px; /* Ajusta según necesites */
+    margin-bottom: 20px;
+  }
+
+  .img-e {
+    margin-left: 570px;
+    margin-top: -260px;
+  }
+  
+  
+  .info-section h2 {
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  .info-section p {
+    margin: 10px 0 0;
+    color: #7f8c8d;
+  }
+  
