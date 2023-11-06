@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2023 at 03:25 AM
+-- Generation Time: Nov 06, 2023 at 04:47 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -32,24 +32,25 @@ CREATE TABLE `psicologos` (
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
   `correo` varchar(255) NOT NULL,
-  `telefono` varchar(255) NOT NULL
+  `telefono` varchar(255) NOT NULL,
+  `cita` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `psicologos`
 --
 
-INSERT INTO `psicologos` (`id_psicol`, `nombre`, `apellido`, `correo`, `telefono`) VALUES
-(1, 'Ana', 'Morales', 'ana.morales@example.com', '+503700112233'),
-(2, 'Carlos', 'Quintanilla', 'carlos.quintanilla@example.com', '+503700223344'),
-(3, 'Luisa', 'Martínez', 'luisa.martinez@example.com', '+503700334455'),
-(4, 'Mario', 'Ramírez', 'mario.ramirez@example.com', '+503700445566'),
-(5, 'Patricia', 'Hernández', 'patricia.hernandez@example.com', '+503700556677'),
-(6, 'Jorge', 'González', 'jorge.gonzalez@example.com', '+503700667788'),
-(7, 'Carmen', 'Reyes', 'carmen.reyes@example.com', '+503700778899'),
-(8, 'Oscar', 'Navarro', 'oscar.navarro@example.com', '+503700889900'),
-(9, 'Sofía', 'López', 'sofia.lopez@example.com', '+503700990011'),
-(10, 'Ricardo', 'Mejía', 'ricardo.mejia@example.com', '+503700001122');
+INSERT INTO `psicologos` (`id_psicol`, `nombre`, `apellido`, `correo`, `telefono`, `cita`) VALUES
+(1, 'Alejandro', 'Serrano', 'alejandro.serrano@email.com', '1234567890', 'La mente es como un paracaídas, solo funciona si se abre.'),
+(2, 'Isabela', 'Márquez', 'isabela.marquez@email.com', '1234567891', 'La comprensión es el primer paso hacia la aceptación, y solo con la aceptación puede haber recuperación.'),
+(3, 'Carlos', 'Gutiérrez', 'carlos.gutierrez@email.com', '1234567892', 'La felicidad no es algo hecho. Proviene de tus propias acciones.'),
+(4, 'Laura', 'Jiménez', 'laura.jimenez@email.com', '1234567893', 'No somos lo que pensamos, sino lo que creemos que podemos ser.'),
+(5, 'Roberto', 'Álvarez', 'roberto.alvarez@email.com', '1234567894', 'Cada día de nuestra vida hacemos depósitos en los bancos de memoria de nuestros hijos.'),
+(6, 'Camila', 'Fernández', 'camila.fernandez@email.com', '1234567895', 'La mente es como un libro; escrita en capítulos, contando historias de vida.'),
+(7, 'Santiago', 'Ramírez', 'santiago.ramirez@email.com', '1234567896', 'El cambio es el final resultante de todo verdadero aprendizaje.'),
+(8, 'Gabriela', 'Vázquez', 'gabriela.vazquez@email.com', '1234567897', 'El autoconocimiento nos lleva a la autotransformación.'),
+(9, 'Enrique', 'Lozano', 'enrique.lozano@email.com', '1234567898', 'En el juego de la vida, la mente es nuestro campo de entrenamiento.'),
+(10, 'Valeria', 'Torres', 'valeria.torres@email.com', '1234567899', 'El diálogo interno que mantenemos moldea nuestra percepción del mundo.');
 
 -- --------------------------------------------------------
 
@@ -84,12 +85,6 @@ INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `correo`, `contrasenia`, `tel
 --
 
 --
--- Indexes for table `psicologos`
---
-ALTER TABLE `psicologos`
-  ADD PRIMARY KEY (`id_psicol`);
-
---
 -- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -98,12 +93,6 @@ ALTER TABLE `usuarios`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `psicologos`
---
-ALTER TABLE `psicologos`
-  MODIFY `id_psicol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `usuarios`

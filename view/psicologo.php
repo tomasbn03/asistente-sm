@@ -1,10 +1,10 @@
-<?php
+ <?php
 
 use function PHPSTORM_META\map;
 
 session_start();
 
-if (!isset($_SESSION['correo'])) { 
+if (!isset($_SESSION['correo'])) {
     header("Location: login-register.php");
     exit();
 }
@@ -16,6 +16,7 @@ include '../model/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,10 +25,13 @@ include '../model/db.php';
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/psicologo.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
 </head>
 <title>Sistema de Salud Mental</title>
+
 <body>
-<nav class="sidebar close">
+    <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
@@ -55,7 +59,7 @@ include '../model/db.php';
 
                     <li class="nav-link">
                         <a href="psicologo.php">
-                            <i class='bx bx-group icon' ></i>
+                            <i class='bx bx-group icon'></i>
                             <span class="text nav-text">Psicologo</span>
                         </a>
                     </li>
@@ -74,14 +78,14 @@ include '../model/db.php';
                         </a>
                     </li>
 
-                    
+
                 </ul>
             </div>
 
             <div class="bottom-content">
                 <li class="">
                     <a href="../controller/logout.php">
-                        <i class='bx bx-log-out icon' ></i>
+                        <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Cerrar Sesión</span>
                     </a>
                 </li>
@@ -90,7 +94,7 @@ include '../model/db.php';
         </div>
     </nav>
 
-    
+
     <div class="cont-text">
         <h1>Holaaa</h1>
             <p>Bienvenido a la página de contacto psicologico, este es un texto de prueba temporal.</p>
@@ -99,22 +103,22 @@ include '../model/db.php';
     </div>
 
     <?php
-        $sql = 'SELECT id_psicol, nombre, apellido, correo, telefono FROM psicologos';
-        $stmt = mysqli_query($conexion, $sql);
+    $sql = 'SELECT id_psicol, nombre, apellido, correo, telefono, cita FROM psicologos';
+    $stmt = mysqli_query($conexion, $sql);
 
-        echo '<div class="cards-wrapper">';
+    echo '<div class="cards-wrapper">';
 
-        while ($row = $stmt->fetch_assoc()) {
-            $id = htmlspecialchars($row['id_psicol']);
-            $nombreCompleto = htmlspecialchars($row['nombre'] . " " . $row['apellido']);
-            $correo = htmlspecialchars($row['correo']);
-            $telefono = htmlspecialchars($row['telefono']);
+    while ($row = $stmt->fetch_assoc()) {
+        $id = htmlspecialchars($row['id_psicol']);
+        $nombreCompleto = htmlspecialchars($row['nombre'] . " " . $row['apellido']);
+        $correo = htmlspecialchars($row['correo']);
+        $telefono = htmlspecialchars($row['telefono']);
 
-            $fotoRandom = '../assets/imgs-psicol/' . rand(1, 10) . '.jpg';
-            $fondoRandom = '../assets/imgs-psicol/' . rand(11, 13) . '.jpg';
+        $fotoRandom = '../assets/imgs-psicol/' . rand(1, 10) . '.jpg';
+        $fondoRandom = '../assets/imgs-psicol/' . rand(11, 13) . '.jpg';
 
-            $info = <<<EOT
-            <div class="card" data-id="$id" onclick="openModal(this)">
+        echo <<<EOT
+            <div class="card" data-id="$id">
                 <div class="card-header">
                     <img src="$fondoRandom" alt="Paisaje" class="background-image">
                     <div class="profile-pic-container">
@@ -128,55 +132,62 @@ include '../model/db.php';
                 </div>
             </div>
             EOT;
+    }
 
-            $modal = <<<EOT
+    echo '</div>';
+
+    echo <<<EOT
             <div id="myModal" class="modal">
                 <!-- Contenido del modal -->
                 <div class="modal-content">
                     <span class="close" id="close">&times;</span>
-                    <div class="modal-body">
-                    $info
-                    </div>
+                    <div id="modal-body"></div>
                 </div>
             </div>
             EOT;
-
-            echo $modal;
-            echo $info;
-        }
-
-        echo '</div>';
     ?>
-    
-    
+
+    <footer>
+        <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
+    </footer>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
-        function openModal(card) {
-            const modal = document.getElementById("myModal");
-            const span = document.getElementById("close");
+        $(document).ready(function() {
+            $('.card').click(function() {
+                const psicologoId = $(this).data('id');
+                console.log(psicologoId);
 
-            modal.style.display = "block";
+                $.ajax({
+                    url: '../controller/get-psicol-details.php',
+                    type: 'GET',
+                    data: {
+                        id: psicologoId
+                    },
+                    success: function(response) {
+                        const data = JSON.parse(response);
+                        $('#modal-body').html(
+                            '<h4><b>' + data.nombreCompleto + '</b></h4>' +
+                            '<p><a href="mailto:' + data.correo + '">' + data.correo + '</a></p>' +
+                            '<p>' + data.telefono + '</p>' +
+                            '<div>' + data.cita + '</div>'
+                        )
+                        $('#myModal').show();
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                })
+            })
 
-            span.addEventListener("click", closeModal);
-            span.onclick = function() {
-                closeModal();
-            }
-
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    closeModal();
-                }
-            }
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("myModal");
-            modal.style.display = "none";
-        }
+            $('#close').click(function() {
+                $('#myModal').hide();
+            })
+        })
     </script>
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>
 </body>
+
 </html>

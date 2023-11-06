@@ -88,14 +88,17 @@
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
   display: flex; /* Using flexbox for the two sections */
+  flex-direction: row; /* The two sections are stacked vertically on small screens */
+  gap: 30px;
+  border-radius: 7px;
 }
 
-.close {
+/* .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
-}
+} */
 
 .close:hover,
 .close:focus {
@@ -104,18 +107,44 @@
   cursor: pointer;
 }
 
-.modal-body {
-  display: flex;
+#modal-body {
+  padding: 20px;
+  text-align: center; /* Centra el texto y contenido */
+  font-size: 1.2em; /* Aumenta el tamaño de la fuente */
+  background: #fff; /* Fondo blanco para el contenido del modal */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: auto; /* Alinea el modal en el centro verticalmente */
+  max-width: 500px; /* Ancho máximo del modal */
 }
 
-.modal-body > div {
-  flex: 1;
-  padding: 10px;
-  border-right: 2px solid #f1f1f1; /* The subtle line between the sections */
+#modal-body h4 {
+  font-size: 1.5em; /* Aumenta el tamaño de la fuente para los títulos */
+  color: #333; /* Color oscuro para el texto */
+  margin-bottom: 15px; /* Espacio debajo del título */
 }
 
-.modal-body > div:last-child {
-  border-right: none;
+#modal-body p {
+  font-size: 1.2em; /* Aumenta el tamaño de la fuente para los párrafos */
+  color: #555; /* Color gris para el texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+#modal-body a {
+  color: #007bff; /* Color para los enlaces */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  font-weight: bold; /* Fuente en negrita para los enlaces */
+}
+
+#modal-body div {
+  font-size: 1.1em; /* Tamaño de la fuente para otros contenidos */
+  margin-top: 15px; /* Espacio en la parte superior */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+  font-size: 1.5em; /* Tamaño más grande para el símbolo de cerrar */
+  cursor: pointer; /* Cambia el cursor a pointer para indicar acción */
 }
 
 /* For the responsive part, you'll use a media query */
