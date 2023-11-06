@@ -93,7 +93,7 @@ $correo = $_SESSION['correo'];
                 <div class="sub-cont-text">
                         <div class="contextu">
                             <h3>Bienvenido/a a MentalMatters Virtual <?php echo $usuario ?></h3>
-                            <p>Bienvenido/a a MentalMatters Virtual, Tomas Bonilla. Has llegado a un refugio digital 
+                            <p>Bienvenido/a a MentalMatters Virtual. Has llegado a un refugio digital 
                                 especialmente diseñado para quienes buscan equilibrio y bienestar en su vida diaria. 
                                 En este mundo, encontrarás un espacio seguro y acogedor donde tu salud mental es nuestra 
                                 prioridad. No solo es un sitio para aprender y crecer, sino también un rincón donde te 
@@ -151,15 +151,15 @@ $correo = $_SESSION['correo'];
 
                 <div class="fondo">
                     <div class="cont3">
-                        <h3>Guía Completa para el Manejo del Estrés Diario</h3>
-                            <span>Enfrenta los desafíos diarios con serenidad y confianza. 
-                                Esta guía te ofrece herramientas prácticas para identificar las fuentes 
-                                de estrés y técnicas efectivas para mitigar sus efectos. Descubre un camino
-                                hacia un estilo de vida equilibrado y empoderado. </span><br>
-                                <a href="biblio-bienestar3.php" class="boton-animado-a">Acceder</a>
+                    <h3>Estrategias de Comunicación para Mejorar Relaciones</h3>
+                    <span>Las habilidades de comunicación son esenciales en todas 
+                            las áreas de la vida, pero especialmente en las relaciones 
+                            personales y profesionales. </span><br>
+                            <a href="biblio-bienestar3.php" class="boton-animado-a">Acceder</a>
                     </div>
                 </div><br>
-                 <br>
+                
+                <br>
                  <div class="carousel-container">
                     <p class="carousel-quote" id="quote1">Las cicatrices invisibles son las que más enseñan sobre resiliencia y fortaleza</p>
                     <p class="carousel-quote" id="quote2">El abrazo del alma es aquel que nos reconforta en los momentos de oscuridad y nos recuerda que no estamos solos</p>

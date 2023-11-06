@@ -65,7 +65,7 @@ footer {
 
 .fondo {
     width: 650px;
-    height: 200px;
+    height: 230px;
     background-color: #D2E7FF;
     padding-top: 20px;
     border-radius: 7px; 
@@ -87,6 +87,7 @@ footer {
     margin-top: 10px;
     border-radius: 7px;
     text-align: justify;
+    padding: 20px;
 }
 
 .cont2 {
@@ -96,15 +97,15 @@ footer {
     margin: auto;
     border-radius: 7px;
     text-align: justify;
+    padding: 10px;
 }
 
 .cont3 {
     width: 580px;
-    justify-content: center;
     align-items: center;
     margin: auto;
     border-radius: 7px;
-    text-align: justify;
+    padding: 10px;
 }
 
 .boton-animado {
@@ -139,7 +140,7 @@ footer {
     transition: transform 0.3s, background-color 0.3s; 
     justify-content: center;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 20px;
     
 }
 

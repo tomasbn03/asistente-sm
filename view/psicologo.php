@@ -148,9 +148,7 @@ include '../model/db.php';
         echo '</div>';
     ?>
     
-    <footer>
-        <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
-    </footer>
+    
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
@@ -177,5 +175,8 @@ include '../model/db.php';
             modal.style.display = "none";
         }
     </script>
+    <footer>
+        <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
+    </footer>
 </body>
 </html>

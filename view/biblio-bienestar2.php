@@ -85,60 +85,127 @@ $correo = $_SESSION['correo'];
     </nav>
     <div class="backgraund-portada">
         <img src="../assets/img/portada.png" id="portada">
-    </div>
-        <div class="cont-text">
-        <h1>Meditación Guiada para la Relajación Profunda</h1><br>
-            <div class="biblio-text">
-                <h3>Video de meditación guiada de 10 minutos</h3>
-                <p>Disfruta de una inmersión tranquila en la relajación profunda a través de esta meditación guiada de 10 minutos. 
-                    Siéntate o acuéstate en un lugar cómodo, cierra los ojos y permite que la voz del guía te lleve a un espacio 
-                    de paz y serenidad.</p><br>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pDigD65kLpE?si=qMNx8YXKXnmzNEaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
-            </div><br>
+    
+        <div class="infografia">
+            <h1>Meditación Guiada para la Relajación Profunda</h1><br>
+            <p>La meditación es una práctica milenaria que se ha utilizado para conectar con el ser interno, 
+            encontrar la paz interior y desarrollar una mayor conciencia de uno mismo y del entorno. En el mundo 
+            acelerado de hoy, la meditación guiada se ha convertido en una herramienta esencial para manejar el 
+            estrés, mejorar la concentración y fomentar el bienestar general.</p><br>
+            
+            <h2>Video de meditación guiada de 10 minutos</h2>
+            
+            <p>Disfruta de una inmersión tranquila en la relajación profunda a través de esta meditación guiada 
+            de 10 minutos. Siéntate o acuéstate en un lugar cómodo, cierra los ojos y permite que la voz del 
+            guía te lleve a un espacio de paz y serenidad.</p><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9svic7ldL2w?si=ifAdFjnt15S6cscq" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br> <br>
+            <section class="info-section">
+                <div class="info-content">
+                <h3>Instrucciones paso a paso para la meditación: .</h3>
+                <div class="lista-comp">
+                    <ol>
+                        <li><b>Preparación del ambiente:</b>
+                            <div class="lista-pequ">
+                                <ul>
+                                    <li><b>Iluminación:</b> Una luz tenue puede ayudar a crear un ambiente de calma. Si puedes, utiliza luz natural o velas.</li>
+                                    <li><b>Sonido:</b> Considera poner música suave de fondo, como sonidos de la naturaleza o melodías tranquilas.</li>
+                                    <li><b>Objetos:</b> Algunas personas encuentran útil tener un objeto de enfoque, como una imagen inspiradora o una estatua.</li>
+                                </ul>
+                            </div>
+                        </li><br>
 
-            <div class="biblio-text">
-                <h3>Instrucciones paso a paso para la meditación.</h3>
-                    <ul>
-                        <li>
-                        <b>Preparación del ambiente:</b><br> Elige un lugar tranquilo y libre de interrupciones. Puedes encender una vela o poner aceites esenciales si lo deseas para crear un ambiente calmado.
+                        <li><b>Elige tu posición:</b><br>
+                            <div class="lista-pequ">
+                                <ul>
+                                    <li><b>Sentado:</b> Asegúrate de que tu espalda esté recta para permitir una respiración adecuada.</li>
+                                    <li><b>Acostado:</b> Evita cruzar las piernas o los brazos para permitir una circulación adecuada.</li>
+                                </ul>
+                            </div>
                         </li><br>
-                        <li>
-                        <b>Encuentra tu posición:</b><br> Siéntate en una silla con los pies apoyados en el suelo o en una postura cómoda en el suelo. Si prefieres, también puedes acostarte.
-                        </li><br>
-                        <li>
-                        <b>Cierra los ojos:</b><br> Esto ayudará a reducir las distracciones y a centrarte en tu experiencia interna.
-                        </li><br>
-                        <li>
-                        <b>Conciencia del cuerpo:</b><br> Nota las sensaciones en tu cuerpo, sin juzgarlas. Reconoce cualquier tensión y permite que se disuelva.
-                        </li><br>
-                        <li>
-                        <b>Enfoque en la respiración:</b><br> Sin modificarla, presta atención a tu respiración, notando el ritmo natural de tu inhalación y exhalación.
-                        </li><br>
-                        <li>
-                        <b>Sigue el guía:</b><br> Escucha atentamente las palabras del guía, permitiendo que te lleven a un estado de relajación profunda.
-                        </li><br>
-                        <li>
-                    <b> Finaliza suavemente:</b><br> Al finalizar, toma unos minutos para regresar a tu estado normal. Mueve suavemente tus dedos y estírate si lo sientes necesario.
-                        </li><br>
-                    </ul>
-            </div><br>
+                        
+                        <li><b>Centra tu atención:</b>
+                            <div class="lista-pequ">
+                                <ul>
+                                    <li><b>Respiración abdominal:</b> Esta técnica te ayuda a respirar profundamente desde el diafragma, proporcionando oxígeno óptimo al cuerpo.</li>
+                                    <li><b>Respiración de cuatro partes:</b> Inhala durante cuatro segundos, mantén durante cuatro segundos, exhala durante cuatro segundos y espera otros cuatro antes de inhalar nuevamente.</li>
+                                </ul>
+                            </div>
+                        </li>
 
-            <div class="biblio-text">
-                <h3> Sugerencias para la postura y la respiración adecuadas.</h3>
-                <ul>
-                    <li>Respira de manera natural, no fuerces ni modifiques tu ritmo de respiración.</li>
-                    <li>Intenta respirar desde el diafragma en lugar de respiraciones superficiales desde el pecho.</li>
-                    <li>Nota cómo el aire entra frío por las narinas y sale cálido. Esto puede ser un ancla para mantener tu atención.</li>
-                </ul>
-            </div><br>
+                        <li><b>Conciencia corporal:</b> 
+                            <div class="lista-pequ">
+                                    <ul>
+                                        <li>Siente la conexión de tu cuerpo con la silla o el suelo. Nota las 
+                                        sensaciones en cada parte de tu cuerpo, desde la cabeza hasta los pies.</li>
+                                    </ul>
+                            </div>
+                        </li>
+                        
+                        <li><b>Enfoque en la respiración:</b>
+                            <div class="lista-pequ">
+                                    <ul>
+                                        <li>Observa cómo el aire entra y sale de tu cuerpo. Si tu mente 
+                                        comienza a divagar, regresa suavemente tu atención a la respiración.</li>
+                                    </ul>
+                            </div>
+                        </li>
 
+                        <li><b>Deja que el guía te conduzca:</b> 
+                            <div class="lista-pequ">
+                                <ul>
+                                    <li>Escucha con atención cada palabra y visualización 
+                                    propuesta por el guía.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    
+                        <li><b>Termina con gratitud:</b> 
+                            <div class="lista-pequ">
+                                <ul>
+                                    <li>Al finalizar, agradece por el momento de paz y serenidad que has experimentado.</li>
+                                </ul>
+                            </div>
+                        </li>
+                
+                    </ol>
+                </div>
+            </div>
+            </section>
+            
+            <section class="info-section">
+                <div class="info-content">
+                <h3>Sugerencias para una experiencia óptima:</h3>
+                <div class="lista-comp">
+                    <div class="lista-pequ">
+                        <ol>
+                            <li><b>Consistencia:</b> La meditación es más efectiva cuando se practica regularmente. Intenta establecer un horario diario.</li>
+                            <li><b>Postura:</b> Tu postura puede influir en tu experiencia meditativa. Asegúrate de estar cómodo pero alerta.</li>
+                            <li><b>Aplicaciones:</b> Considera usar aplicaciones de meditación guiada que te ayuden a mantener la consistencia y explorar diferentes técnicas.</li>
+                        </ol>
+                    </div>
+                </div>
 
-            <div class="biblio-text">
-                <p>La meditación es una herramienta poderosa para conectar con nuestro interior, relajarnos y encontrar paz en medio del caos diario. 
-                    Con la práctica regular, descubrirás un espacio de serenidad que siempre ha estado dentro de ti. Dedica estos momentos para ti y 
-                    observa los cambios positivos en tu bienestar general.</p>
-            </div><br>
-        </div><br><br>
+                </div>
+            </section>
+
+            <section class="info-section">                
+                <div class="info-content">
+                <h2>Reflexión Final</h2>               
+                <p>La meditación no solo es una técnica de relajación, sino también una puerta hacia el autoconocimiento 
+                y la expansión de la conciencia. A través de una práctica dedicada, la meditación nos permite explorar 
+                las profundidades de nuestra mente y espíritu, dándonos claridad y serenidad para vivir una vida más 
+                equilibrada y armoniosa. Invitamos a los usuarios a abrazar esta práctica ancestral y descubrir los 
+                tesoros que se encuentran en la quietud de su ser interior.</p>
+                </div><br><br>
+                <h3>Video para reflexionar:</h3><br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HnXDG070R6I?si=by72ya6eoqA4pYOu" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+    </div><br><br><br><br>
+
     
     <footer>
         <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
