@@ -56,14 +56,6 @@ $correo = $_SESSION['correo'];
                     </li>
 
                     <li class="nav-link">
-                        <a href="evaluacion-clinica.php">
-                            <i class="bx bxs-brain icon"></i>
-                            <span class="text nav-text">Evaluación Clínica</span>
-                        </a>
-                    </li>
-
-
-                    <li class="nav-link">
                         <a href="settings.php">
                             <i class='bx bxs-cog icon'></i>
                             <span class="text nav-text">Configuraciones</span>
@@ -122,12 +114,12 @@ $correo = $_SESSION['correo'];
                     <p class="carousel-quote" id="quote3">Las cicatrices del alma son testigos de su fortaleza</p>
                 </div><br><br>
 
+        <!-- Tres recursos en la parte superior -->
         <div class="cont-recurs">
                 <div class="fondo">
                     <div class="cont1">
-                        <h3>Cómo Gestionar el Estrés en el Trabajo.</h3> 
-                        <span>Las habilidades comunicativas son clave en el día a día. 
-                            Descubre cómo mejorarlas para enriquecer tus interacciones 
+                        <h3>Cómo Gestionar el Estrés en el Trabajo.</h3><br>
+                        <span>Descubre cómo mejorarlas para enriquecer tus interacciones 
                             personales y avances profesionales con métodos efectivos y 
                             empatía activa.</span><br>
                             <a href="biblio-bienestar1.php" class="boton-animado">Acceder</a>
@@ -137,9 +129,8 @@ $correo = $_SESSION['correo'];
 
                 <div class="fondo">
                     <div class="cont2">
-                        <h3>Meditación Guiada para la Relajación Profunda.</h3>
-                        <span>Sumérgete en un viaje de tranquilidad y paz interior con
-                            nuestra meditación guiada. Descubre cómo la respiración 
+                        <h3>Meditación Guiada para la Relajación Profunda.</h3><br>
+                        <span>Descubre cómo la respiración 
                             adecuada y la postura correcta pueden llevarte a un estado 
                             de relajación profunda.</span><br>
                             <a href="biblio-bienestar2.php" class="boton-animado">Acceder</a>
@@ -148,14 +139,40 @@ $correo = $_SESSION['correo'];
 
                 <div class="fondo">
                     <div class="cont3">
-                        <h3>Estrategias de Comunicación para Mejorar Relaciones.</h3>
-                        <span>Mejora tus relaciones y éxito profesional con nuestras estrategias de 
-                            comunicación. Aprende a expresar tus ideas con claridad y a escuchar 
+                        <h3>Estrategias de Comunicación para Mejorar Relaciones.</h3><br>
+                        <span> Aprende a expresar tus ideas con claridad y a escuchar 
                             activamente para fomentar entendimiento mutuo y colaboración efectiva.</span><br>
                             <a href="biblio-bienestar3.php" class="boton-animado-a">Acceder</a>
                     </div>
                 </div>
-        </div><br><br><br>
+        </div><br>
+                <!-- Tres recursos en la parte inferior -->
+                <div class="cont-recurs">
+                <div class="fondo">
+                    <div class="cont1">
+                        <h3></h3> 
+                        <span></span><br>
+                            <a href="" class="boton-animado">Acceder</a>
+                    </div>
+                </div><br>
+
+
+                <div class="fondo">
+                    <div class="cont2">
+                        <h3></h3>
+                        <span></span><br>
+                            <a href="" class="boton-animado">Acceder</a>
+                    </div>
+                </div><br>
+
+                <div class="fondo">
+                    <div class="cont3">
+                        <h3></h3>
+                        <span></span><br>
+                            <a href="" class="boton-animado-a">Acceder</a>
+                    </div>
+                </div>
+                </div><br><br>
 
            
                 <div class="carousel-container">

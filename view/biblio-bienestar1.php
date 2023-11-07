@@ -56,18 +56,11 @@ $correo = $_SESSION['correo'];
                         </a>
                     </li>
 
-                    <li class="nav-link">
-                        <a href="evaluacion-clinica.php">
-                            <i class="bx bxs-brain icon"></i>
-                            <span class="text nav-text">Evaluación Clínica</span>
-                        </a>
-                    </li>
-
 
                     <li class="nav-link">
                         <a href="settings.php">
                             <i class='bx bxs-cog icon'></i>
-                            <span class="text nav-text">Perfil</span>
+                            <span class="text nav-text">Configuraciones</span>
                         </a>
                     </li>
 

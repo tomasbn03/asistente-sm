@@ -13,9 +13,9 @@
         <ul class="navbar">
             <li class="navitem"><a href="login-register.php">Registrarse</a></li>
             <li class="navitem"><a href="login-register.php">Iniciar sesión</a></li>
-            <li class="navitem"><a href="services.html">Servicios</a></li>
-            <li class="navitem"><a href="about.html">Acerca de</a></li>
-            <li class="navitem"><a href="home.html">Inicio</a></li>    
+            <li class="navitem"><a href="services.php">Servicios</a></li>
+            <li class="navitem"><a href="about.php">Acerca de</a></li>
+            <li class="navitem"><a href="home.php">Inicio</a></li>    
         </ul>
     </nav>
     <header>

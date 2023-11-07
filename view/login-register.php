@@ -9,9 +9,9 @@
 <body>
     <nav>
         <ul class="navbar">
-            <li class="navitem"><a href="home.html">Inicio</a></li>
-            <li class="navitem"><a href="about.html">Acerca de</a></li>
-            <li class="navitem"><a href="services.html">Servicios</a></li>
+            <li class="navitem"><a href="home.php">Inicio</a></li>
+            <li class="navitem"><a href="about.php">Acerca de</a></li>
+            <li class="navitem"><a href="services.php">Servicios</a></li>
         </ul>
     </nav> 
     <div class="container" id="container">
