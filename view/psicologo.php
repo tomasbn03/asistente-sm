@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 use function PHPSTORM_META\map;
 
@@ -186,6 +186,9 @@ include '../model/db.php';
             })
         })
     </script>
+    <footer>
+        <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
+    </footer>
 </body>
 
 </html>
