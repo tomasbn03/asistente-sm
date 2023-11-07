@@ -167,7 +167,7 @@ $correo = $_SESSION['correo'];
 
             <div class="box-forum">
                 <div class="forum-container">
-                    <h2>Foros Alterno Recomendados</h2>
+                    <h2>Foros Alternos Recomendados</h2>
                     <p>Descubre y participa en foros externos que recomendamos para enriquecer tu camino hacia el bienestar.</p> <br> <br>
 
                     <!-- Foro 1 -->
@@ -178,7 +178,7 @@ $correo = $_SESSION['correo'];
                             <p>Foro Afectivo y Efectivo </p>
                             <span>Temas: <strong>Hablar sobre salud mental para romper el estigma</strong></span>
                         </div><br>
-                        <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
+                        <a href="https://gacetamedica.com/mas/rsc/foro-afectivo-efectivo-salud-mental-estigma-prevencion/" target="_blank" class="visit-btn">Visitar Foro</a>
                     </div><br>
 
                     <!-- Foro 2 -->
@@ -190,7 +190,7 @@ $correo = $_SESSION['correo'];
                             se llevó a cabo en diciembre de 2022. Expone las principales problemáticas planteadas y 10 ideas como resultado del foro.</p>
                             <span>Temas: <strong>#Adolecencia #DerechoALaSalud #ServiciosDeSalud</strong></span>
                         </div>
-                        <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
+                        <a href="https://bancos.salud.gob.ar/recurso/foro-de-ideas-para-el-abordaje-de-la-salud-mental-con-adolescentes-y-jovenes" target="_blank" class="visit-btn">Visitar Foro</a>
                     </div><br>
 
                     <!-- Foro 3 -->
@@ -201,7 +201,7 @@ $correo = $_SESSION['correo'];
                             <p>Guía de estilo sobre salud mental para medios de comunicación. Las palabras si importan.</p>
                             <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
                         </div>
-                        <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
+                        <a href="http://www.forosaludmental.com" target="_blank" class="visit-btn">Visitar Foro</a>
                     </div><br>
                     
                     <p><strong>Nota:</strong> Aunque estos foros son recomendados, no tenemos control sobre su contenido. Ejerce juicio propio y consulta a un profesional en caso de necesitar asistencia.</p>
