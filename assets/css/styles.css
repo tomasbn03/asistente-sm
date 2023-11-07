@@ -1,4 +1,13 @@
-
+.infografia{
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    max-width: 1000px;
+    height: 500px;
+    margin-left: 150px;
+    font-size: 14pt;
+}
 
 .cont-text{
     font-size: 20px;
@@ -17,7 +26,6 @@
 
 .contextu {
     width: 900px;
-    /* margin-left: 30px; */
     padding: 10px 20px;
     text-align: justify;
 }
@@ -51,27 +59,29 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #4C85A0; 
-    color: #fff; 
+    background-color: #272665; 
+    color: #D2E7FF; 
     padding: 10px; 
     text-align: center; 
 }
 
-.container-recursos {
-    display: flex;
-    margin: 0;
-    width: 800px;
-}
-
 .fondo {
-    width: 650px;
-    height: 230px;
+    width: 350px;
+    height: 300px;
     background-color: #D2E7FF;
+    background-image: url('../img/personal.png');
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
     padding-top: 20px;
-    border-radius: 7px; 
+    border-radius: 30px; 
     transition: all 500ms ease; /* Esto asegura que los cambios se animen suavemente */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s,
+    transition: transform 0.3s,;
+    border: solid 5px #2F3A3C;
+    font-weight: bold;
+    color: #2F3A3C;
 }
 
 .fondo:hover {
@@ -80,28 +90,25 @@ footer {
 }
 
 .cont1 {
-    width: 580px;
+    width: 280px;
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 10px;
     border-radius: 7px;
-    text-align: justify;
-    padding: 20px;
+    padding: 10px;
 }
 
 .cont2 {
-    width: 580px;
+    width: 280px;
     justify-content: center;
     align-items: center;
     margin: auto;
     border-radius: 7px;
-    text-align: justify;
     padding: 10px;
 }
 
 .cont3 {
-    width: 580px;
+    width: 280px;
     align-items: center;
     margin: auto;
     border-radius: 7px;
@@ -117,7 +124,7 @@ footer {
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    background-color: #007BFF;
+    background-color: #272665;
     color: white;
     transition: transform 0.3s, background-color 0.3s; 
     justify-content: center;
@@ -135,7 +142,7 @@ footer {
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    background-color: #007BFF;
+    background-color: #272665;
     color: white;
     transition: transform 0.3s, background-color 0.3s; 
     justify-content: center;
@@ -155,6 +162,16 @@ footer {
     transform: scale(0.95); 
 }
 
+.boton-animado-a:hover {
+    transform: scale(1.05); 
+    background-color: #0056b3; 
+}
+
+
+.boton-animado-a:active {
+    transform: scale(0.95); 
+}
+
 #portada {
     padding: 5px 130px;
     width: 1300px;
@@ -171,12 +188,16 @@ footer {
 /* Estilo para carrusel */
 .carousel-container {
     position: relative;
-    width: 1000px;
-    height: 60px;
+    width: 100%;
+    height: 100px;
     overflow: hidden;
-    background-color: #766FB0;
+    background-color: #2B2A68;
     color: #D2E7FF;
-    border-radius: 5px;
+    
+}
+
+.carousel-container p{
+    margin: auto;
 }
 
 .carousel-quote {
@@ -186,7 +207,7 @@ footer {
     width: 100%;
     text-align: center;
     line-height: 100px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     opacity: 0;
     animation-duration: 25s;
@@ -271,3 +292,23 @@ footer {
     text-decoration: none;
     color: white;
 }
+
+.cont-recurs {
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    margin-left: 100px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.box-forum {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    max-width: 1200px;
+    margin: auto;
+}
+

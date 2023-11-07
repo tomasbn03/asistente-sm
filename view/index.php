@@ -83,56 +83,53 @@ $correo = $_SESSION['correo'];
     </nav>
     <div class="backgraund-portada">
         <img src="../assets/img/portada.png" id="portada">
-    </div>
-    <!-- Seccion principal para la página de acceder a recursos de bienestar -->
-    
-    
+    </div><br>
 
-    <div class="cont-text">
-    <h1>Acceso a recursos de bienestar</h1><br>
+    <!-- Seccion principal para la página de acceder a recursos de bienestar -->
+    <div class="infografia">
+    <h1>Bienvenido/a a MentalMatters Virtual, <?php echo $usuario ?></h1><br>
                 <div class="sub-cont-text">
-                        <div class="contextu">
-                            <h3>Bienvenido/a a MentalMatters Virtual <?php echo $usuario ?></h3>
-                            <p>Bienvenido/a a MentalMatters Virtual. Has llegado a un refugio digital 
-                                especialmente diseñado para quienes buscan equilibrio y bienestar en su vida diaria. 
-                                En este mundo, encontrarás un espacio seguro y acogedor donde tu salud mental es nuestra 
-                                prioridad. No solo es un sitio para aprender y crecer, sino también un rincón donde te 
-                                sentirás entendido y apoyado. Explora nuestra amplia biblioteca de recursos, participa 
-                                en cursos de desarrollo personal diseñados por expertos, y descubre ejercicios de 
-                                relajación que te ayudarán a encontrar la paz interior. Tu bienestar es nuestro
-                                principal objetivo.</p>
-                        </div>
+                    <div class="contextu">
+                        <h3>Acceso a recursos de bienestar</h3>
+                        <p>Bienvenido/a a MentalMatters Virtual. Has llegado a un refugio digital 
+                        especialmente diseñado para quienes buscan equilibrio y bienestar en su vida diaria. 
+                        En este mundo, encontrarás un espacio seguro y acogedor donde tu salud mental es nuestra 
+                        prioridad. No solo es un sitio para aprender y crecer, sino también un rincón donde te 
+                        sentirás entendido y apoyado. Explora nuestra amplia biblioteca de recursos, participa 
+                        en cursos de desarrollo personal diseñados por expertos, y descubre ejercicios de 
+                        relajación que te ayudarán a encontrar la paz interior. Tu bienestar es nuestro
+                        principal objetivo.</p>
+                    </div>
+                </div><br>
+    
+                <div class="sub-cont-text">
+                    <div class="contextu">
+                        <h3>Biblioteca de Bienestar</h3>
+                        <p>Descubre nuestra selección especializada de recursos, elegidos pensando en ti y en tu 
+                        bienestar integral. Con una combinación de conocimientos científicos y técnicas prácticas, 
+                        nuestra colección abarca desde guías detalladas hasta meditaciones envolventes. Cada 
+                        lemento ha sido diseñado como una herramienta personalizada para cultivar equilibrio, 
+                        armonía y paz en tu rutina cotidiana.</p>
+                    </div>
                 </div>
-            </div><br>
-            <div class="cont-text">
-                        <div class="sub-cont-text">
-                            <div class="contextu">
-                                <h3>Biblioteca de Bienestar</h3>
-                                <p>Descubre nuestra selección especializada de recursos, elegidos pensando en ti y en tu 
-                                    bienestar integral. Con una combinación de conocimientos científicos y técnicas prácticas, 
-                                    nuestra colección abarca desde guías detalladas hasta meditaciones envolventes. Cada 
-                                    lemento ha sido diseñado como una herramienta personalizada para cultivar equilibrio, 
-                                    armonía y paz en tu rutina cotidiana.</p>
-                            </div>
-                        </div>
-            </div><br>
+    </div><br><br>
             
-            <div class="cont-text">
+        
                 <!-- Carrusel para frases   -->
                 <div class="carousel-container">
                     <p class="carousel-quote" id="quote1">Dentro de cada tormenta, reside una calma esperando ser encontrada</p>
                     <p class="carousel-quote" id="quote2">Nuestro espíritu es inquebrantable; sólo necesita recordarlo.</p>
                     <p class="carousel-quote" id="quote3">Las cicatrices del alma son testigos de su fortaleza</p>
-                </div>
-            </div><br>
+                </div><br><br>
 
-            <div class="cont-text">
+            <div class="cont-recurs">
                 <div class="fondo">
                     <div class="cont1">
-                        <h3>Cómo Gestionar el Estrés en el Trabajo</h3> 
-                                <span>El estrés laboral es una realidad en la vida moderna.
-                                Aprende a identificar y reducir su impacto con consejos 
-                                prácticos y técnicas de relajación.</span><br>
+                        <h3>Cómo Gestionar el Estrés en el Trabajo.</h3> 
+                                <span>Las habilidades comunicativas son clave en el día a día. 
+                                    Descubre cómo mejorarlas para enriquecer tus interacciones 
+                                    personales y avances profesionales con métodos efectivos y 
+                                    empatía activa.</span><br>
                                 <a href="biblio-bienestar1.php" class="boton-animado">Acceder</a>
                     </div>
                 </div><br>
@@ -140,7 +137,7 @@ $correo = $_SESSION['correo'];
 
                 <div class="fondo">
                     <div class="cont2">
-                        <h3>Meditación Guiada para la Relajación Profunda</h3>
+                        <h3>Meditación Guiada para la Relajación Profunda.</h3>
                             <span>Sumérgete en un viaje de tranquilidad y paz interior con
                                 nuestra meditación guiada. Descubre cómo la respiración 
                                 adecuada y la postura correcta pueden llevarte a un estado 
@@ -151,66 +148,69 @@ $correo = $_SESSION['correo'];
 
                 <div class="fondo">
                     <div class="cont3">
-                    <h3>Estrategias de Comunicación para Mejorar Relaciones</h3>
-                    <span>Las habilidades de comunicación son esenciales en todas 
-                            las áreas de la vida, pero especialmente en las relaciones 
-                            personales y profesionales. </span><br>
+                    <h3>Estrategias de Comunicación para Mejorar Relaciones.</h3>
+                    <span>Mejora tus relaciones y éxito profesional con nuestras estrategias de 
+                        comunicación. Aprende a expresar tus ideas con claridad y a escuchar 
+                        activamente para fomentar entendimiento mutuo y colaboración efectiva.</span><br>
                             <a href="biblio-bienestar3.php" class="boton-animado-a">Acceder</a>
                     </div>
-                </div><br>
-                
-                <br>
-                 <div class="carousel-container">
+                </div>
+            </div><br><br><br>
+
+           
+                <div class="carousel-container">
                     <p class="carousel-quote" id="quote1">Las cicatrices invisibles son las que más enseñan sobre resiliencia y fortaleza</p>
                     <p class="carousel-quote" id="quote2">El abrazo del alma es aquel que nos reconforta en los momentos de oscuridad y nos recuerda que no estamos solos</p>
                     <p class="carousel-quote" id="quote3">La salud de nuestra mente es el reflejo de cómo nutrimos nuestra esencia y nuestro espíritu</p>
-                </div>
-            </div><br><br><br>  
+                </div><br><br>
             
-            <div class="forum-container">
-                <h2>Foros Alterno Recomendados</h2>
-                <p>Descubre y participa en foros externos que recomendamos para enriquecer tu camino hacia el bienestar.</p> <br> <br>
 
-                <!-- Foro 1 -->
-                <div class="forum-item">
-                    <img src="../assets/img/valores.png" alt="Logo del foro" class="forum-logo">
-                    <div class="forum-description">
-                        <h3>Nombre del Foro</h3>
-                        <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
-                        <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
-                    </div>
-                    <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
-                </div><br>
+            <div class="box-forum">
+                <div class="forum-container">
+                    <h2>Foros Alterno Recomendados</h2>
+                    <p>Descubre y participa en foros externos que recomendamos para enriquecer tu camino hacia el bienestar.</p> <br> <br>
 
-                <!-- Foro 2 -->
-                <div class="forum-item">
-                    <img src="../assets/img/investigacion.png" alt="Logo del foro" class="forum-logo">
-                    <div class="forum-description">
-                        <h3>Nombre del Foro</h3>
-                        <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
-                        <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
-                    </div>
-                    <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
-                </div><br>
+                    <!-- Foro 1 -->
+                    <div class="forum-item">
+                        <img src="../assets/img/valores.png" alt="Logo del foro" class="forum-logo">
+                        <div class="forum-description">
+                            <h3>Nombre del Foro</h3>
+                            <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
+                            <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
+                        </div>
+                        <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
+                    </div><br>
 
-                <!-- Foro 3 -->
-                <div class="forum-item">
-                    <img src="../assets/img/investigacion.png" alt="Logo del foro" class="forum-logo">
-                    <div class="forum-description">
-                        <h3>Nombre del Foro</h3>
-                        <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
-                        <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
-                    </div>
-                    <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
-                </div><br>
-                
-                <p><strong>Nota:</strong> Aunque estos foros son recomendados, no tenemos control sobre su contenido. Ejerce juicio propio y consulta a un profesional en caso de necesitar asistencia.</p>
-            </div> 
+                    <!-- Foro 2 -->
+                    <div class="forum-item">
+                        <img src="../assets/img/investigacion.png" alt="Logo del foro" class="forum-logo">
+                        <div class="forum-description">
+                            <h3>Nombre del Foro</h3>
+                            <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
+                            <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
+                        </div>
+                        <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
+                    </div><br>
+
+                    <!-- Foro 3 -->
+                    <div class="forum-item">
+                        <img src="../assets/img/investigacion.png" alt="Logo del foro" class="forum-logo">
+                        <div class="forum-description">
+                            <h3>Nombre del Foro</h3>
+                            <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
+                            <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
+                        </div>
+                        <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
+                    </div><br>
+                    
+                    <p><strong>Nota:</strong> Aunque estos foros son recomendados, no tenemos control sobre su contenido. Ejerce juicio propio y consulta a un profesional en caso de necesitar asistencia.</p>
+                </div> 
+            </div>
 
 <br><br><br>
 
     <footer>
-        <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
+        <p>&copy;<span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/showYear.js"></script>

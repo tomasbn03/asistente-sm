@@ -6,7 +6,7 @@
 }
 
 :root{
-    --body-color: #eff0f1;
+    --body-color: #D2E7FF;
     --sidebar-color: #FFF;
     --primary-color: #232424;
     --primary-color-light: #f0f0f1;
@@ -21,7 +21,7 @@
 
 body{
     min-height: 90vh;
-    background-color: var(--body-color);
+    background-color: #D2E7FF;
     transition: var(--tran-05);
 }
 
