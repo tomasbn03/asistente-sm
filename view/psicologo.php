@@ -114,7 +114,7 @@ include '../model/db.php';
         $correo = htmlspecialchars($row['correo']);
         $telefono = htmlspecialchars($row['telefono']);
 
-        $fotoRandom = '../assets/imgs-psicol/' . rand(1, 10) . '.jpg';
+        $fotoRandom = '../assets/imgs-psicol/' . $id . '.jpg';
         $fondoRandom = '../assets/imgs-psicol/' . rand(11, 13) . '.jpg';
 
         echo <<<EOT
@@ -163,10 +163,11 @@ include '../model/db.php';
                     success: function(response) {
                         const data = JSON.parse(response);
                         $('#modal-body').html(
+                            '<img src="../assets/imgs-psicol/' + psicologoId + '.jpg" alt="Foto de perfil">' +
                             '<h4><b>' + data.nombreCompleto + '</b></h4>' +
-                            '<p><a href="mailto:' + data.correo + '">' + data.correo + '</a></p>' +
-                            '<p>' + data.telefono + '</p>' +
-                            '<div>' + data.cita + '</div>'
+                            '<p>Mi correo es <a href="mailto:' + data.correo + '">' + data.correo + '</a></p>' +
+                            '<p>Mi telefono es el ' + data.telefono + '</p>' +
+                            '<div>"' + data.cita + '"</div>'
                         )
                         $('#myModal').show();
                     },
