@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 06, 2023 at 04:47 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 07-11-2023 a las 15:22:46
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ctrl_user`
+-- Base de datos: `ctrl_user`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `psicologos`
+-- Estructura de tabla para la tabla `psicologos`
 --
 
 CREATE TABLE `psicologos` (
@@ -37,7 +37,7 @@ CREATE TABLE `psicologos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `psicologos`
+-- Volcado de datos para la tabla `psicologos`
 --
 
 INSERT INTO `psicologos` (`id_psicol`, `nombre`, `apellido`, `correo`, `telefono`, `cita`) VALUES
@@ -55,7 +55,7 @@ INSERT INTO `psicologos` (`id_psicol`, `nombre`, `apellido`, `correo`, `telefono
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -68,7 +68,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `correo`, `contrasenia`, `telefono`) VALUES
@@ -76,26 +76,26 @@ INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `correo`, `contrasenia`, `tel
 (20, 'Enrique Bonilla', 'tomasbnll', 'tomas@gmail.com', 'root', '76576555'),
 (21, 'Jordan', 'Jordan1', 'jordan.molina22@itca.edu.sv', '12345', '76654114'),
 (23, 'Cristiano Ronaldo', 'cr7', 'elbicho@cr7.com', 'siu', '60655786'),
-(24, 'Leonel Andrés', 'messi', 'leomessi@adidas.org', 'goat', '60005090'),
+(24, 'Tomas Bonilla', 'messi', 'tomasbonilla@gmail.com', 'admin', '76576555'),
 (27, 'Juan Hernandez', 'jhernandez', 'jhernandez@gmail.com', 'games', '78876541'),
 (28, 'Fernando Páz', 'ferpz', 'fernandopz@gmail.com', 'secreto', '60009909');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
