@@ -172,32 +172,33 @@ $correo = $_SESSION['correo'];
 
                     <!-- Foro 1 -->
                     <div class="forum-item">
-                        <img src="../assets/img/valores.png" alt="Logo del foro" class="forum-logo">
+                        <img src="../assets/img/gaceta-medica.png" alt="Logo del foro" class="forum-logo">
                         <div class="forum-description">
-                            <h3>Nombre del Foro</h3>
-                            <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
-                            <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
-                        </div>
+                            <h3>Gaceta Médica</h3>
+                            <p>Foro Afectivo y Efectivo </p>
+                            <span>Temas: <strong>Hablar sobre salud mental para romper el estigma</strong></span>
+                        </div><br>
                         <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
                     </div><br>
 
                     <!-- Foro 2 -->
                     <div class="forum-item">
-                        <img src="../assets/img/investigacion.png" alt="Logo del foro" class="forum-logo">
+                        <img src="../assets/img/bancos-salud.png" alt="Logo del foro" class="forum-logo">
                         <div class="forum-description">
-                            <h3>Nombre del Foro</h3>
-                            <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
-                            <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
+                            <h3>Foro de Ideas para el Abordaje de la Salud Mental con Adolescentes y Jóvenes</h3>
+                            <p>Este documento sistematiza experiencias y testimonios a partir del primer encuentro del Foro de Ideas que 
+                            se llevó a cabo en diciembre de 2022. Expone las principales problemáticas planteadas y 10 ideas como resultado del foro.</p>
+                            <span>Temas: <strong>#Adolecencia #DerechoALaSalud #ServiciosDeSalud</strong></span>
                         </div>
                         <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
                     </div><br>
 
                     <!-- Foro 3 -->
                     <div class="forum-item">
-                        <img src="../assets/img/investigacion.png" alt="Logo del foro" class="forum-logo">
+                        <img src="../assets/img/foro-sm.png" alt="Logo del foro" class="forum-logo">
                         <div class="forum-description">
-                            <h3>Nombre del Foro</h3>
-                            <p>Descripción breve del foro y su enfoque temático. Por ejemplo: "Foro especializado en terapias grupales y técnicas de relajación".</p>
+                            <h3>Foro Salud Mental</h3>
+                            <p>Guía de estilo sobre salud mental para medios de comunicación. Las palabras si importan.</p>
                             <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
                         </div>
                         <a href="link-al-foro.com" class="visit-btn">Visitar Foro</a>
