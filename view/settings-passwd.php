@@ -134,10 +134,12 @@ $usuario = $_SESSION['nombre'];
                     </div>
             </form> 
             <!-- Fin de filtro para cambiar la contraseña -->
-        </div>
-        <footer>
-            <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
-        </footer>
+        </div><br>
+
+<footer>
+        <p>&copy;<span id="year"></span> Clinica virtual para la salud de tu mente</p>
+</footer>
+
         <script src="../assets/js/menu.js"></script>
         <script src="../assets/js/showYear.js"></script>
         <script src="../assets/js/script.js"></script>

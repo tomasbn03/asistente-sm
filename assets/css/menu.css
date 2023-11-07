@@ -21,7 +21,7 @@
 
 body{
     min-height: 90vh;
-    background-color: #D2E7FF;
+    background-color: var(--body-color);
     transition: var(--tran-05);
 }
 

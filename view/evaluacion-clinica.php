@@ -90,7 +90,7 @@ $correo = $_SESSION['correo'];
     </section>
 
     <footer>
-        <p>&copy; <span id="year"></span> Clinica virtual para la salud de tu mente</p>
+        <p>&copy;<span id="year"></span> Clinica virtual para la salud de tu mente</p>
     </footer>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/script.js"></script>

@@ -93,15 +93,18 @@ include '../model/db.php';
             </div>
         </div>
     </nav>
+    <div class="backgraund-portada">
+        <img src="../assets/img/portada.png" id="portada">
+    </div><br>
 
 
+
+    
+    <div class=box-main> 
     <div class="cont-text">
-        <h1>Holaaa</h1>
-            <p>Bienvenido a la página de contacto psicologico, este es un texto de prueba temporal.</p>
-        
-        
-    </div>
-
+        <h1>Hola <?php echo $_SESSION['nombre'] ?></h1>
+        <p>Bienvenido a la página para contactar a tu profesional especializado en la salud mental.</p>
+    </div><br><br>
     <?php
     $sql = 'SELECT id_psicol, nombre, apellido, correo, telefono, cita FROM psicologos';
     $stmt = mysqli_query($conexion, $sql);
@@ -146,7 +149,7 @@ include '../model/db.php';
             </div>
             EOT;
     ?>
-
+    </div> <br><br>
     
     <script>
         $(document).ready(function() {

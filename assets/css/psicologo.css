@@ -136,3 +136,15 @@
     margin: 5% auto; /* More margin on the top on small screens */
   }
 }
+
+.box-main {
+   width: 1000px;
+   margin: auto;
+   background-color: #f9f9f9;
+   border: 1px solid #ddd;
+
+}
+
+.cont-text h1{
+    margin-left: -50px;
+}
