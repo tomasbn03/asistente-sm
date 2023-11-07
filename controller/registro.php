@@ -35,7 +35,6 @@
         exit();
     }
 
-
     // Valida la contraseña del usuario
     $verify_pass = mysqli_query($conexion, "SELECT * FROM usuarios WHERE contrasenia = '$pass'");
     if(mysqli_num_rows($verify_pass) > 0){
@@ -44,6 +43,8 @@
         include '../view/login-register.php';
         exit();  
     }
+
+    // Valida el teléfono del usuario
     if(!preg_match("/^[0-9]{7,10}$/", $telefono)) {
         $error_message = "Número de teléfono no válido.";
         mysqli_close($conexion);
@@ -51,16 +52,30 @@
         exit();
     }
 
-    if(!preg_match("/^[6-7][0-9]{7}$/", $telefono)) {
-    $error_message = "Número de teléfono no válido.";
-    mysqli_close($conexion);
-    include '../view/login-register.php';
-    exit();
+    // Validación de la fecha de nacimiento
+    if (!preg_match("/^\d{4}-\d{2}-\d{2}$/", $fechaNacimiento)) {
+        $error_message = "Formato de fecha de nacimiento no válido.";
+        mysqli_close($conexion);
+        include '../view/login-register.php';
+        exit();
+    } else {
+        // Comprobar si la fecha es válida
+        $fecha = explode('-', $fechaNacimiento);
+        $anio = (int)$fecha[0];
+        $mes = (int)$fecha[1];
+        $dia = (int)$fecha[2];
+
+        if (!checkdate($mes, $dia, $anio)) {
+            $error_message = "Fecha de nacimiento no válida.";
+            mysqli_close($conexion);
+            include '../view/login-register.php';
+            exit();
+        }
     }
 
+    // Continúa con la inserción del usuario en la base de datos
     $query = "INSERT INTO usuarios(nombre, usuario, correo, contrasenia, telefono, fecha_nacimiento)
     VALUES('$nombre','$usuario','$correo','$pass', '$telefono', '$fechaNacimiento')";
-
 
     $exe = mysqli_query($conexion, $query);
 

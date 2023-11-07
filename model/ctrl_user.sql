@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2023 a las 15:22:46
+-- Tiempo de generación: 07-11-2023 a las 16:04:17
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -64,21 +64,18 @@ CREATE TABLE `usuarios` (
   `usuario` varchar(200) NOT NULL,
   `correo` varchar(400) NOT NULL,
   `contrasenia` varchar(200) DEFAULT NULL,
-  `telefono` varchar(50) DEFAULT NULL
+  `telefono` varchar(50) DEFAULT NULL,
+  `fecha_nacimiento` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `correo`, `contrasenia`, `telefono`) VALUES
-(19, 'Angel Martinez', 'angelm', 'angelm@gmail.com', '2003', '79322840'),
-(20, 'Enrique Bonilla', 'tomasbnll', 'tomas@gmail.com', 'root', '76576555'),
-(21, 'Jordan', 'Jordan1', 'jordan.molina22@itca.edu.sv', '12345', '76654114'),
-(23, 'Cristiano Ronaldo', 'cr7', 'elbicho@cr7.com', 'siu', '60655786'),
-(24, 'Tomas Bonilla', 'messi', 'tomasbonilla@gmail.com', 'admin', '76576555'),
-(27, 'Juan Hernandez', 'jhernandez', 'jhernandez@gmail.com', 'games', '78876541'),
-(28, 'Fernando Páz', 'ferpz', 'fernandopz@gmail.com', 'secreto', '60009909');
+INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `correo`, `contrasenia`, `telefono`, `fecha_nacimiento`) VALUES
+(31, 'Jordan Molina', 'Jordaaan', 'jordan.molina22@itca.edu.sv', '212121', '21212828', '2004-07-21'),
+(32, 'Tomas Bonilla', 'tomaas', 'tomasbonilla@gmail.com', 'admin', '76576555', '2003-03-15'),
+(33, 'Rosendo Garcia', 'roosendo', 'rosendogarc@gmail.com', 'camellonaldo', '70708080', '2002-09-11');
 
 --
 -- Índices para tablas volcadas
@@ -98,7 +95,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
