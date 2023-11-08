@@ -1,0 +1,61 @@
+.container-bl {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container-bl {
+    display: flex;
+    flex-direction: column; /* Esto asegura que el contenido esté en dirección vertical */
+    
+    margin-bottom: 20px;
+}   
+
+section {
+    width: 730px;
+    padding: 20px;
+    text-align: justify;
+    margin: auto;
+}
+
+section p {
+    margin: 5px;
+    color: #414141;
+}
+
+h1{
+    padding-left: 40px;
+}
+
+h3 {
+    margin-left: 10px;
+}
+
+h4 {
+    margin-left: 30px;
+}
+
+.lista-box {
+    margin: 5px;
+    color: #414141;
+    margin-left: 30px;
+    list-style: none;
+}
+
+.margen-box {
+    background-color: #CFE3FB;
+    height: auto;
+    margin: auto;
+}
+
+.intro {
+    width: 800px;
+}
+
+.title h2{
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+}

@@ -146,30 +146,35 @@ $correo = $_SESSION['correo'];
                     </div>
                 </div>
         </div><br>
+
+
                 <!-- Tres recursos en la parte inferior -->
                 <div class="cont-recurs">
                 <div class="fondo">
                     <div class="cont1">
-                        <h3></h3> 
-                        <span></span><br>
-                            <a href="" class="boton-animado">Acceder</a>
+                        <h3>Técnicas para Manejar la Ansiedad Diaria.</h3><br>
+                    <span>Aprende métodos prácticos para reducir la ansiedad y mejorar tu calidad de 
+                        vida a través de estrategias de mindfulness y autogestión emocional.</span><br>
+                        <a href="biblio-bienestar4.php" class="boton-animado">Acceder</a>
                     </div>
                 </div><br>
 
 
                 <div class="fondo">
                     <div class="cont2">
-                        <h3></h3>
-                        <span></span><br>
-                            <a href="" class="boton-animado">Acceder</a>
+                        <h3>Construyendo una Autoestima Sólida.</h3><br>
+                        <span>Explora técnicas para reforzar tu confianza, reconocer tus valores 
+                        y promover un diálogo interno positivo para una vida más plena.</span><br>
+                            <a href="biblio-bienestar5.php" class="boton-animado">Acceder</a>
                     </div>
                 </div><br>
 
                 <div class="fondo">
                     <div class="cont3">
-                        <h3></h3>
-                        <span></span><br>
-                            <a href="" class="boton-animado-a">Acceder</a>
+                        <h3>Claves para un Equilibrio Vida-Trabajo Saludable.</h3><br>
+                        <span>Encuentra el balance perfecto entre tus responsabilidades laborales
+                        y tu tiempo personal con estrategias efectivas de manejo del tiempo y priorización.</span><br>
+                            <a href="biblio-bienestar6.php" class="boton-animado-a">Acceder</a>
                     </div>
                 </div>
                 </div><br><br>
@@ -184,7 +189,7 @@ $correo = $_SESSION['correo'];
 
             <div class="box-forum">
                 <div class="forum-container">
-                    <h2>Foros Alternos Recomendados</h2>
+                    <h1>Foros Alternos Recomendados</h1><br>
                     <p>Descubre y participa en foros externos que recomendamos para enriquecer tu camino hacia el bienestar.</p> <br> <br>
 
                     <!-- Foro 1 -->
