@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2023 a las 16:04:17
+-- Tiempo de generación: 09-11-2023 a las 04:59:21
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -65,17 +65,19 @@ CREATE TABLE `usuarios` (
   `correo` varchar(400) NOT NULL,
   `contrasenia` varchar(200) DEFAULT NULL,
   `telefono` varchar(50) DEFAULT NULL,
-  `fecha_nacimiento` date DEFAULT NULL
+  `fecha_nacimiento` date DEFAULT NULL,
+  `foto_perfil` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `correo`, `contrasenia`, `telefono`, `fecha_nacimiento`) VALUES
-(31, 'Jordan Molina', 'Jordaaan', 'jordan.molina22@itca.edu.sv', '212121', '21212828', '2004-07-21'),
-(32, 'Tomas Bonilla', 'tomaas', 'tomasbonilla@gmail.com', 'admin', '76576555', '2003-03-15'),
-(33, 'Rosendo Garcia', 'roosendo', 'rosendogarc@gmail.com', 'camellonaldo', '70708080', '2002-09-11');
+INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `correo`, `contrasenia`, `telefono`, `fecha_nacimiento`, `foto_perfil`) VALUES
+(31, 'Jordan Molina', 'Jordaaan', 'jordan.molina22@itca.edu.sv', '212121', '21212828', '2004-07-21', NULL),
+(32, 'Tomas Bonilla', 'tomaas', 'tomasbonilla@gmail.com', 'admin', '76576555', '2003-03-15', 'profile32.jpg'),
+(33, 'Rosendo Garcia', 'roosendo', 'rosendogarc@gmail.com', 'camellonaldo', '70708080', '2002-09-11', NULL),
+(34, 'Panchito Funes', 'panchitosv', 'panchito@gmail.com', '1234', '60607090', '1994-11-05', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -95,7 +97,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
