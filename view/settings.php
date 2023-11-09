@@ -10,7 +10,14 @@ $usuario = $_SESSION['nombre'];
 $email = $_SESSION['correo'];
 $phone = $_SESSION['telefono'];
 
+// Define la ruta a la carpeta de uploads. Ajusta si es necesario
+$uploadPath = '../uploads/';
+// Verifica si existe una imagen de perfil en la sesión
+$profileImage = isset($_SESSION['foto_perfil']) ? $uploadPath . $_SESSION['foto_perfil'] : 'path/to/default/profile.png';
+// Verifica si el archivo de imagen realmente existe
+$profileImage = file_exists($profileImage) ? $profileImage : 'path/to/default/profile.png';
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -87,16 +94,26 @@ $phone = $_SESSION['telefono'];
                 tu perfil.</p> <br><br>
 
 
+                
+                <?php if (isset($_SESSION['message'])): ?>
+                    <p><?php echo $_SESSION['message']; unset($_SESSION['message']); ?></p>
+                <?php endif; ?>
 
-                <div class="container"> 
-                    <div class="centered-div">
-                        <img class="img-prfl" src="../assets/img/perfil.png">
-                        <p>Cuenta</p>
-                    </div>
-                </div><br>
+                
+                <img src="<?php echo $profileImage; ?>" alt="Foto de perfil" style="width:150px;">
 
-            <br><br>
-            <input type="file" name="foto_perfil" accept="image/*">
+                
+                <form action="../controller/foto-perfil.php" method="post" enctype="multipart/form-data">
+                    <input type="file" name="image" required>
+                    <button type="submit" name="submit">Subir/Actualizar Foto</button>
+                </form>
+
+                
+                <form action="../controller/foto-perfil.php" method="post">
+                    <input type="hidden" name="action" value="delete">
+                    <button type="submit" name="delete">Eliminar Foto</button>
+                </form>
+     
             <br><br><br>
 
             <!-- Filtros para cambiar nombre que aparece en el sistema -->

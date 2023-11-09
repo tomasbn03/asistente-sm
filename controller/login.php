@@ -29,7 +29,7 @@
             if(mysqli_num_rows($result) === 1){
                 $row = mysqli_fetch_assoc($result);
                 if($row['correo'] === $correo && $row['contrasenia'] === $contrasenia){
-                        $_SESSION['id'] = $row['id'];
+                        $_SESSION['user_id'] = $row['id'];
                         $_SESSION['nombre'] = $row['nombre'];
                         $_SESSION['usuario'] = $row['usuario'];
                         $_SESSION['correo'] = $row['correo'];
