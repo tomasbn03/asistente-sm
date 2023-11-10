@@ -307,3 +307,20 @@ footer {
     margin: auto;
 }
 
+.profile-picture {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 50%;
+}
+
+.btn-delete {
+    background-color: rgb(156, 41, 41);
+    color: #f9f9f9;
+}
+
+input[type=file] {
+
+
+    color: #272665;
+}

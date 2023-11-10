@@ -25,7 +25,29 @@ $correo = $_SESSION['correo'];
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="../assets/img/perfil.png" alt="">
+                <?php
+                // Verifica la sesion para mostrar la imagen según el usuario 
+                if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+                    require_once '../model/db.php'; 
+
+                    $userId = $_SESSION['user_id'];
+                    $stmt = $conexion->prepare("SELECT foto_perfil FROM usuarios WHERE id = ?");
+                    $stmt->bind_param("i", $userId);
+                    $stmt->execute();
+                    $stmt->store_result();
+
+                    if ($stmt->num_rows > 0) {
+                        $stmt->bind_result($fotoPerfil);
+                        $stmt->fetch();
+
+                        $imagePath = !empty($fotoPerfil) ? '../uploads/' . $fotoPerfil : 'ruta/a/imagen/por/defecto.jpg';
+                        echo '<img src="' . htmlspecialchars($imagePath) . '" alt="Foto de perfil">';
+                    } else {
+                        echo '<img src="ruta/a/imagen/por/defecto.jpg" alt="Foto de perfil" >';
+                    }
+                    $stmt->close();
+                }
+                ?>
                 </span>
 
                 <div class="text logo-text">

@@ -10,12 +10,6 @@ $usuario = $_SESSION['nombre'];
 $email = $_SESSION['correo'];
 $phone = $_SESSION['telefono'];
 
-// Define la ruta a la carpeta de uploads. Ajusta si es necesario
-$uploadPath = '../uploads/';
-// Verifica si existe una imagen de perfil en la sesión
-$profileImage = isset($_SESSION['foto_perfil']) ? $uploadPath . $_SESSION['foto_perfil'] : 'path/to/default/profile.png';
-// Verifica si el archivo de imagen realmente existe
-$profileImage = file_exists($profileImage) ? $profileImage : 'path/to/default/profile.png';
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +31,29 @@ $profileImage = file_exists($profileImage) ? $profileImage : 'path/to/default/pr
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="../assets/img/perfil.png" alt="">
+                <?php
+                // Verifica la sesion para mostrar la imagen según el usuario 
+                if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+                    require_once '../model/db.php'; 
+
+                    $userId = $_SESSION['user_id'];
+                    $stmt = $conexion->prepare("SELECT foto_perfil FROM usuarios WHERE id = ?");
+                    $stmt->bind_param("i", $userId);
+                    $stmt->execute();
+                    $stmt->store_result();
+
+                    if ($stmt->num_rows > 0) {
+                        $stmt->bind_result($fotoPerfil);
+                        $stmt->fetch();
+
+                        $imagePath = !empty($fotoPerfil) ? '../uploads/' . $fotoPerfil : 'ruta/a/imagen/por/defecto.jpg';
+                        echo '<img src="' . htmlspecialchars($imagePath) . '" alt="Foto de perfil">';
+                    } else {
+                        echo '<img src="ruta/a/imagen/por/defecto.jpg" alt="Foto de perfil" >';
+                    }
+                    $stmt->close();
+                }
+                ?>
                 </span>
 
                 <div class="text logo-text">
@@ -93,31 +109,43 @@ $profileImage = file_exists($profileImage) ? $profileImage : 'path/to/default/pr
             <p><b>Tu bienestar mental es prioridad.</b> En esta sección, puedes personalizar tu experiencia en nuestro sitio, aquí puedes gestionar 
                 tu perfil.</p> <br><br>
 
+                <?php
+                // Verifica la sesion para mostrar la imagen según el usuario 
+                if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+                    require_once '../model/db.php'; 
 
-                
-                <?php if (isset($_SESSION['message'])): ?>
-                    <p><?php echo $_SESSION['message']; unset($_SESSION['message']); ?></p>
-                <?php endif; ?>
+                    $userId = $_SESSION['user_id'];
+                    $stmt = $conexion->prepare("SELECT foto_perfil FROM usuarios WHERE id = ?");
+                    $stmt->bind_param("i", $userId);
+                    $stmt->execute();
+                    $stmt->store_result();
 
-                
-                <img src="<?php echo $profileImage; ?>" alt="Foto de perfil" style="width:150px;">
+                    if ($stmt->num_rows > 0) {
+                        $stmt->bind_result($fotoPerfil);
+                        $stmt->fetch();
 
-                
+                        $imagePath = !empty($fotoPerfil) ? '../uploads/' . $fotoPerfil : 'ruta/a/imagen/por/defecto.jpg';
+                        echo '<img src="' . htmlspecialchars($imagePath) . '" alt="Foto de perfil" class="profile-picture"> <br>';
+                    } else {
+                        echo '<img src="ruta/a/imagen/por/defecto.jpg" alt="Foto de perfil" >';
+                    }
+                    $stmt->close();
+                }
+                ?>
+
+                <!-- Formulario para subir, cambiar y  eliminar la foto de perfil -->
                 <form action="../controller/foto-perfil.php" method="post" enctype="multipart/form-data">
-                    <input type="file" name="image" required>
+                    <input type="file" name="image" required> 
                     <button type="submit" name="submit">Subir/Actualizar Foto</button>
-                </form>
-
-                
+                </form><br>
                 <form action="../controller/foto-perfil.php" method="post">
                     <input type="hidden" name="action" value="delete">
-                    <button type="submit" name="delete">Eliminar Foto</button>
+                    <button type="submit" class=btn-delete name="delete">Eliminar Foto</button>
                 </form>
      
-            <br><br><br>
 
             <!-- Filtros para cambiar nombre que aparece en el sistema -->
-            
+<br><br><br>          
             <!-- Formulario para cambiar nombre -->
             <div class="container-display">
                 <div class="sub-name">
