@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-11-2023 a las 04:59:21
+-- Tiempo de generación: 10-11-2023 a las 22:43:57
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -75,9 +75,9 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `correo`, `contrasenia`, `telefono`, `fecha_nacimiento`, `foto_perfil`) VALUES
 (31, 'Jordan Molina', 'Jordaaan', 'jordan.molina22@itca.edu.sv', '212121', '21212828', '2004-07-21', NULL),
-(32, 'Tomas Bonilla', 'tomaas', 'tomasbonilla@gmail.com', 'admin', '76576555', '2003-03-15', 'profile32.jpg'),
-(33, 'Rosendo Garcia', 'roosendo', 'rosendogarc@gmail.com', 'camellonaldo', '70708080', '2002-09-11', NULL),
-(34, 'Panchito Funes', 'panchitosv', 'panchito@gmail.com', '1234', '60607090', '1994-11-05', NULL);
+(38, 'Freddy Fazbeard', 'fnaf', 'fnaf@oso.com', '$2y$10$70XTCevAjCy28To1ATCx4eYAvuqwJ5qGT3f2kL7FwJoYlGG2Jvjl2', '70708990', '1980-10-11', 'profile38.jpg'),
+(39, 'Tomas Bonilla', 'tomas', 'tomasbonilla@gmail.com', '$2y$10$y88LS3qn9TU1dXD8T7qLguayTiDs98RlmPejFzAhUqK4Y02p0Y6wu', '76576555', '0003-02-15', 'profile39.jpg'),
+(40, 'Rosendo Garcia', 'callmerosendo', 'rosendogrc@gmail.com', '$2y$10$yvwNbuWPf14vfbXJMPkwbu/3sLxVE6SUdenkTMkAGUl.R7cM/Lj3i', '70600872', '2002-09-11', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -97,7 +97,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

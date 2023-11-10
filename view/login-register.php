@@ -1,3 +1,13 @@
+<?php
+    session_start(); // Iniciar la sesión al principio del archivo
+
+    $error_message = '';
+    if (isset($_SESSION['error_message'])) {
+        $error_message = $_SESSION['error_message'];
+        unset($_SESSION['error_message']); // Es importante limpiar la variable de sesión después de usarla
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,17 +43,10 @@
                 ?>
                 <hr>
                 <!-- Error de registro para saber si se registró o no -->
-                <?php
-                    if(isset($error_message)){
-                        ?>
-                        <p class="error">
-                            <?php
-                                echo $error_message;
-                            ?>
-                        </p>
-                    <?php
-                    }
-                ?>
+                <?php if ($error_message != ''): ?>
+                    <p class="error"><?php echo htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8'); ?></p>
+                <?php endif; ?>
+
                 <input type="email" name="correo" placeholder="Correo" />
                 <input type="password" name="contrasenia" placeholder="Constraseña" />
                 <a href="#">Olvidaste tu contraseña?</a>

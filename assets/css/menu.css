@@ -55,7 +55,7 @@ body{
 
 .sidebar header .image,
 .sidebar .icon{
-    min-width: 60px;
+    min-width: 50px;
     border-radius: 6px;
 }
 

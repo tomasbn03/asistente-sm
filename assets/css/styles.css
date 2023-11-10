@@ -324,3 +324,9 @@ input[type=file] {
 
     color: #272665;
 }
+
+
+.img-default {
+    width: 30px;
+    height: 20px;
+}
