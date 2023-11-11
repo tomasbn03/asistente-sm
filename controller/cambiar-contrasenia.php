@@ -1,58 +1,50 @@
- <?php
-session_start(); // Asegúrate de haber iniciado la sesión
-
-$usuario = $_SESSION['nombre'];
-
+<?php
+session_start();
 include '../model/db.php';
 
 if (isset($_POST['submitPass'])) {
-    $currentPassword = $_POST['currentPassword'];
-    $newPassword = $_POST['newPassword'];
-    $confirmPassword = $_POST['confirmPassword'];
+    $currentPassword = $_POST['currentPassword']; // La contraseña actual ingresada por el usuario.
+    $newPassword = $_POST['newPassword']; // La nueva contraseña ingresada por el usuario.
+    $confirmPassword = $_POST['confirmPassword']; // Confirmación de la nueva contraseña.
+    $usuarioId = $_SESSION['user_id']; // El ID del usuario obtenido de la sesión.
 
-    // Verificar si el usuario actual coincide con el usuario en sesión
-    if ($_SESSION['nombre'] === $usuario) { // Supongo que $usuario contiene el nombre del usuario en sesión
-        // El usuario actual coincide con el usuario en sesión, procede con el cambio de contraseña
-
-        // Obtener la contraseña actual desde la base de datos (campo 'contrasenia')
-        $query = "SELECT contrasenia FROM usuarios WHERE nombre = '$usuario'";
-        $result = $conexion->query($query);
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $storedPassword = $row['contrasenia'];
-
-            // Verificar que la contraseña actual ingresada coincida con la almacenada
-            if ($currentPassword === $storedPassword) {
-                // La contraseña actual es correcta, procede a actualizar la contraseña
-
-                // Actualizar la contraseña en la base de datos (sin hashear)
-                $query = "UPDATE usuarios SET contrasenia = '$newPassword' WHERE nombre = '$usuario'";
-                
-                if ($conexion->query($query) === TRUE) {
-                    $pass_error_message = "La contraseña ha sido cambiada exitosamente.";
-                } else {
-                    $pass_error_message  = "Error al cambiar la contraseña: " . $conexion->error;
-                }
-            } else {
-                $pass_error_message  = "La contraseña actual es incorrecta. Inténtalo de nuevo.";
-            }
-        } else {
-            $pass_error_message  = "No se encontró un usuario con este nombre.";
-        }
-    } else {
-        // El usuario actual no coincide con el usuario en sesión, muestra un mensaje de error
-        $pass_error_message  = "No tienes permiso para cambiar la contraseña de otro usuario.";
+    // Verificar si la nueva contraseña y la confirmación son iguales.
+    if ($newPassword !== $confirmPassword) {
+        header("Location: ../view/settings-passwd.php?pass_error_message=" . urlencode("Las nuevas contraseñas no coinciden."));
+        exit();
     }
 
-    // Cerrar la conexión a la base de datos
-    $conexion->close();
+    // Obtener la contraseña actual desde la base de datos.
+    $stmt = mysqli_prepare($conexion, "SELECT contrasenia FROM usuarios WHERE id = ?");
+    mysqli_stmt_bind_param($stmt, "i", $usuarioId);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
-    // Redireccionar al usuario de regreso a la página de configuración
-    header("Location: ../view/settings-passwd.php?pass_error_message=" . urlencode($pass_error_message));
-    exit();
+    if ($row = mysqli_fetch_assoc($result)) {
+        // Verificar que la contraseña actual ingresada coincida con la almacenada.
+        if (password_verify($currentPassword, $row['contrasenia'])) {
+            // La contraseña actual es correcta, procede a actualizar la contraseña.
+            $newPasswordHash = password_hash($newPassword, PASSWORD_DEFAULT);
+            
+            $updateStmt = mysqli_prepare($conexion, "UPDATE usuarios SET contrasenia = ? WHERE id = ?");
+            mysqli_stmt_bind_param($updateStmt, "si", $newPasswordHash, $usuarioId);
+            $exe = mysqli_stmt_execute($updateStmt);
+
+            if ($exe) {
+                header("Location: ../view/settings-passwd.php?pass_success_message=" . urlencode("La contraseña ha sido cambiada exitosamente."));
+            } else {
+                header("Location: ../view/settings-passwd.php?pass_error_message=" . urlencode("Error al cambiar la contraseña."));
+            }
+            mysqli_stmt_close($updateStmt);
+        } else {
+            header("Location: ../view/settings-passwd.php?pass_error_message=" . urlencode("La contraseña actual es incorrecta."));
+        }
+    } else {
+        header("Location: ../view/settings-passwd.php?pass_error_message=" . urlencode("No se pudo verificar la información del usuario."));
+    }
+    mysqli_stmt_close($stmt);
+    mysqli_close($conexion);
 } else {
-    // Manejo de caso en el que se accede a la página sin haber enviado el formulario
     header("Location: ../view/settings-passwd.php");
     exit();
 }

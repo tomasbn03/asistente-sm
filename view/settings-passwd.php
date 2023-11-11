@@ -5,8 +5,6 @@ if (!isset($_SESSION['correo'])) {
     header("Location: login-register.php");
     exit();
 }
-
-$pass = $_SESSION['contrasenia'];
 $usuario = $_SESSION['nombre'];
 ?>
 
@@ -27,7 +25,7 @@ $usuario = $_SESSION['nombre'];
 <?php
     require("components/menu.php");
 ?>
-
+<br>
         <div class="cont-text">
             <h2>En este apartado puedes actualizar tu contraseña <?php echo $_SESSION['nombre']; ?></h2><br>
             
@@ -39,7 +37,7 @@ $usuario = $_SESSION['nombre'];
                         <div class="form-group-f">
                                 <div class="currentPass">
                                     <label for="currentPassword">Contraseña actual:</label> <br> <br>
-                                    <input type="password" id="currentPassword" value="<?php echo $_SESSION['contrasenia']; ?>" name="currentPassword" required>
+                                    <input type="password" id="currentPassword" name="currentPassword" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -63,18 +61,11 @@ $usuario = $_SESSION['nombre'];
                                 </table>
                             </div>
                             <input type="submit" name="submitPass" value="Guardar"><br> <br> <br>
-                            <?php
-                                if(isset($_GET["pass_error_message"])){
-                                    ?>
-                                    <p class="pass_error_message">                           
-                                            <?php
-                                                echo $_GET['pass_error_message'];
-                                            ?>
-
-                                    </p>
-                                <?php
-                                }
-                            ?>
+                            <?php if (isset($_GET["pass_error_message"])): ?>
+                                <p class="pass_error_message">
+                                    <?php echo htmlspecialchars($_GET['pass_error_message'], ENT_QUOTES, 'UTF-8'); ?>
+                                </p>
+                            <?php endif; ?>
                         </div>
                     </div>
             </form> 
