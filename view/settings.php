@@ -22,7 +22,6 @@ $phone = $_SESSION['telefono'];
     <link rel="stylesheet" href="../assets/css/forms-display.css">
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="../assets/css/error-message.css">
 </head>
 <title>Sistema de Salud Mental</title>
 <body>
@@ -97,10 +96,11 @@ $phone = $_SESSION['telefono'];
                             <button type="submit" name="submitName">Guardar cambios</button>
                         </form>
                 </div>
-                <div class="mensaje">
-                    <!-- Mensaje -->
-                    <?php if(isset($_GET["mensaje_name"])){ ?> <p class="mensaje_name"> <?php echo $_GET['mensaje_name']; ?> </p> <?php } ?>
-                </div>
+                <?php if (isset($_GET['mensaje_name'])): ?>
+                    <div class="<?php echo isset($_GET['tipo']) && $_GET['tipo'] === 'error' ? 'mensaje_error' : 'mensaje_success'; ?>">
+                        <?php echo htmlspecialchars(urldecode($_GET['mensaje_name'])); ?>
+                    </div>
+                <?php endif; ?>
             </div>
 <br><br><br>
             <!-- Formulario para cambiar correo -->
@@ -127,10 +127,11 @@ $phone = $_SESSION['telefono'];
                         </form>
                     </table>
                 </div>
-                <div class="mensaje">
-                    <!-- Mensaje -->
-                    <?php if(isset($_GET["mensaje_email"])){ ?> <p class="mensaje_email"> <?php echo $_GET['mensaje_email']; ?> </p> <?php } ?>
-                </div>
+                <?php if(isset($_GET["mensaje_email"])): ?>
+                    <div class="<?php echo isset($_GET['tipo']) && $_GET['tipo'] === 'error' ? 'mensaje_error' : 'mensaje_success'; ?>">
+                        <?php echo htmlspecialchars(urldecode($_GET['mensaje_email'])); ?>
+                    </div>
+                <?php endif; ?>
             </div>
 <br><br><br>
             <!-- Formulario para cambiar telefono -->
@@ -157,10 +158,12 @@ $phone = $_SESSION['telefono'];
                         </form>
                     </table>
                 </div>
-                <div class="mensaje">
-                    <!-- Mensaje -->
-                    <?php if(isset($_GET["mensaje_phone"])){ ?> <p class="mensaje_phone"> <?php echo $_GET['mensaje_phone']; ?> </p> <?php } ?>
-                </div>
+                <!-- Mensaje -->
+                <?php if(isset($_GET["mensaje_phone"])): ?>
+                    <div class="<?php echo isset($_GET['tipo']) && $_GET['tipo'] === 'error' ? 'mensaje_error' : 'mensaje_success'; ?>">
+                        <?php echo htmlspecialchars(urldecode($_GET['mensaje_phone'])); ?>
+                    </div>
+                <?php endif; ?>
             </div>
 
 <br><br><br>

@@ -2,11 +2,12 @@
 session_start();
 include '../model/db.php';
 
+//Evalúa si los datos se envían por medio del formulario
 if (isset($_POST['submitPass'])) {
-    $currentPassword = $_POST['currentPassword']; // La contraseña actual ingresada por el usuario.
-    $newPassword = $_POST['newPassword']; // La nueva contraseña ingresada por el usuario.
-    $confirmPassword = $_POST['confirmPassword']; // Confirmación de la nueva contraseña.
-    $usuarioId = $_SESSION['user_id']; // El ID del usuario obtenido de la sesión.
+    $currentPassword = $_POST['currentPassword']; 
+    $newPassword = $_POST['newPassword']; 
+    $confirmPassword = $_POST['confirmPassword'];
+    $usuarioId = $_SESSION['user_id']; 
 
     // Verificar si la nueva contraseña y la confirmación son iguales.
     if ($newPassword !== $confirmPassword) {

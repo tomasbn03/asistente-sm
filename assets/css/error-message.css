@@ -1,5 +1,25 @@
-.pass_error_message {
-    color: #272665;
-    font-size: 12pt;
+.error-message {
+    margin: auto;
+    color: #dc3545; /* Color de texto para error */
+    background-color: #f8d7da; /* Fondo claro para error */
+    border: 1px solid #dc3545; /* Borde para error */
+    margin-top: -40px;
+    border-radius: 5px;
     text-align: center;
+    width: 250px;
+    height: auto;
+    font-size: 12pt;
+}
+
+.success-message {
+    margin: auto;
+    color: #28a745; /* Color de texto para éxito */
+    background-color: #daf5e9; /* Fondo claro para éxito */
+    border: 1px solid #28a745; /* Borde para éxito */
+    margin-top: -40px;
+    border-radius: 5px;
+    text-align: center;
+    width: 250px;
+    height: auto;
+    font-size: 12pt;
 }

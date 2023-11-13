@@ -1,59 +1,47 @@
-
 <?php
 session_start();
 
-$usuario = $_SESSION['nombre'];
-
 include '../model/db.php';
-
-$mensaje_name = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $currentName = trim($_POST['currentName']);
     $newName = trim($_POST['newName']);
 
     // Verificar si el nombre actual coincide con el nombre en sesión
-    if ($_SESSION['nombre'] === $usuario) {
+    if ($_SESSION['nombre'] === $currentName) {
         $query = "SELECT nombre FROM usuarios WHERE nombre = ?";
         $stmt = $conexion->prepare($query);
-        $stmt->bind_param("s", $usuario);
+        $stmt->bind_param("s", $currentName);
         $stmt->execute();
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $storedName = $row['nombre'];
+            $sql = "UPDATE usuarios SET nombre = ? WHERE correo = ? AND nombre = ?";
+            $stmt = $conexion->prepare($sql);
+            $stmt->bind_param("sss", $newName, $_SESSION['correo'], $currentName);
 
-            if ($currentName === $storedName) {
-                $sql = "UPDATE usuarios SET nombre = ? WHERE correo = ? AND nombre = ?";
-                $stmt = $conexion->prepare($sql);
-                $stmt->bind_param("sss", $newName, $_SESSION['correo'], $currentName);
-
-                if ($stmt->execute()) {
-                    $_SESSION['nombre'] = $newName;
-                    $mensaje_name = "Nombre actualizado con éxito!";
-                } else {
-                    $mensaje_name = "Error al actualizar el nombre: " . $conexion->error;
-                }
+            if ($stmt->execute()) {
+                $_SESSION['nombre'] = $newName;
+                // Agrega tipo de mensaje 'success'
+                header("Location: ../view/settings.php?mensaje_name=" . urlencode("Nombre actualizado con éxito!") . "&tipo=success");
             } else {
-                $mensaje_name = "El nombre actual proporcionado no coincide con el nombre en sesión. Inténtalo de nuevo.";
+                // Agrega tipo de mensaje 'error'
+                header("Location: ../view/settings.php?mensaje_name=" . urlencode("Error al actualizar el nombre.") . "&tipo=error");
             }
         } else {
-            $mensaje_name = "No se encontró un usuario con este nombre.";
+            // Agrega tipo de mensaje 'error'
+            header("Location: ../view/settings.php?mensaje_name=" . urlencode("No se encontró un usuario con este nombre.") . "&tipo=error");
         }
     } else {
-        $mensaje_name = "No tienes permiso para cambiar el nombre de otro usuario.";
+        // Agrega tipo de mensaje 'error'
+        header("Location: ../view/settings.php?mensaje_name=" . urlencode("El nombre actual no coincide con nuestros registros.") . "&tipo=error");
     }
 
     $stmt->close();
     $conexion->close();
-
-     // Redireccionar al usuario de regreso a la página de configuración
-    header("Location: ../view/settings.php?mensaje_name=" . urlencode($mensaje_name));
-    exit();
 } else {
+    // Redirige aquí si el método no es POST
     header("Location: ../view/settings.php");
     exit();
 }
 ?>
-

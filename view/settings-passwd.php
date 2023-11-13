@@ -6,6 +6,10 @@ if (!isset($_SESSION['correo'])) {
     exit();
 }
 $usuario = $_SESSION['nombre'];
+
+// Mensajes de retroalimentación
+$passErrorMessage = isset($_GET['pass_error_message']) ? $_GET['pass_error_message'] : '';
+$passSuccessMessage = isset($_GET['pass_success_message']) ? $_GET['pass_success_message'] : '';
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +32,6 @@ $usuario = $_SESSION['nombre'];
 <br>
         <div class="cont-text">
             <h2>En este apartado puedes actualizar tu contraseña <?php echo $_SESSION['nombre']; ?></h2><br>
-            
             <!-- Filtro para cambiar la contraseña -->
             <form action="../controller/cambiar-contrasenia.php" method="POST">
                     <div class="contenedor-2">
@@ -61,10 +64,17 @@ $usuario = $_SESSION['nombre'];
                                 </table>
                             </div>
                             <input type="submit" name="submitPass" value="Guardar"><br> <br> <br>
-                            <?php if (isset($_GET["pass_error_message"])): ?>
-                                <p class="pass_error_message">
-                                    <?php echo htmlspecialchars($_GET['pass_error_message'], ENT_QUOTES, 'UTF-8'); ?>
-                                </p>
+                            <!-- Mensajes de retroalimentación -->
+                            <?php if ($passErrorMessage): ?>
+                                <div class="error-message">
+                                    <?php echo htmlspecialchars(urldecode($passErrorMessage)); ?>
+                                </div>
+                            <?php endif; ?>
+                            
+                            <?php if ($passSuccessMessage): ?>
+                                <div class="success-message">
+                                    <?php echo htmlspecialchars(urldecode($passSuccessMessage)); ?>
+                                </div>
                             <?php endif; ?>
                         </div>
                     </div>

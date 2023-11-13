@@ -1,56 +1,53 @@
 <?php
 session_start();
 
-$usuarioCorreo = $_SESSION['correo'];
+// Asegúrate de que se incluya la lógica de conexión a la base de datos aquí
+include '../model/db.php';
 
-$mensaje_email = "";
-
-include '../model/db.php'; 
-
+// Verifica si se envió el formulario
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submitEmail'])) {
     $currentEmail = trim($_POST['correo']);
     $newEmail = trim($_POST['nuevoCorreo']);
+    $usuarioId = $_SESSION['user_id'];
 
     // Verificar si el correo actual coincide con el correo en sesión
-    if ($usuarioCorreo === $currentEmail) {
-        $query = "SELECT correo FROM usuarios WHERE correo = ?";
+    if ($currentEmail === $_SESSION['correo']) {
+        // Preparar la consulta para verificar si el correo existe
+        $query = "SELECT correo FROM usuarios WHERE correo = ? AND id = ?";
         $stmt = $conexion->prepare($query);
-        $stmt->bind_param("s", $currentEmail);
+        $stmt->bind_param("si", $currentEmail, $usuarioId);
         $stmt->execute();
         $result = $stmt->get_result();
 
+        // Verificar si se encontró el correo en la base de datos
         if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $storedEmail = $row['correo'];
+            // Preparar la consulta para actualizar el correo
+            $sql = "UPDATE usuarios SET correo = ? WHERE id = ?";
+            $stmt = $conexion->prepare($sql);
+            $stmt->bind_param("si", $newEmail, $usuarioId);
 
-            if ($currentEmail === $storedEmail) {
-                $sql = "UPDATE usuarios SET correo = ? WHERE correo = ?";
-                $stmt = $conexion->prepare($sql);
-                $stmt->bind_param("ss", $newEmail, $currentEmail);
-
-                if ($stmt->execute()) {
-                    $_SESSION['correo'] = $newEmail;
-                    $mensaje_email = "Correo actualizado con éxito!";
-                } else {
-                    $mensaje_email = "Error al actualizar el correo: " . $conexion->error;
-                }
+            // Ejecutar la actualización y verificar si fue exitosa
+            if ($stmt->execute()) {
+                $_SESSION['correo'] = $newEmail;
+                header("Location: ../view/settings.php?mensaje_email=" . urlencode("Correo actualizado con éxito!") . "&tipo=success");
+                exit();
             } else {
-                $mensaje_email = "El correo actual proporcionado no coincide con el correo en sesión. Inténtalo de nuevo.";
+                header("Location: ../view/settings.php?mensaje_email=" . urlencode("Error al actualizar el correo: " . $conexion->error) . "&tipo=error");
+                exit();
             }
         } else {
-            $mensaje_email = "No se encontró un usuario con este correo.";
+            header("Location: ../view/settings.php?mensaje_email=" . urlencode("El correo actual no coincide con nuestros registros.") . "&tipo=error");
+            exit();
         }
     } else {
-        $mensaje_email = "No tienes permiso para cambiar el correo de otro usuario.";
+        header("Location: ../view/settings.php?mensaje_email=" . urlencode("El correo actual proporcionado no coincide con tu correo actual.") . "&tipo=error");
+        exit();
     }
 
     $stmt->close();
     $conexion->close();
-
-    // Redireccionar al usuario de regreso a la página de configuración
-    header("Location: ../view/settings.php?mensaje_email=" . urlencode($mensaje_email));
-    exit();
 } else {
+    // Si el formulario no se envía, simplemente redirige al usuario a la página de configuración
     header("Location: ../view/settings.php");
     exit();
 }

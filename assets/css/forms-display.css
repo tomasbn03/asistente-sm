@@ -17,17 +17,48 @@ button {
 }
 
 .mensaje {
-    width: 250px;
-    height: 30px;
-    padding: 3px 10px;
-    float: right;
-    margin-top: -150px;
-    margin-right: 40px;
+   
+    
+   
+    
     color: #272665;
-    font-size: 12pt;
+    
     border-radius: 5px;
     
 }
+
+.mensaje_success {
+    color: #28a745; /* Color de texto para éxito */
+    background-color: #daf5e9; /* Fondo claro para éxito */
+    border: 1px solid #28a745; /* Borde para éxito */
+    padding: 3px 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 250px;
+    height: auto;
+    font-size: 12pt;
+    float: right;
+    margin-top: -150px;
+    margin-right: 40px;
+}
+
+.mensaje_error {
+    color: #dc3545; /* Color de texto para error */
+    background-color: #f8d7da; /* Fondo claro para error */
+    border: 1px solid #dc3545; /* Borde para error */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 250px;
+    height: auto;
+    font-size: 12pt;
+    float: right;
+    margin-top: -150px;
+    margin-right: 40px;
+}
+
 
 .container-display .sub-name{
     padding: 20px 40px;
