@@ -4,9 +4,15 @@
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
-  background-color: #fff;
+  background-color: #D2E7FF;
   text-align: center;
 }
+
+ .custom-hr {
+  height: 2px;
+  background-color: #2F3A3C;
+  border: none;
+ }
 
 .card-header {
   position: relative;
@@ -108,15 +114,30 @@
 #modal-body {
   text-align: center; /* Center align the text */
   font-size: 1rem; /* Keeping font size to default for consistency */
-  background: #fff; /* White background */
+  background: #D2E7FF; /* White background */
   border-radius: 5px; /* Slightly smaller border-radius for consistency with the card design */
   margin: auto; /* Centering it */
   padding: 25px; /* More padding for better spacing */
+  width: 350px;
 }
+
+.foto-psicologo {
+  width: 100px;
+  height: auto;
+  background-color: #6971A1;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.foto-psicologo img{
+  padding-top: 10px;
+}
+
 
 #modal-body h4,
 #modal-body p {
   margin-bottom: 1rem; /* Consistent spacing at the bottom */
+  text-align: center;
 }
 
 #modal-body a {

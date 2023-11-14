@@ -16,17 +16,6 @@ button {
     width: 1100px;
 }
 
-.mensaje {
-   
-    
-   
-    
-    color: #272665;
-    
-    border-radius: 5px;
-    
-}
-
 .mensaje_success {
     color: #28a745; /* Color de texto para éxito */
     background-color: #daf5e9; /* Fondo claro para éxito */

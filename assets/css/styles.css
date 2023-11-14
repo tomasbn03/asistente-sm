@@ -1,14 +1,14 @@
 .infografia{
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    padding: 20px;
     border: 1px solid #ddd;
-    max-width: 1000px;
-    margin-left: 150px;
+    
     font-size: 14pt;
 }
 
+
 .cont-text{
+    max-width: 1100px;
     font-size: 20px;
     font-weight: 500;
     color: var(--text-color);

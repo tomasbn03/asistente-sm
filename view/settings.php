@@ -32,44 +32,47 @@ $phone = $_SESSION['telefono'];
 
     <!-- Seccion principal de la pagina home -->
     
-        <div class="cont-text">
-            <h1>Bienvenido <?php echo $_SESSION['nombre']; ?></h1> <br>
-            <p><b>Tu bienestar mental es prioridad.</b> En esta sección, puedes personalizar tu experiencia en nuestro sitio, aquí puedes gestionar 
-                tu perfil.</p> <br><br>
+        <div class="infografia">
+            
+                <h1>Bienvenido <?php echo $_SESSION['nombre']; ?></h1> <br>
+                <p><b>Tu bienestar mental es prioridad.</b> En esta sección, puedes personalizar tu experiencia en nuestro sitio, aquí puedes gestionar 
+                    tu perfil.</p> <br><br>
 
-                <?php
-                // Verifica la sesion para mostrar la imagen según el usuario 
-                if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
-                    require_once '../model/db.php'; 
+                    <?php
+                    // Verifica la sesion para mostrar la imagen según el usuario 
+                    if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+                        require_once '../model/db.php'; 
 
-                    $userId = $_SESSION['user_id'];
-                    $stmt = $conexion->prepare("SELECT foto_perfil FROM usuarios WHERE id = ?");
-                    $stmt->bind_param("i", $userId);
-                    $stmt->execute();
-                    $stmt->store_result();
+                        $userId = $_SESSION['user_id'];
+                        $stmt = $conexion->prepare("SELECT foto_perfil FROM usuarios WHERE id = ?");
+                        $stmt->bind_param("i", $userId);
+                        $stmt->execute();
+                        $stmt->store_result();
 
-                    if ($stmt->num_rows > 0) {
-                        $stmt->bind_result($fotoPerfil);
-                        $stmt->fetch();
+                        if ($stmt->num_rows > 0) {
+                            $stmt->bind_result($fotoPerfil);
+                            $stmt->fetch();
 
-                        $imagePath = !empty($fotoPerfil) ? '../uploads/' . $fotoPerfil : 'ruta/a/imagen/por/defecto.jpg';
-                        echo '<img src="' . htmlspecialchars($imagePath) . '" alt="Foto de perfil" class="profile-picture"> <br>';
-                    } else {
-                        echo '<img src="ruta/a/imagen/por/defecto.jpg" alt="Foto de perfil" >';
+                            $imagePath = !empty($fotoPerfil) ? '../uploads/' . $fotoPerfil : 'ruta/a/imagen/por/defecto.jpg';
+                            echo '<img src="' . htmlspecialchars($imagePath) . '" alt="Foto de perfil" class="profile-picture"> <br>';
+                        } else {
+                            echo '<img src="ruta/a/imagen/por/defecto.jpg" alt="Foto de perfil" >';
+                        }
+                        $stmt->close();
                     }
-                    $stmt->close();
-                }
-                ?>
+                    ?>
+                    <!-- Formulario para subir, cambiar y  eliminar la foto de perfil -->
+                    <form action="../controller/foto-perfil.php" method="post" enctype="multipart/form-data">
+                        <input type="file" name="image" required> 
+                        <button type="submit" name="submit">Subir/Actualizar Foto</button>
+                    </form><br>
+                    <form action="../controller/foto-perfil.php" method="post">
+                        <input type="hidden" name="action" value="delete">
+                        <button type="submit" class=btn-delete name="delete">Eliminar Foto</button>
+                    </form>
+            
 
-                <!-- Formulario para subir, cambiar y  eliminar la foto de perfil -->
-                <form action="../controller/foto-perfil.php" method="post" enctype="multipart/form-data">
-                    <input type="file" name="image" required> 
-                    <button type="submit" name="submit">Subir/Actualizar Foto</button>
-                </form><br>
-                <form action="../controller/foto-perfil.php" method="post">
-                    <input type="hidden" name="action" value="delete">
-                    <button type="submit" class=btn-delete name="delete">Eliminar Foto</button>
-                </form>
+                
      
 
             <!-- Filtros para cambiar nombre que aparece en el sistema -->

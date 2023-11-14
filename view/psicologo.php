@@ -56,7 +56,7 @@ $correo = $_SESSION['correo'];
         $correo = htmlspecialchars($row['correo']);
         $telefono = htmlspecialchars($row['telefono']);
 
-        $fotoRandom = '../assets/imgs-psicol/' . $id . '.jpg';
+        $fotoRandom = '../assets/imgs-psicol/' . $id . '.png';
         $fondoRandom = '../assets/imgs-psicol/' . rand(11, 13) . '.jpg';
 
         echo <<<EOT
@@ -69,7 +69,7 @@ $correo = $_SESSION['correo'];
                 </div>
                 <div class="card-content">
                     <h4><b>$nombreCompleto</b></h4>
-                    <p><a href="mailto:$correo">$correo</a></p>
+                    <p><a href="mailto:$correo" style="color:#1F1F1F;">$correo</a></p>
                     <p>$telefono</p>
                 </div>
             </div>
@@ -105,10 +105,13 @@ $correo = $_SESSION['correo'];
                     success: function(response) {
                         const data = JSON.parse(response);
                         $('#modal-body').html(
-                            '<img src="../assets/imgs-psicol/' + psicologoId + '.jpg" alt="Foto de perfil">' +
-                            '<h4><b>' + data.nombreCompleto + '</b></h4>' +
-                            '<p>Mi correo es <a href="mailto:' + data.correo + '">' + data.correo + '</a></p>' +
-                            '<p>Mi telefono es el ' + data.telefono + '</p>' +
+                            '<div class="foto-psicologo"><img src="../assets/imgs-psicol/' + psicologoId + '.png" alt="Foto de perfil"></div><br>' +
+                            '<h3>Hola! Me llamo ' + data.nombreCompleto + '</h3><br>' +
+                            '<hr class="custom-hr"><br>' +
+                            '<h4>Puedes contactarme al correo: <a href="mailto:' + data.correo + '">' + data.correo + '</a></h4>' +
+                            '<hr class="custom-hr"><br>' +
+                            '<h4>Puedes contactarme al teléfono:<br>'+ '+503 ' + data.telefono + '</h4>' +
+                            '<hr class="custom-hr"><br>' +
                             '<div>"' + data.cita + '"</div>'
                         )
                         $('#myModal').show();
