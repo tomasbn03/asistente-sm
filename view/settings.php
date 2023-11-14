@@ -29,15 +29,12 @@ $phone = $_SESSION['telefono'];
 <?php
     require("components/menu.php")
 ?>
-
+<br>
     <!-- Seccion principal de la pagina home -->
-    
         <div class="infografia">
-            
-                <h1>Bienvenido <?php echo $_SESSION['nombre']; ?></h1> <br>
+                <h1>Bienvenido/a <?php echo $_SESSION['nombre']; ?></h1> <br>
                 <p><b>Tu bienestar mental es prioridad.</b> En esta sección, puedes personalizar tu experiencia en nuestro sitio, aquí puedes gestionar 
                     tu perfil.</p> <br><br>
-
                     <?php
                     // Verifica la sesion para mostrar la imagen según el usuario 
                     if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
@@ -70,13 +67,10 @@ $phone = $_SESSION['telefono'];
                         <input type="hidden" name="action" value="delete">
                         <button type="submit" class=btn-delete name="delete">Eliminar Foto</button>
                     </form>
-            
-
-                
-     
-
-            <!-- Filtros para cambiar nombre que aparece en el sistema -->
-<br><br><br>          
+        </div>
+<br><br>
+        <div class="cont-text">
+            <!-- Filtros para cambiar nombre que aparece en el sistema -->        
             <!-- Formulario para cambiar nombre -->
             <div class="container-display">
                 <div class="sub-name">

@@ -31,7 +31,7 @@ $passSuccessMessage = isset($_GET['pass_success_message']) ? $_GET['pass_success
 ?>
 <br>
         <div class="cont-text">
-            <h2>En este apartado puedes actualizar tu contraseña <?php echo $_SESSION['nombre']; ?></h2><br>
+            <h2>En este apartado puedes actualizar tu contraseña, <?php echo $_SESSION['nombre']; ?></h2><br>
             <!-- Filtro para cambiar la contraseña -->
             <form action="../controller/cambiar-contrasenia.php" method="POST">
                     <div class="contenedor-2">
