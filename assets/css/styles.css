@@ -3,17 +3,33 @@
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     max-width: 1100px;
-    height: 550px;
+    height: auto;
     margin:auto;
 }
 
+
 .infografia h1{
+    padding: 20px;
+}
+
+
+.infografia-main {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    max-width: 1100px;
+    height: 500px;
+    margin:auto;
+}
+
+.infografia-main h1{
     padding: 25px;
 }
 
 .cont-photo {
-    margin: auto;
-    margin-left: 100px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+    max-width: 800px;
 }
 
 .cont-text{
@@ -267,12 +283,15 @@ footer {
 }
 
 .forum-item {
+    width: 700px;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #B9CFE9;
+    margin: auto;
 }
 
 .forum-logo {
@@ -284,7 +303,9 @@ footer {
 }
 
 .forum-description {
-    margin: 10px 0; 
+    margin: auto;
+    width: 500px; 
+    text-align: justify;
 }
 
 .visit-btn {

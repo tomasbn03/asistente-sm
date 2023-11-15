@@ -31,7 +31,7 @@ $correo = $_SESSION['correo'];
     </div><br>
 
     <!-- Seccion principal para la página de acceder a recursos de bienestar -->
-    <div class="infografia">
+    <div class="infografia-main">
     <h1>Bienvenido/a a MentalMatters Virtual, <?php echo $usuario ?></h1><br>
                 <div class="sub-cont-text">
                     <div class="contextu">
@@ -164,7 +164,7 @@ $correo = $_SESSION['correo'];
                             <p>Este documento sistematiza experiencias y testimonios a partir del primer encuentro del Foro de Ideas que 
                             se llevó a cabo en diciembre de 2022. Expone las principales problemáticas planteadas y 10 ideas como resultado del foro.</p>
                             <span>Temas: <strong>#Adolecencia #DerechoALaSalud #ServiciosDeSalud</strong></span>
-                        </div>
+                        </div><br>
                         <a href="https://bancos.salud.gob.ar/recurso/foro-de-ideas-para-el-abordaje-de-la-salud-mental-con-adolescentes-y-jovenes" target="_blank" class="visit-btn">Visitar Foro</a>
                     </div><br>
 
@@ -175,7 +175,7 @@ $correo = $_SESSION['correo'];
                             <h3>Foro Salud Mental</h3>
                             <p>Guía de estilo sobre salud mental para medios de comunicación. Las palabras si importan.</p>
                             <span>Temas: <strong>#Ansiedad #Depresión #TerapiaGrupal</strong></span>
-                        </div>
+                        </div><br>
                         <a href="http://www.forosaludmental.com" target="_blank" class="visit-btn">Visitar Foro</a>
                     </div><br>
                     
