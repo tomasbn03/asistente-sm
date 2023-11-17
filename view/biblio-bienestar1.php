@@ -17,6 +17,7 @@ $correo = $_SESSION['correo'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion del estres en el trabajo | Biblioteca de recursos</title>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="../assets/img/mascota.png">
     <link rel="stylesheet" href="../assets/css/chatbot.css">
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/biblio1.css">
