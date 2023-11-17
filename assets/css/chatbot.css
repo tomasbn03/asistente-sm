@@ -1,0 +1,65 @@
+#floating-chat-icon {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#chat-container {
+  position: fixed;
+  bottom: 180px; /* Ajustar según el tamaño del ícono y del contenedor del chat */
+  right: 20px;
+  display: none;
+  width: 300px; /* Ancho del contenedor del chat */
+  height: 400px; /* Altura del contenedor del chat */
+  background-color: white; /* Color de fondo del contenedor del chat */
+  border: 1px solid #ccc; /* Bordes del contenedor */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra opcional */
+  overflow: hidden; /* Ocultar contenido desbordado */
+  z-index: 999; /* Asegúrate de que sea menor que el z-index del ícono del chat */
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+#chat-messages {
+  height: 350px; /* Altura para la sección de mensajes */
+  overflow-y: auto; /* Hacer la sección de mensajes desplazable */
+  padding: 10px; /* Espaciado interno */
+}
+
+#chat-input {
+  width: calc(100% - 20px); /* Ajustar el ancho para tener en cuenta el padding */ /* Opcional: quitar el borde del input */
+  padding: 10px; /* Espaciado interno para el input */
+  box-sizing: border-box; /* Ajustar el box model para el cálculo del ancho */
+  border-radius: 5px;
+  border: none;
+  border: solid 1px grey;
+}
+
+#send-button {
+  width: 100px; /* Hacer que el botón ocupe todo el ancho */
+  padding: 10px 0; /* Espaciado interno para el botón */
+  border: none; /* Opcional: quitar el borde del botón */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  cursor: pointer; /* Cambiar el cursor a puntero */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+  background-color: #0056b3; /* Un tono más oscuro para el hover */
+}
+
+.filtro {
+  display: flex;
+}
+
+.sub-chat-cont {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  padding-top: 30px;
+}

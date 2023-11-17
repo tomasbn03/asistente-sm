@@ -15,6 +15,7 @@ $correo = $_SESSION['correo'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía Completa para el Manejo del Estrés Diario | Biblioteca de recursos</title>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../assets/css/chatbot.css">
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/biblio6.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -134,9 +135,17 @@ $correo = $_SESSION['correo'];
         </section>
 
     </div><br><br>
+        <?php
+            require("components/ai.php");
+        ?>
+
+    
+<br><br><br>
 
 
     <?php require("components/footer.php") ?>
+
+    <script src="../assets/js/chatbot.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/showYear.js"></script>
     <script src="../assets/js/script.js"></script>

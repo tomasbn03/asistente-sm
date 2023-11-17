@@ -127,9 +127,11 @@ $correo = $_SESSION['correo'];
             })
         })
     </script>
+
     <?php
         require("components/footer.php");
     ?>
+    <script src="../assets/js/chatbot.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/showYear.js"></script>

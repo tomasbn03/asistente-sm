@@ -81,11 +81,12 @@ $passSuccessMessage = isset($_GET['pass_success_message']) ? $_GET['pass_success
             </form> 
             <!-- Fin de filtro para cambiar la contraseña -->
         </div><br>
+        
 
 <?php
     require("components/footer.php");
 ?>
-
+        <script src="../assets/js/chatbot.js"></script>
         <script src="../assets/js/menu.js"></script>
         <script src="../assets/js/showYear.js"></script>
         <script src="../assets/js/script.js"></script>

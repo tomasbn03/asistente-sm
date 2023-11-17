@@ -172,7 +172,6 @@ $phone = $_SESSION['telefono'];
                 <a href="settings-passwd.php" class="button">Cambiar la contraseña</a>
             </div>
         </div>  
-
 <br>
 <br>
 <br>
@@ -181,6 +180,7 @@ $phone = $_SESSION['telefono'];
 <?php
     require("components/footer.php");
 ?>
+    <script src="../assets/js/chatbot.js"></script>
     <script src="../assets/js/showYear.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/script.js"></script>
