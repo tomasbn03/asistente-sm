@@ -15,7 +15,7 @@ function getBotResponse ($message) {
 		$client = new Client();
 		$response = $client->request('POST', 'https://api.openai.com/v1/chat/completions', [
 			'headers' => [
-				'Authorization' => 'Bearer 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',
+				'Authorization' => 'Bearer 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',
 				'Content-Type' => 'application/json',
 			],
 			'json' => [
@@ -43,6 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$_SESSION['chatHistory']['mensajesUser'][] = $userMessage;
 	$_SESSION['chatHistory']['mensajesBot'][] = $botResponse;
 
-  echo json_encode(['userMessage' => $userMessage, 'botResponse' => $botResponse]);
+  echo json_encode(['botResponse' => $botResponse]);
   exit;
 }

@@ -1,13 +1,17 @@
 <?php
 
-// function mostrarMensajes() {
-// 	foreach ($_SESSION['chatHistory']['mensajesUser'] as $index => $mensaje) {
-// 			echo '<div class="user-message">' . htmlspecialchars($mensaje) . '</div>';
-// 			if (isset($_SESSION['chatHistory']['mensajesBot'][$index])) {
-// 					echo '<div class="bot-message">' . htmlspecialchars($_SESSION['chatHistory']['mensajesBot'][$index]) . '</div>';
-// 			}
-// 	}
-// }
+function mostrarMensajes() {
+	// Verifica si chatHistory está definida y no está vacía
+	if (isset($_SESSION['chatHistory']) && !empty($_SESSION['chatHistory'])) {
+			foreach ($_SESSION['chatHistory']['mensajesUser'] as $index => $mensaje) {
+					echo '<div class="user-message">' . htmlspecialchars($mensaje) . '</div>';
+					if (isset($_SESSION['chatHistory']['mensajesBot'][$index])) {
+							echo '<div class="bot-message">' . htmlspecialchars($_SESSION['chatHistory']['mensajesBot'][$index]) . '</div>';
+					}
+			}
+	}
+}
+
 ?>
 
 <div id="floating-chat-icon">
@@ -16,6 +20,7 @@
 
 <div id="chat-container">
 	<div id="chat-messages" style="height: 300px; overflow-y: auto;">
+	<?php mostrarMensajes(); ?>
 		<!-- Mensajes del chat irán aquí -->
 	</div>
 	<div class="sub-chat-cont">
@@ -36,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const message = document.getElementById('chat-input').value;
         sendMessage(message);
+				const messagesContainer = document.getElementById('chat-messages');
+        messagesContainer.innerHTML += '<div class="user-message">' + message + '</div>';
         document.getElementById('chat-input').value = '';
 				const typingIndicator = addTypingIndicator()
     });
@@ -52,7 +59,6 @@ function sendMessage(message) {
     .then(response => response.json())
     .then(data => {
         const messagesContainer = document.getElementById('chat-messages');
-        messagesContainer.innerHTML += '<div class="user-message">' + data.userMessage + '</div>';
         messagesContainer.innerHTML += '<div class="bot-message">' + data.botResponse + '</div>';
 				messagesContainer.removeChild(document.querySelector('.typing-indicator'))
     })
