@@ -24,6 +24,7 @@ $correo = $_SESSION['correo'];
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/psicologo.css">
+    <link rel="stylesheet" href="../assets/css/chatbot.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <title>Sistema de Salud Mental</title>
 </head>
@@ -89,6 +90,10 @@ $correo = $_SESSION['correo'];
             EOT;
     ?>
     </div> <br><br>
+
+    <?php
+        require("components/ai.php");
+    ?>
     
     <script>
         $(document).ready(function() {
