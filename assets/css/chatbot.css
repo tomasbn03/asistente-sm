@@ -99,3 +99,24 @@
   border-radius: 7px;
   padding: 7px;
 }
+
+.typing-indicator {
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  margin: 0 2px;
+  background-color: #888;
+  border-radius: 50%;
+  animation: typing 1s infinite ease;
+}
+
+@keyframes typing {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}

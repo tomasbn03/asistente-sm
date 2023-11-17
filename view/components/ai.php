@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const message = document.getElementById('chat-input').value;
         sendMessage(message);
+        document.getElementById('chat-input').value = '';
+				const typingIndicator = addTypingIndicator()
     });
 });
 
@@ -49,12 +51,24 @@ function sendMessage(message) {
     })
     .then(response => response.json())
     .then(data => {
-			console.log(data);
         const messagesContainer = document.getElementById('chat-messages');
         messagesContainer.innerHTML += '<div class="user-message">' + data.userMessage + '</div>';
         messagesContainer.innerHTML += '<div class="bot-message">' + data.botResponse + '</div>';
-        document.getElementById('chat-input').value = '';
+				messagesContainer.removeChild(document.querySelector('.typing-indicator'))
     })
     .catch(error => console.error('Error:', error));
+}
+
+function addTypingIndicator () {
+  const typingDiv = document.createElement('div')
+  typingDiv.classList.add('typing-indicator')
+  for (let i = 0; i < 3; i++) {
+    const dot = document.createElement('span')
+    dot.textContent = ''
+    typingDiv.appendChild(dot)
+  }
+  messagesContainer.appendChild(typingDiv)
+
+  return typingDiv
 }
 </script>
