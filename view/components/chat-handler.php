@@ -15,7 +15,7 @@ function getBotResponse ($message) {
 		$client = new Client();
 		$response = $client->request('POST', 'https://api.openai.com/v1/chat/completions', [
 			'headers' => [
-				'Authorization' => 'Bearer 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',
+				'Authorization' => 'Bearer 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',
 				'Content-Type' => 'application/json',
 			],
 			'json' => [
