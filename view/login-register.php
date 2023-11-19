@@ -17,13 +17,10 @@
     <title>Iniciar sesión | Registrarse</title>
 </head>
 <body>
-    <nav>
-        <ul class="navbar">
-            <li class="navitem"><a href="home.php">Inicio</a></li>
-            <li class="navitem"><a href="">Acerca de</a></li>
-            <li class="navitem"><a href="">Servicios</a></li>
-        </ul>
-    </nav> 
+    
+<a href="home.php" class="boton-regresar"><p>Regresar</p></a>
+
+        
     <div class="container" id="container">
         <!-- Formulario de logeo -->
         <div class="form-container sign-in-container">
