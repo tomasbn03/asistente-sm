@@ -22,6 +22,7 @@ $correo = $_SESSION['correo'];
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/biblio1.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/mascota.png">
 </head>
 <body>
 <?php

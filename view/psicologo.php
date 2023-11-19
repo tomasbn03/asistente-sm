@@ -1,4 +1,4 @@
- <?php
+<?php
 
 use function PHPSTORM_META\map;
 
@@ -26,6 +26,7 @@ $correo = $_SESSION['correo'];
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/psicologo.css">
     <link rel="stylesheet" href="../assets/css/chatbot.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/mascota.png">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <title>Sistema de Salud Mental</title>
 </head>
@@ -110,16 +111,17 @@ $correo = $_SESSION['correo'];
                     },
                     success: function(response) {
                         const data = JSON.parse(response);
-                        $('#modal-body').html(
-                            '<div class="foto-psicologo"><img src="../assets/imgs-psicol/' + psicologoId + '.png" alt="Foto de perfil"></div><br>' +
-                            '<h3>Hola! Me llamo ' + data.nombreCompleto + '</h3><br>' +
-                            '<hr class="custom-hr"><br>' +
-                            '<h4>Puedes contactarme al correo: <a href="mailto:' + data.correo + '">' + data.correo + '</a></h4>' +
-                            '<hr class="custom-hr"><br>' +
-                            '<h4>Puedes contactarme al teléfono:<br>'+ '+503 ' + data.telefono + '</h4>' +
-                            '<hr class="custom-hr"><br>' +
-                            '<div>"' + data.cita + '"</div>'
-                        )
+                        $('#modal-body').html(`
+                            <div class="modal-psicologo-content">
+                                <div class="foto-psicologo">
+                                    <img src="../assets/imgs-psicol/${psicologoId}.png" class=perfil alt="Foto de perfil">
+                                </div>
+                                <h3>${data.nombreCompleto}</h3>
+                                <h4>Puedes contactarme al correo: <a href="mailto:${data.correo}" class="correo-link">${data.correo}</a></h4>
+                                <h4>Puedes contactarme al teléfono: <span class="telefono"><br>+503 ${data.telefono}</span></h4>
+                                <div class="cita">${data.cita}</div>
+                            </div>
+                        `);
                         $('#myModal').show();
                     },
                     error: function(error) {

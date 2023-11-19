@@ -22,6 +22,7 @@ $passSuccessMessage = isset($_GET['pass_success_message']) ? $_GET['pass_success
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/error-message.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/mascota.png">
     <title>Cambiar contraseña</title>
 </head>
 <body>
