@@ -20,8 +20,8 @@
     <nav>
         <ul class="navbar">
             <li class="navitem"><a href="home.php">Inicio</a></li>
-            <li class="navitem"><a href="about.php">Acerca de</a></li>
-            <li class="navitem"><a href="services.php">Servicios</a></li>
+            <li class="navitem"><a href="">Acerca de</a></li>
+            <li class="navitem"><a href="">Servicios</a></li>
         </ul>
     </nav> 
     <div class="container" id="container">
@@ -48,8 +48,8 @@
                 <?php endif; ?>
 
                 <input type="email" name="correo" placeholder="Correo" />
-                <input type="password" name="contrasenia" placeholder="Constraseña" />
-                <a href="#">Olvidaste tu contraseña?</a>
+                <input type="password" name="contrasenia" placeholder="Constraseña" /><br>
+                
                 <button type="submit">Ingresar</button>
             </form>
         </div>
@@ -73,9 +73,6 @@
 
         <div class="overlay-container">
             <div class="overlay">
-                <div class="salud-mental-img">
-                    <img src="../assets/img/salud-mental.png" alt="">
-                </div>
                 <div class="overlay-panel overlay-left">
                     <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
                     <button class="ghost" id="signIn">Sign In</button>

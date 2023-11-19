@@ -34,6 +34,8 @@ function mostrarMensajes() {
 	</div>
 </div>
 
+
+<!-- Esto para que al momento de enviar el mensaje a la AI no se actualice la página  -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('basura-gpt');
