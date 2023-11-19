@@ -56,15 +56,7 @@
     
 }
 
-.cont1 span{
-    font-size: 12pt;
-    text-align: justify;
-}
-.cont2 span{
-    font-size: 12pt;
-    text-align: justify;
-}
-.cont3 span{
+.cont span{
     font-size: 12pt;
     text-align: justify;
 }
@@ -110,7 +102,7 @@ footer {
     background-color: #B9CFE9;
 }
 
-.cont1 {
+.cont {
     width: 280px;
     justify-content: center;
     align-items: center;
@@ -119,21 +111,32 @@ footer {
     padding: 10px;
 }
 
-.cont2 {
-    width: 280px;
+.search-container {
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: calc(100vw - 400px);
     margin: auto;
     border-radius: 7px;
     padding: 10px;
 }
 
-.cont3 {
-    width: 280px;
-    align-items: center;
-    margin: auto;
-    border-radius: 7px;
-    padding: 10px;
+/* Estilo Base del Campo de Búsqueda */
+.input-search {
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Cambia el color y la sombra cuando está en foco */
+.input-search:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0,123,255,0.3);
 }
 
 .boton-animado {
@@ -322,12 +325,21 @@ footer {
 
 .cont-recurs {
     width: 85%;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Crea columnas que se adaptan al tamaño disponible */
+    gap: 20px; /* Espacio entre las tarjetas */
     padding: 50px;
-    margin-left: 100px;
+    margin-left: auto; /* Centra el contenedor */
+    margin-right: auto; /* Centra el contenedor */
     background-color: #f9f9f9;
     border: 1px solid #ddd;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    .cont-recurs {
+        grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+    }
 }
 
 .box-forum {
