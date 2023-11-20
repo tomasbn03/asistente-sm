@@ -176,20 +176,12 @@ $correo = $_SESSION['correo'];
                     <span><em>"La mente lo es todo. Lo que piensas, lo conviertes en realidad."</em><br>- Buda</span>
                     <p>Consejo Interactivo: ¿Dificultad para visualizar?<br><a target="_blank" href="https://www.youtube.com/watch?v=TR2X1DCccVI&pp=ygUYcGFpc2FqZXMgdHJhbnF1aWxpemFudGVz">Mira este video de paisajes tranquilos para inspirarte.</a></p>    
                 </section>
-
-                <!-- Puedes continuar con más secciones según sea necesario -->
-            </div>
-
         </div><br><br>
-    
         <?php
             require("components/ai.php");
         ?>
-
 <br><br><br>
-        <?php require("components/footer.php") ?>
-    
-        
+        <?php require("components/footer.php") ?>        
     <script src="../assets/js/chatbot.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/showYear.js"></script>

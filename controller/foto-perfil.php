@@ -19,7 +19,7 @@ if (isset($_POST['submit']) && isset($_FILES['image'])) {
 
     if (in_array($fileActualExt, $allowed)) {
         if ($imageError === 0) {
-            if ($imageSize < 1000000) { // Tamaño máximo de 1MB
+            if ($imageSize < 1000000) { 
                 $imageNameNew = "profile" . $userId . "." . $fileActualExt;
                 $fileDestination = '../uploads/' . $imageNameNew;
                 if (move_uploaded_file($imageTmpName, $fileDestination)) {

@@ -145,8 +145,6 @@ $correo = $_SESSION['correo'];
                 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </section>
     </div><br><br><br><br>
-
-
     <?php
         require("components/ai.php");
     ?>
@@ -154,7 +152,6 @@ $correo = $_SESSION['correo'];
     <?php
         require("components/footer.php")
     ?>
-
     <script src="../assets/js/chatbot.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/showYear.js"></script>

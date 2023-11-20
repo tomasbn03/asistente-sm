@@ -22,7 +22,6 @@
         </ul>
     </nav>
     </header>
-    
     <div class="backgraund-portada">
         <img src="../assets/img/portada.png" alt="" id="portada">
     </div><br>
@@ -52,7 +51,6 @@
             </div>
         </div>
     </div>
-    
 <br>
     <main class="container">
         <div class="card-group">
@@ -66,7 +64,6 @@
                     <!-- <a href="login-register.php" class="btn">Ver Más</a> -->
                 </div>
             </div>
-            
             <div class="card">
                 <figure>
                     <img src="../assets/img/salud-mental2.png" alt="" width="100">
@@ -77,7 +74,6 @@
                     <!-- <a href="login-register.php" class="btn">Ver Más</a> -->
                 </div>
             </div>
-            
             <div class="card">
                 <figure>
                     <img src="../assets/img/salud-mental4.png" alt="" width="100">
@@ -114,11 +110,8 @@
                         <h3>Consulta Psicológica Profesional</h3>
                         <p>Encuentra aquí consejos útiles para mantener un buen estado de ánimo y cuidar tu salud mental. Desde técnicas de relajación hasta formas de mantener una mente positiva, estamos aquí para apoyarte.</p>
                         <br>
-                        <!-- <a href="login-register.php" class="btn">Ver Más</a> -->
                         </div>
                     </div>
-                
-            
                 <div class="card-service">
                     <figure>
                         <img src="../assets/img/asistente.png" alt="">
@@ -127,7 +120,6 @@
                     <h3>Asistente Virtual de Salud Mental</h3>
                     <p>Nuestro chatbot con inteligencia artificial está aquí para ayudarte las 24 horas, los 7 días de la semana. Conversa de manera confidencial con nuestro asistente virtual, que puede proporcionarte recursos útiles, técnicas de relajación y escuchar tus preocupaciones en cualquier momento que lo necesites.</p>
                     <br>
-                    <!-- <a href="login-register.php" class="btn">Ver Más</a> -->
                     </div>
                 </div>
             </div>
@@ -157,10 +149,8 @@
                     <h3>Nuestros Valores</h3>
                     <p>En nuestra Clinica Virtual para la salud mental, nos guiamos por valores fundamentales como la empatía, la integridad y el compromiso con el bienestar de nuestros clientes. Creemos que cada individuo merece atención personalizada y un enfoque integral para su salud mental.</p>
                     <br>
-                    <!-- <a href="login-register.php" class="btn">Ver Más</a> -->
                 </div>
             </div>
-
             <div class="card-about">
                 <figure>
                     <img src="../assets/img/principios-morales.png" alt="" width="100px">
@@ -169,7 +159,6 @@
                     <h3>Nuestros Principios Éticos</h3>
                     <p>La ética y la confidencialidad son fundamentales para nosotros. Nos comprometemos a proteger la privacidad de nuestros clientes y a seguir estrictos estándares éticos en todas nuestras interacciones.</p>
                     <br>
-                    <!-- <a href="login-register.php" class="btn">Ver Más</a> -->
                 </div>
             </div>
             
@@ -181,7 +170,6 @@
                     <h3>Investigación y Desarrollo</h3>
                     <p>En nuestra Clinica Virtual para la salud mental, creemos en la importancia de la investigación continua en el campo de la salud mental. Colaboramos con expertos en investigación para mejorar constantemente nuestros servicios.</p>
                     <br>
-                    <!-- <a href="login-register.php" class="btn">Ver Más</a> -->
                 </div>
             </div>
         </main>

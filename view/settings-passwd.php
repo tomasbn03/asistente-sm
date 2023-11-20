@@ -1,17 +1,13 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['correo'])) { 
     header("Location: login-register.php");
     exit();
 }
 $usuario = $_SESSION['nombre'];
-
-// Mensajes de retroalimentación
 $passErrorMessage = isset($_GET['pass_error_message']) ? $_GET['pass_error_message'] : '';
 $passSuccessMessage = isset($_GET['pass_success_message']) ? $_GET['pass_success_message'] : '';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +67,6 @@ $passSuccessMessage = isset($_GET['pass_success_message']) ? $_GET['pass_success
                                     <?php echo htmlspecialchars(urldecode($passErrorMessage)); ?>
                                 </div>
                             <?php endif; ?>
-                            
                             <?php if ($passSuccessMessage): ?>
                                 <div class="success-message">
                                     <?php echo htmlspecialchars(urldecode($passSuccessMessage)); ?>
@@ -80,10 +75,7 @@ $passSuccessMessage = isset($_GET['pass_success_message']) ? $_GET['pass_success
                         </div>
                     </div>
             </form> 
-            <!-- Fin de filtro para cambiar la contraseña -->
         </div><br>
-        
-
 <?php
     require("components/footer.php");
 ?>

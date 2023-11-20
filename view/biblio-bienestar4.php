@@ -36,12 +36,10 @@ $correo = $_SESSION['correo'];
                 <p>La ansiedad es una respuesta natural al estrés pero puede volverse abrumadora. 
                 Aquí te presentamos algunas técnicas efectivas para ayudarte a manejarla en tu vida diaria.</p>
             </section>
-
             <div class="margen-box">
                 <section>
                     <h2>Respiración Consciente</h2>
                     <p>La respiración consciente es una práctica simple pero poderosa que ayuda a calmar la mente y reducir la ansiedad.</p><br>
-
                     <h3>¿Cómo practicarla?</h3>
                     <p>
                         <ol class="lista-box">
@@ -54,9 +52,6 @@ $correo = $_SESSION['correo'];
                     </p>
                 </section>
             </div><br>
-
-
-
             <div class="margen-box">
                 <section>
                     <h2>Mindfulness y Meditación</h2>
@@ -72,7 +67,6 @@ $correo = $_SESSION['correo'];
                     </p>
                 </section>
             </div><br>
-
             <div class="margen-box">
                 <section>
                     <h2>Ejercicio Físico</h2>
@@ -88,7 +82,6 @@ $correo = $_SESSION['correo'];
                     </p>
                 </section>
             </div><br>
-
             <div class="margen-box">
                 <section>
                     <h2>Escritura Terapéutica</h2>
@@ -104,7 +97,6 @@ $correo = $_SESSION['correo'];
                     </p>
                 </section>
             </div><br>
-
             <div class="margen-box">
                 <section>
                     <h2>Técnicas de Relajación Muscular</h2>
@@ -120,7 +112,6 @@ $correo = $_SESSION['correo'];
                     </p>
                 </section>
             </div><br>
-
             <div class="margen-box">
                 <section>
                     <h2>Establecimiento de Rutinas</h2>
@@ -136,7 +127,6 @@ $correo = $_SESSION['correo'];
                     </p>
                 </section>
             </div><br>
-
             <div class="margen-box">
                 <section>
                     <h2>Conexión Social</h2>
@@ -152,7 +142,6 @@ $correo = $_SESSION['correo'];
                     </p>
                 </section>
             </div><br>
-
             <div class="margen-box">
                 <section>
                     <h2>Reflexión Personal y Metas a Pequeña Escala</h2>
@@ -168,12 +157,10 @@ $correo = $_SESSION['correo'];
                     </p>
                 </section>
             </div><br>
-
             <div class="margen-box">
                 <section>
                     <h2>Consideraciones Finales</h2>
                     <p>Si bien estas técnicas pueden ser muy útiles, es importante recordar que la ansiedad severa o prolongada puede requerir la atención de un profesional. No dudes en buscar ayuda si sientes que la ansiedad interfiere con tu vida diaria de forma significativa.</p><br>
-                
                     <h3>Buscando apoyo profesional:</h3>
                     <p>
                         <ol class="lista-box">
@@ -189,8 +176,6 @@ $correo = $_SESSION['correo'];
                     vida más tranquila y plena.</p>
                 </section>
             </div><br>
-
-
             <section class="recurs-ad">
                 <h2>Recursos adicionales:</h2>
                 <p>
@@ -202,20 +187,17 @@ $correo = $_SESSION['correo'];
                 </p>
             </section>
         </div><br>
-
         <section>
             <h2>Actúa Ahora</h2>
             <p>Si te sientes listo para dar el siguiente paso hacia el manejo de tu ansiedad, 
             comienza explorando una o más de las técnicas que hemos compartido. Si la ansiedad te está impidiendo vivir la vida que deseas, considera buscar ayuda profesional. Recuerda, tomar acción es el primer paso hacia el cambio.</p>
         </section>
     </div><br><br>
-
     <?php
         require("components/ai.php");
     ?>
 <br><br><br>
     <?php require("components/footer.php") ?>
-
     <script src="../assets/js/chatbot.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/showYear.js"></script>

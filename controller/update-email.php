@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Asegúrate de que se incluya la lógica de conexión a la base de datos aquí
 include '../model/db.php';
 
 // Verifica si se envió el formulario
@@ -47,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submitEmail'])) {
     $stmt->close();
     $conexion->close();
 } else {
-    // Si el formulario no se envía, simplemente redirige al usuario a la página de configuración
     header("Location: ../view/settings.php");
     exit();
 }

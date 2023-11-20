@@ -22,25 +22,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             if ($stmt->execute()) {
                 $_SESSION['nombre'] = $newName;
-                // Agrega tipo de mensaje 'success'
                 header("Location: ../view/settings.php?mensaje_name=" . urlencode("Nombre actualizado con éxito!") . "&tipo=success");
-            } else {
-                // Agrega tipo de mensaje 'error'
+            } else {   
                 header("Location: ../view/settings.php?mensaje_name=" . urlencode("Error al actualizar el nombre.") . "&tipo=error");
             }
         } else {
-            // Agrega tipo de mensaje 'error'
             header("Location: ../view/settings.php?mensaje_name=" . urlencode("No se encontró un usuario con este nombre.") . "&tipo=error");
         }
     } else {
-        // Agrega tipo de mensaje 'error'
         header("Location: ../view/settings.php?mensaje_name=" . urlencode("El nombre actual no coincide con nuestros registros.") . "&tipo=error");
     }
 
     $stmt->close();
     $conexion->close();
 } else {
-    // Redirige aquí si el método no es POST
     header("Location: ../view/settings.php");
     exit();
 }

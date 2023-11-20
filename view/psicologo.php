@@ -8,10 +8,8 @@ if (!isset($_SESSION['correo'])) {
     header("Location: login-register.php");
     exit();
 }
-
 $usuario = $_SESSION['nombre'];
 $correo = $_SESSION['correo'];
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -38,10 +36,6 @@ $correo = $_SESSION['correo'];
     <div class="backgraund-portada">
         <img src="../assets/img/portada.png" id="portada">
     </div><br>
-
-
-
-    
     <div class=box-main> 
     <div class="cont-text">
         <h1>Hola <?php echo $_SESSION['nombre'] ?></h1>
@@ -50,15 +44,12 @@ $correo = $_SESSION['correo'];
     <?php
     $sql = 'SELECT id_psicol, nombre, apellido, correo, telefono, cita FROM psicologos';
     $stmt = mysqli_query($conexion, $sql);
-
     echo '<div class="cards-wrapper">';
-
     while ($row = $stmt->fetch_assoc()) {
         $id = htmlspecialchars($row['id_psicol']);
         $nombreCompleto = htmlspecialchars($row['nombre'] . " " . $row['apellido']);
         $correo = htmlspecialchars($row['correo']);
         $telefono = htmlspecialchars($row['telefono']);
-
         $fotoRandom = '../assets/imgs-psicol/' . $id . '.png';
         $fondoRandom = '../assets/imgs-psicol/' . rand(11, 13) . '.png';
 
@@ -78,7 +69,6 @@ $correo = $_SESSION['correo'];
             </div>
             EOT;
     }
-
     echo '</div>';
 
     echo <<<EOT
@@ -129,13 +119,11 @@ $correo = $_SESSION['correo'];
                     }
                 })
             })
-
             $('#close').click(function() {
                 $('#myModal').hide();
             })
         })
     </script>
-
     <?php
         require("components/footer.php");
     ?>

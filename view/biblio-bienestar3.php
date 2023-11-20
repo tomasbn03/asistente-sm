@@ -40,8 +40,6 @@ $correo = $_SESSION['correo'];
             que fortalezcan tus conexiones con los demás.</p>
             </section>
          
-
-       
             <section class="info-section"> 
                 <h3>¿Por qué es importante la comunicación interpersonal?</h3>
                 <p>La comunicación está presente en todos los ámbitos de nuestra vida, también 
@@ -53,9 +51,7 @@ $correo = $_SESSION['correo'];
                 consecuencia, repercuten en el buen funcionamiento de la empresa.
                 Además, una buena comunicación interpersonal permite la transparencia 
                 empresarial, algo que cada vez impacta más a nivel externo.</p><br>
-
             </section><br>
-
 
             <section class="info-section">
                 <h3>¿Qué es la comunicación interpersonal? Ejemplos</h3>
@@ -139,14 +135,11 @@ $correo = $_SESSION['correo'];
             </section>
        </div>
     </div><br><br><br>
-
     <?php
         require("components/ai.php");
     ?>
     <br><br><br>
-    
     <?php require("components/footer.php") ?>
-
     <script src="../assets/js/chatbot.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/showYear.js"></script>

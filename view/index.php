@@ -21,11 +21,9 @@ $correo = $_SESSION['correo'];
 	<link rel="stylesheet" href="../assets/css/chatbot.css">
 	<link rel="stylesheet" href="../assets/css/styles.css">
 	<link rel="icon" type="image/x-icon" href="../assets/img/mascota.png">
+	<title>Sistema de Salud Mental</title>
 </head>
-<title>Sistema de Salud Mental</title>
-
 <body>
-
 	<!-- Menu -->
 	<?php
 	require("components/menu.php")
@@ -33,7 +31,6 @@ $correo = $_SESSION['correo'];
 	<div class="backgraund-portada">
 		<img src="../assets/img/portada.png" id="portada">
 	</div><br>
-
 	<!-- Seccion principal para la página de acceder a recursos de bienestar -->
 	<div class="infografia-main">
 		<h1>Bienvenido/a a MentalMatters Virtual, <?php echo $usuario ?></h1><br>
@@ -50,7 +47,6 @@ $correo = $_SESSION['correo'];
 					principal objetivo.</p>
 			</div>
 		</div><br>
-
 		<div class="sub-cont-text">
 			<div class="contextu">
 				<h3>Biblioteca de Bienestar</h3>
@@ -62,34 +58,26 @@ $correo = $_SESSION['correo'];
 			</div>
 		</div>
 	</div><br><br>
-
-
 	<!-- Carrusel para frases   -->
 	<div class="carousel-container">
 		<p class="carousel-quote" id="quote1">Dentro de cada tormenta, reside una calma esperando ser encontrada</p>
 		<p class="carousel-quote" id="quote2">Nuestro espíritu es inquebrantable; sólo necesita recordarlo.</p>
 		<p class="carousel-quote" id="quote3">Las cicatrices del alma son testigos de su fortaleza</p>
 	</div><br><br>
-
 	<div class="search-container">
 		<input type="search" id="search" class="input-search" placeholder="Buscar recurso ...">
 	</div>
 	<!-- Tres recursos en la parte superior -->
 	<div class="cont-recurs"></div><br><br>
-
-
 	<div class="carousel-container">
 		<p class="carousel-quote" id="quote1">Las cicatrices invisibles son las que más enseñan sobre resiliencia y fortaleza</p>
 		<p class="carousel-quote" id="quote2">El abrazo del alma es aquel que nos reconforta en los momentos de oscuridad y nos recuerda que no estamos solos</p>
 		<p class="carousel-quote" id="quote3">La salud de nuestra mente es el reflejo de cómo nutrimos nuestra esencia y nuestro espíritu</p>
 	</div><br><br>
-
-
 	<div class="box-forum">
 		<div class="forum-container">
 			<h1>Foros Alternos Recomendados</h1><br>
 			<p>Descubre y participa en foros externos que recomendamos para enriquecer tu camino hacia el bienestar.</p> <br> <br>
-
 			<!-- Foro 1 -->
 			<div class="forum-item">
 				<img src="../assets/img/gaceta-medica.png" alt="Logo del foro" class="forum-logo">
@@ -100,7 +88,6 @@ $correo = $_SESSION['correo'];
 				</div><br>
 				<a href="https://gacetamedica.com/mas/rsc/foro-afectivo-efectivo-salud-mental-estigma-prevencion/" target="_blank" class="visit-btn">Visitar Foro</a>
 			</div><br>
-
 			<!-- Foro 2 -->
 			<div class="forum-item">
 				<img src="../assets/img/bancos-salud.png" alt="Logo del foro" class="forum-logo">
@@ -112,7 +99,6 @@ $correo = $_SESSION['correo'];
 				</div><br>
 				<a href="https://bancos.salud.gob.ar/recurso/foro-de-ideas-para-el-abordaje-de-la-salud-mental-con-adolescentes-y-jovenes" target="_blank" class="visit-btn">Visitar Foro</a>
 			</div><br>
-
 			<!-- Foro 3 -->
 			<div class="forum-item">
 				<img src="../assets/img/foro-sm.png" alt="Logo del foro" class="forum-logo">
@@ -127,7 +113,6 @@ $correo = $_SESSION['correo'];
 			<p><strong>Nota:</strong> Aunque estos foros son recomendados, no tenemos control sobre su contenido. Ejerce juicio propio y consulta a un profesional en caso de necesitar asistencia.</p>
 		</div>
 	</div>
-
 	<?php
 	require("components/ai.php");
 	?>
@@ -140,5 +125,4 @@ $correo = $_SESSION['correo'];
 	<script src="../assets/js/showYear.js"></script>
 	<script src="../assets/js/script.js" defer type="module"></script>
 </body>
-
 </html>

@@ -6,7 +6,7 @@ include '../model/db.php';
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submitPhone'])) {
     $currentPhone = trim($_POST['currentPhone']); 
     $newPhone = trim($_POST['newPhone']); 
-    $usuarioId = $_SESSION['user_id']; // Asumiendo que guardas el ID de usuario en la sesión
+    $usuarioId = $_SESSION['user_id']; 
 
     // Verificar si el número de teléfono actual coincide con el número en sesión
     if ($currentPhone === $_SESSION['telefono']) {

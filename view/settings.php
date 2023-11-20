@@ -1,17 +1,13 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['correo'])) { 
     header("Location: login-register.php");
     exit();
 }
- 
 $usuario = $_SESSION['nombre'];
 $email = $_SESSION['correo'];
 $phone = $_SESSION['telefono'];
-
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -37,7 +33,6 @@ $phone = $_SESSION['telefono'];
                     <div class="cont-photo">
                         <p><b>Tu bienestar mental es prioridad.</b> En esta sección, puedes personalizar tu experiencia en nuestro sitio, aquí puedes gestionar 
                         tu perfil.</p> <br><br>
-                        
                             <?php
                             // Verifica la sesion para mostrar la imagen según el usuario 
                             if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
@@ -166,7 +161,6 @@ $phone = $_SESSION['telefono'];
                     </div>
                 <?php endif; ?>
             </div>
-
 <br><br><br>
             <p style="font-size: 14pt;">Tambien puedes cambiar tu contraseña</p><br>
             <div class="cmbcnt">

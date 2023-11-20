@@ -74,13 +74,11 @@
         header('Location: ../view/login-register.php');
         exit();
     }
-
     // Inserta el nuevo usuario en la base de datos
     $stmt = mysqli_prepare($conexion, "INSERT INTO usuarios (nombre, usuario, correo, contrasenia, telefono, fecha_nacimiento) VALUES (?, ?, ?, ?, ?, ?)");
     mysqli_stmt_bind_param($stmt, "ssssss", $nombre, $usuario, $correo, $pass, $telefono, $fechaNacimiento);
     $exe = mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-
     if ($exe) {
         header('Location: ../view/login-register.php?success=1');
         exit();
@@ -89,6 +87,5 @@
         header('Location: ../view/login-register.php');
         exit();
     }
-
     mysqli_close($conexion);
 ?>

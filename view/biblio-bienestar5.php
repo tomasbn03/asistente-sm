@@ -90,7 +90,6 @@ $correo = $_SESSION['correo'];
                         saludable permite a las personas enfrentar los altibajos de la vida con resiliencia, y cultivar 
                         relaciones saludables con los demás y consigo mismos.</p>
                 </section>
-
         <hr>
             <div class="margen-box">
                 <section>
@@ -107,7 +106,6 @@ $correo = $_SESSION['correo'];
                             a enfrentar las situaciones desafiantes con confianza?</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h3>Paso 2: Identificación de Creencias y Actitudes</h3>
                         <ul class="lista-box">
@@ -117,7 +115,6 @@ $correo = $_SESSION['correo'];
                             consideras que son tus capacidades y áreas de mejora.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h3>Paso 3: Autoevaluación Estructurada</h3>
                         <ul class="lista-box">
@@ -127,7 +124,6 @@ $correo = $_SESSION['correo'];
                             una perspectiva que no has considerado.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h3>Paso 4: Evaluación de Experiencias Pasadas</h3>
                         <ul class="lista-box">
@@ -137,7 +133,6 @@ $correo = $_SESSION['correo'];
                             ¿Tus logros han mejorado tu autoestima? ¿Cómo reaccionas ante los fracasos?</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h3>Paso 5: Reconocimiento de Influencias Externas</h3>
                         <ul class="lista-box">
@@ -147,7 +142,6 @@ $correo = $_SESSION['correo'];
                             y compañeros han influenciado tu percepción de ti mismo.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h3>Paso 6: Entendimiento del Impacto en la Vida Diaria</h3>
                         <ul class="lista-box">
@@ -155,7 +149,6 @@ $correo = $_SESSION['correo'];
                             <li><b>Considera tu desempeño: </b> ¿De qué manera influye tu autoestima en tu trabajo o estudios?</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h3>Paso 7: Plan de Acción para Mejorar</h3>
                         <ul class="lista-box">
@@ -164,7 +157,6 @@ $correo = $_SESSION['correo'];
                             <li><b>Practica la autocompasión:</b> Sé amable contigo mismo y reconoce que todos tienen defectos y cometen errores.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h3>Paso 8: Busca Soporte Profesional si es Necesario</h3>
                         <ul class="lista-box">
@@ -174,7 +166,7 @@ $correo = $_SESSION['correo'];
                     </p>
                 </section>
             </div>
-        <hr>
+                <hr>
                 <section class="intro">
                     <p>Entender tu autoestima es un proceso continuo y dinámico. Requiere tiempo y, a menudo, un esfuerzo consciente para cambiar 
                     patrones de pensamiento arraigados y actitudes hacia uno mismo. La autoaceptación y el amor propio son metas valiosas en este 
@@ -187,7 +179,6 @@ $correo = $_SESSION['correo'];
                 <section>
                     <p>Mejorar la autoestima es un proceso personal y activo que implica tanto la reflexión como la acción. 
                     Aquí te detallo algunas estrategias y ejercicios que pueden ayudar a reforzar la autoestima:</p><br>
-                
                     <h2>Estrategias para Reforzar la Autoestima</h2><br>    
                     <p>
                         <h4>Habla Positivamente Contigo Mismo</h4>
@@ -196,7 +187,6 @@ $correo = $_SESSION['correo'];
                             Por ejemplo, en lugar de decir "No puedo hacer esto", intenta con "Voy a hacer lo mejor que pueda".</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Establece Metas Realistas</h4>
                         <ul class="lista-box">
@@ -204,7 +194,6 @@ $correo = $_SESSION['correo'];
                             puede construir confianza y mejorar tu autoestima.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Practica la Autocompasión</h4>
                         <ul class="lista-box">
@@ -212,24 +201,19 @@ $correo = $_SESSION['correo'];
 
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Enfrenta tus Miedos</h4>
                         <ul class="lista-box">
                             <li><b>Acción a Pesar del Miedo:</b> Toma pequeños pasos para enfrentarte a las cosas que te asustan. La superación de miedos puede
                              ser un poderoso potenciador de la autoestima.</li>
-                        
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Identifica y Desafía Creencias Limitantes</h4>
                         <ul class="lista-box">
                             <li><b>Reestructuración Cognitiva:</b> Cuestiona las creencias negativas sobre ti mismo y reemplázalas por interpretaciones más balanceadas.</li>
-                          
                         </ul>
                     </p><br><br>
-
                     <h2>Ejercicios para Reforzar la Autoestima</h2><br>
                     <p>
                         <h4>Ejercicio de Afirmaciones</h4>
@@ -238,7 +222,6 @@ $correo = $_SESSION['correo'];
                             Léelas en voz alta todos los días.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>El Frasco de Logros</h4>
                         <ul class="lista-box">
@@ -246,7 +229,6 @@ $correo = $_SESSION['correo'];
                             en un frasco. Cuando te sientas desanimado, lee tus logros.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Diario de Gratitud</h4>
                         <ul class="lista-box">
@@ -254,14 +236,12 @@ $correo = $_SESSION['correo'];
                             enfoque de lo que te falta a lo que tienes.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>La Lista de Fortaleza</h4>
                         <ul class="lista-box">
                             <li>Haz una lista de tus fortalezas y habilidades. Si te resulta difícil, pide a amigos y familiares que contribuyan.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Visualización Positiva</h4>
                         <ul class="lista-box">
@@ -269,7 +249,6 @@ $correo = $_SESSION['correo'];
                             reforzar la creencia en tus habilidades.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Ejercicio del Espejo</h4>
                         <ul class="lista-box">
@@ -277,28 +256,24 @@ $correo = $_SESSION['correo'];
                             con el tiempo puede mejorar significativamente tu percepción de ti mismo.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Desafíos de Habilidades</h4>
                         <ul class="lista-box">
                             <li>Participa regularmente en actividades que sabes que eres bueno. Mejorar o demostrar tus habilidades puede aumentar tu autoestima.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Rodearse de Positividad</h4>
                         <ul class="lista-box">
                             <li>Pasa tiempo con personas que te hagan sentir bien contigo mismo y evita aquellas que tienden a desencadenar tus inseguridades.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Meditación y Mindfulness</h4>
                         <ul class="lista-box">
                             <li>Practica la meditación y la atención plena para reducir el estrés y mejorar la relación contigo mismo.</li>
                         </ul>
                     </p><br>
-
                     <p>
                         <h4>Terapia y Coaching</h4>
                         <ul class="lista-box">
@@ -307,25 +282,19 @@ $correo = $_SESSION['correo'];
                     </p><br>
                 </section>
             </div>
-        <hr>
-
+                <hr>
                 <section class="intro">
                     <p>Recuerda, la autoestima se construye poco a poco con cada acción que realizas en tu favor. Los ejercicios y estrategias 
                     deben ser personalizados para adaptarse a tus necesidades y circunstancias individuales. Es importante ser paciente contigo 
                     mismo y reconocer que el cambio es un proceso que toma tiempo.</p>
                 </section><br>
-    </div>
-
-
-
-    </div><br><br>
-
+            </div>
+            </div><br><br>
     <?php
         require("components/ai.php");
     ?>
     <br><br><br>
     <?php require("components/footer.php") ?>
-    
     <script src="../assets/js/chatbot.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/showYear.js"></script>
