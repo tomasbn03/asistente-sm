@@ -5,7 +5,7 @@
     $nombre = $_POST['nombre'];
     $usuario = $_POST['usuario'];
     $correo = $_POST['correo'];
-    $pass = password_hash($_POST['contrasenia'], PASSWORD_DEFAULT); // Asegúrate de que la contraseña sea hasheada antes de la inserción
+    $pass = password_hash($_POST['contrasenia'], PASSWORD_DEFAULT); 
     $telefono = $_POST['telefono'];
     $fechaNacimiento = $_POST['fechaNacimiento'];
 
