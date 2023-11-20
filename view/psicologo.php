@@ -60,7 +60,7 @@ $correo = $_SESSION['correo'];
         $telefono = htmlspecialchars($row['telefono']);
 
         $fotoRandom = '../assets/imgs-psicol/' . $id . '.png';
-        $fondoRandom = '../assets/imgs-psicol/' . rand(11, 13) . '.jpg';
+        $fondoRandom = '../assets/imgs-psicol/' . rand(11, 13) . '.png';
 
         echo <<<EOT
             <div class="card" data-id="$id">
@@ -72,7 +72,7 @@ $correo = $_SESSION['correo'];
                 </div>
                 <div class="card-content">
                     <h4><b>$nombreCompleto</b></h4>
-                    <p><a href="mailto:$correo" style="color:#1F1F1F;">$correo</a></p>
+                    <p><a href="mailto:$correo" style="color:#D2E7FF;">$correo</a></p>
                     <p>$telefono</p>
                 </div>
             </div>

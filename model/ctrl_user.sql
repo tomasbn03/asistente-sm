@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-11-2023 a las 00:58:48
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.0.28
+-- Tiempo de generación: 20-11-2023 a las 02:59:35
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,23 +34,23 @@ CREATE TABLE `psicologos` (
   `correo` varchar(255) NOT NULL,
   `telefono` varchar(255) NOT NULL,
   `cita` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `psicologos`
 --
 
 INSERT INTO `psicologos` (`id_psicol`, `nombre`, `apellido`, `correo`, `telefono`, `cita`) VALUES
-(1, 'Alejandro', 'Serrano', 'alejandro.serrano@email.com', '1234567890', 'La mente es como un paracaídas, solo funciona si se abre.'),
-(2, 'Isabela', 'Márquez', 'isabela.marquez@email.com', '1234567891', 'La comprensión es el primer paso hacia la aceptación, y solo con la aceptación puede haber recuperación.'),
-(3, 'Carlos', 'Gutiérrez', 'carlos.gutierrez@email.com', '1234567892', 'La felicidad no es algo hecho. Proviene de tus propias acciones.'),
-(4, 'Laura', 'Jiménez', 'laura.jimenez@email.com', '1234567893', 'No somos lo que pensamos, sino lo que creemos que podemos ser.'),
-(5, 'Roberto', 'Álvarez', 'roberto.alvarez@email.com', '1234567894', 'Cada día de nuestra vida hacemos depósitos en los bancos de memoria de nuestros hijos.'),
-(6, 'Camila', 'Fernández', 'camila.fernandez@email.com', '1234567895', 'La mente es como un libro; escrita en capítulos, contando historias de vida.'),
-(7, 'Santiago', 'Ramírez', 'santiago.ramirez@email.com', '1234567896', 'El cambio es el final resultante de todo verdadero aprendizaje.'),
-(8, 'Gabriela', 'Vázquez', 'gabriela.vazquez@email.com', '1234567897', 'El autoconocimiento nos lleva a la autotransformación.'),
-(9, 'Enrique', 'Lozano', 'enrique.lozano@email.com', '1234567898', 'En el juego de la vida, la mente es nuestro campo de entrenamiento.'),
-(10, 'Valeria', 'Torres', 'valeria.torres@email.com', '1234567899', 'El diálogo interno que mantenemos moldea nuestra percepción del mundo.');
+(1, 'Alejandro', 'Serrano', 'alejandro.serrano@email.com', '7657-4321', 'La mente es como un paracaídas, solo funciona si se abre.'),
+(2, 'Isabela', 'Márquez', 'isabela.marquez@email.com', '6098-5463', 'La comprensión es el primer paso hacia la aceptación, y solo con la aceptación puede haber recuperación.'),
+(3, 'Carlos', 'Gutiérrez', 'carlos.gutierrez@email.com', '7651-8654', 'La felicidad no es algo hecho. Proviene de tus propias acciones.'),
+(4, 'Laura', 'Jiménez', 'laura.jimenez@email.com', '7345-1245', 'No somos lo que pensamos, sino lo que creemos que podemos ser.'),
+(5, 'Roberto', 'Álvarez', 'roberto.alvarez@email.com', '7656-8100', 'Cada día de nuestra vida hacemos depósitos en los bancos de memoria de nuestros hijos.'),
+(6, 'Camila', 'Fernández', 'camila.fernandez@email.com', '6106-1580', 'La mente es como un libro; escrita en capítulos, contando historias de vida.'),
+(7, 'Santiago', 'Ramírez', 'santiago.ramirez@email.com', '6202-1389', 'El cambio es el final resultante de todo verdadero aprendizaje.'),
+(8, 'Gabriela', 'Vázquez', 'gabriela.vazquez@email.com', '7577-1309', 'El autoconocimiento nos lleva a la autotransformación.'),
+(9, 'Enrique', 'Lozano', 'enrique.lozano@email.com', '7854-9090', 'En el juego de la vida, la mente es nuestro campo de entrenamiento.'),
+(10, 'Valeria', 'Torres', 'valeria.torres@email.com', '7460-6555', 'El diálogo interno que mantenemos moldea nuestra percepción del mundo.');
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,7 @@ CREATE TABLE `usuarios` (
   `telefono` varchar(50) DEFAULT NULL,
   `fecha_nacimiento` date DEFAULT NULL,
   `foto_perfil` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
